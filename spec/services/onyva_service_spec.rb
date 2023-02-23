@@ -21,4 +21,23 @@ RSpec.describe OnyvaService do
       expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
     end
   end
+
+  describe '#one_trip' do
+    it 'returns one trip' do
+      trip = OnyvaService.one_trip(1)
+
+      expect(trip).to have_key(:id)
+      expect(trip[:id]).to be_a(String)
+
+      expect(trip[:attributes]).to have_key(:name)
+      expect(trip[:attributes][:name]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:country)
+      expect(trip[:attributes][:country]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:city)
+      expect(trip[:attributes][:city]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:postcode)
+      expect(trip[:attributes][:postcode]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:place_id)
+    end
+  end
 end
