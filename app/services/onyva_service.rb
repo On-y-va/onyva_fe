@@ -9,4 +9,8 @@ class OnyvaService
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
+  def self.one_trip(id)
+    response = conn.get("/api/v1/trips/#{id}")
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
 end

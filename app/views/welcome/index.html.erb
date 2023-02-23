@@ -1,10 +1,12 @@
 <center>
-<h1> Welcome to ONYVA </h1><br/>
-<h2> image </h2><br/>
+
+<div id="logo" align="center">
+<img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+</div>
 
 <div class="btn-group">
-  <%= button_to "Register", new_user_path, method: :get, class:"btn btn-dark" %>&nbsp;&nbsp;&nbsp;
-  <%= button_to "Log In", login_path, method: :get, class:"btn btn-dark" %>
+  <%= button_to "Register", new_user_path, method: :get, local: true, class:"btn btn-dark" %>&nbsp;&nbsp;&nbsp;
+  <%= button_to "Log In", login_path, method: :get, local: true, class:"btn btn-dark" %>
 </div>
-<center/>
+</center>
 

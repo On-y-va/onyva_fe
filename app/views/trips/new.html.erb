@@ -1,0 +1,28 @@
+<center>
+<div id="logo" align="center">
+<img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+</div>
+</center>
+<%= form_with method: :post, local: true do |f| %>
+<div class="row">
+    <div class="col">
+        <%= f.label :name %>
+        <p><%= f.text_field :name, class: "form-control", placeholder: "Name" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :country %>
+        <p><%= f.text_field :country, class: "form-control", placeholder: "Country" %></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <%= f.label :city %>
+        <p><%= f.text_field :city, class: "form-control", placeholder: "City" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :postcode %>
+        <p><%= f.text_field :postcode, class: "form-control", placeholder: "Postcode" %></p>
+    </div>
+</div>
+<%= f.submit "Onyva", class:"btn btn-dark" %>
+<% end %>

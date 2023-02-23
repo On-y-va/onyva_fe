@@ -9,7 +9,7 @@ RSpec.describe 'welcome page' do
     expect(page).to have_content("Welcome to ONYVA")
   end
 
-  xit 'has a button to register' do
+  it 'has a button to register' do
     expect(page).to have_button 'Register'
 
     click_button 'Register'
