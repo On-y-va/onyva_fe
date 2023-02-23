@@ -1,15 +1,19 @@
-<center>
-<p><h3>Welcome <%= @user.first_name %> <%= @user.last_name %></h3></p>
-
+<div id="logo" align="left">
+  <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="200" height="200" />
+</div>
+<div id="button" align="right">
   <div class='btn-group'>
     <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn btn-dark" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn btn-dark" %><br/><br/><br/><br/>
   </div>
+</div>
+<center>
+  <p><h3>Welcome <%= @user.first_name %> <%= @user.last_name %></h3></p>
 
-<div class="bg-secondary p-1 rounded-lg m-5">
-  <h4> Upcoming Trips </h4><br/><br/><br/><br/>
-</div>
-<div class="bg-secondary p-1 rounded-lg m-5">
-  <h4> Pending Trips </h4><br/><br/><br/><br/>
-</div>
-<center/>
+  <div class="bg-secondary p-1 rounded-lg m-5">
+    <h4> Upcoming Trips </h4><br/><br/><br/><br/>
+  </div>
+  <div class="bg-secondary p-1 rounded-lg m-5">
+    <h4> Pending Trips </h4><br/><br/><br/><br/>
+  </div>
+</center>
