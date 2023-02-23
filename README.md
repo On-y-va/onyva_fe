@@ -36,3 +36,25 @@ Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instr
 This application was designed according to the project specs [here](https://backend.turing.edu/module3/projects/consultancy/).
 
 ## Contributors
+
+:mortar_board: <i>All participants in this project are graduates from the Turing School of Software & Design.</i> <br> <br>
+  
+:woman: <b>Anhnhi Tran, PT, DPT</b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/anhtran811">@anhtran811</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/anhtran8/">anhtran8</a> <br>
+
+:woman: <b>Kaylah Rose Mitchell</b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/kaylahrose">@kaylahrose</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/kaylahrose/">kaylahrose</a> <br>
+
+:boy: <b>Matisse Mallette</b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/MatisseMallette">@MatisseMallette</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/matisse-mallette/">matisse-mallette</a> <br>
+
+:boy: <b>Braxton Eddings</b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/beddings81">@beddings81</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/braxton-eddings/">braxton-eddings</a> <br>
+
+:boy: <b>Alastair Lloyd</b> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/Adrlloyd">@Adrlloyd</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LinkedIn: <a href="https://www.linkedin.com/in/adrlloyd/">adrlloyd</a> <br>
