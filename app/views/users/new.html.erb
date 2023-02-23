@@ -1,15 +1,33 @@
 <%= form_with method: :post, local: true do |f| %>
-    <%= f.label :first_name %>
-    <p><%= f.text_field :first_name %></p>
-    <%= f.label :last_name %>
-    <p><%= f.text_field :last_name %></p>
-    <%= f.label :phone_number %>
-    <p><%= f.text_field :phone_number %></p>
-    <%= f.label :email %>
-    <p><%= f.email_field :email %></p>
-    <%= f.label :password %>
-    <p><%= f.password_field :password %></p>
-    <%= f.label :password_confirmation %>
-    <p><%= f.password_field :password_confirmation %></p>
-    <%= f.submit "Register" %>
-    <% end %>
+<div class="row">
+    <div class="col">
+        <%= f.label :first_name %>
+        <p><%= f.text_field :first_name, class: "form-control", placeholder: "First name" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :last_name %>
+        <p><%= f.text_field :last_name, class: "form-control", placeholder: "Last name" %></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <%= f.label :phone_number %>
+        <p><%= f.text_field :phone_number, class: "form-control", placeholder: "1234567890" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :email %>
+        <p><%= f.email_field :email, class: "form-control", placeholder: "name@example.com" %></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <%= f.label :password %>
+        <p><%= f.password_field :password, class: "form-control", placeholder: "Password" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :password_confirmation %>
+        <p><%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %></p>
+    </div>
+</div>
+<%= f.submit "Register", class:"btn btn-dark" %>
+<% end %>

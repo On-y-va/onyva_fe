@@ -1,9 +1,9 @@
 <%= form_with url: "/login", method: :post do |form|%>
 
   <%= form.label :email, "Email" %><br/>
-  <%= form.text_field :email, placeholder: "name@example.com" %><br/><br/>
+  <%= form.text_field :email, class: "form-control", placeholder: "name@example.com" %><br/><br/>
 
   <%= form.label :password, "Password" %><br/>
-  <%= form.password_field :password, placeholder: "Password" %><br/><br/>
+  <%= form.password_field :password, class: "form-control", placeholder: "Password" %><br/><br/>
   <%= form.submit "Log In", class:"btn btn-dark" %>
 <% end %>
