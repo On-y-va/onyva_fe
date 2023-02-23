@@ -11,4 +11,26 @@
 ## Project Overview
 Organize your upcoming travel plans with Onyva! This repo is a front-end application built on Rails. The back-end repo is available [here](https://github.com/On-y-va/onyva_be).
 
+## Prerequisites
+Running this project requires 
+
+## Installation
+
+1. Fork and clone this repository
+2. `cd` into the root directiory
+3. `bundle install`
+4. `rails db:{drop,create,migrate,seed}`
+5. Run the test suite with `bundle exec rspec`
+6. Start the local server by running `rails s'
+7. Visit http://localhost:3000
+
+Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
+
+## Learning Goals
+- API building and consumption
+- Use of an external OAuth provider to authenticate users
+- Implement a production-quality user interface using Bootstrap or other common CSS styling framework
+
+This application was designed according to the project specs [here](https://backend.turing.edu/module3/projects/consultancy/).
+
 ## Contributors
