@@ -3,4 +3,8 @@ class UsersController < ApplicationController
     user_id = params[:id]
     @user = UserFacade.one_user(user_id)
   end
+
+  def edit
+    
+  end
 end
