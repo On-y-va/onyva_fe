@@ -20,14 +20,14 @@ SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'application_cable', 'application_job', 'application_mailer']
 
 #Vcr/Webmock
-require 'webmock/rspec'
-require 'vcr'
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-  # config.filter_sensitive_data('<govt_api_key>') { ENV['govt_api_key'] }
-end
+# require 'webmock/rspec'
+# require 'vcr'
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.configure_rspec_metadata!
+#   # config.filter_sensitive_data('<govt_api_key>') { ENV['govt_api_key'] }
+# end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
