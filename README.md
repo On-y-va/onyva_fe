@@ -9,6 +9,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-by-crips.svg)](https://forthebadge.com)
 
 ## Project Overview
-Organize your upcoming travel plans with Onyva! This repo is a front-end application built on Rails. The back-end repo is available here.
+Organize your upcoming travel plans with Onyva! This repo is a front-end application built on Rails. The back-end repo is available [here](https://github.com/On-y-va/onyva_be).
 
 ## Contributors
