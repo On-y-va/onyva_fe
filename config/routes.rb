@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :new]
 
-  resources :trips, only: [:new]
+  resources :trips, only: [:show, :new]
 
   post '/users/new', to: 'users#create'
   get '/login', to: "users#login_form"
