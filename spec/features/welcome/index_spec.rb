@@ -19,6 +19,6 @@ RSpec.describe 'welcome page' do
   it 'has a button to Log In' do
     expect(page).to have_button 'Log In'
     click_button 'Log In'
-    expect(current_path).to eq "/login"
+    expect(current_path).to eq login_path
   end
 end

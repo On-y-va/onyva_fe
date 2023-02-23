@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def show
     user_id = params[:id]
     @user = UserFacade.one_user(user_id)
@@ -39,7 +40,6 @@ class UsersController < ApplicationController
       response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
       user = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to user_path(user[:id].to_i)
-    end
   end
 end
   
