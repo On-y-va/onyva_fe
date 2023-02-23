@@ -35,6 +35,10 @@ Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instr
 
 This application was designed according to the project specs [here](https://backend.turing.edu/module3/projects/consultancy/).
 
+## Screenshots
+
+## OAuth
+
 ## Contributors
 
 :mortar_board: <i>All participants in this project are graduates from the Turing School of Software & Design.</i> <br> <br>
