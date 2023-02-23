@@ -1,1 +1,10 @@
 <h1> Users </h1>
+
+<p><%= @user.first_name %> <%= @user.last_name %></p>
+
+<%= button_to "Create Trip", new_trip_path, method: :get, local: true %>
+
+<%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true %>
+
+<h2> Upcoming Trips </h2>
+<h2> Pending Trips </h2>

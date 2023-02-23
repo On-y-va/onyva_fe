@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9a41f0df10db0ef9c8bcc81170395868"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f077a476-9e4c-41c6-95f7-c34c21d84ba2
+      X-Runtime:
+      - '0.107327'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"Braxton","last_name":"Eddings","phone_number":"1234567","email":"b@email.com","password_digest":"$2a$12$8ZbbNaboWpGBCxWOtrjQXuR9ERVT5RnLWuwJtfiOsEaNM1Is21Jm2","emergency_contact_name":null,"emergency_contact_phone_number":null}}}'
+  recorded_at: Thu, 23 Feb 2023 00:54:39 GMT
+recorded_with: VCR 6.1.0

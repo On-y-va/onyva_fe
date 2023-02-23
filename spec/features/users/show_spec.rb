@@ -1,31 +1,31 @@
 require 'rails_helper'
 
-RSpec.describe 'user show' do
+RSpec.describe 'user show page' do
   before :each do
-    visit user_path
+    visit user_path(1)
   end
 
-  xit 'displays the users name' do
-    expect(page).to have_content('John')
+  it 'displays the users name' do
+    expect(page).to have_content('Braxton Eddings')
   end
 
-  xit 'has a button to create a trip' do
+  it 'has a button to create a trip' do
     click_button 'Create Trip'
 
-    expect(current_path).to eq '/trips/new'
+    expect(current_path).to eq(new_trip_path) 
   end
 
-  xit 'has a button to edit profile' do
-    click_button 'Edit profile'
+  it 'has a button to edit profile' do
+    click_button 'Edit Profile'
 
-    expect(current_path).to eq 'user/id/edit'
+    expect(current_path).to eq(edit_user_path(1))
   end
 
-  xit 'has a section for upcoming trips' do
+  it 'has a section for upcoming trips' do
     expect(page).to have_content('Upcoming Trips')
   end
 
-  xit 'has a section for pending trips' do
+  it 'has a section for pending trips' do
     expect(page).to have_content('Pending Trips')
   end
 end
