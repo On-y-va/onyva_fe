@@ -49,7 +49,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'orderly', '~> 0.1.1'
-  # gem 'webmock'
+  gem 'webmock'
   # gem 'vcr'
   gem 'pry'
   gem 'dotenv-rails'
