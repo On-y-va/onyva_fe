@@ -54,6 +54,7 @@ group :development, :test do
   gem 'pry'
   gem 'dotenv-rails'
   gem 'omniauth-google-oauth2'
+  gem 'figaro'
 end
 
 group :development do
