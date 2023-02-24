@@ -11,6 +11,10 @@ class TripsController < ApplicationController
     # require 'pry'; binding.pry
   end
 
+  def update
+    
+  end
+
   def new
   end
 
