@@ -1,0 +1,25 @@
+<center>
+<div id="logo" align="center">
+  <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+</div>
+<h3> Edit Profile </h3>
+<%= form_with method: :post, local: true do |f| %>
+<div class="row">
+    <div class="col">
+        <%= f.label :phone_number %>
+        <p><%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number" %></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <%= f.label :emergency_contact_name %>
+        <p><%= f.text_field :emergency_contact_name, class: "form-control", placeholder: "Emergency Contact Name" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :emergency_contact_phone_number %>
+        <p><%= f.text_field :emergency_contact_phone_number, class: "form-control", placeholder: "Emergency Contact Phone Number" %></p>
+    </div>
+</div>
+<%= f.submit "Update", class:"btn btn-dark" %>
+<% end %>
+</center>

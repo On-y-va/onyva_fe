@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'trip show page' do
+RSpec.describe 'trip show page', :vcr do
   before :each do
     visit trip_path(1)
   end
