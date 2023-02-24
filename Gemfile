@@ -53,8 +53,6 @@ group :development, :test do
   gem 'simplecov'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'orderly', '~> 0.1.1'
-  gem 'webmock'
-  gem 'vcr'
   gem 'pry'
 end
 
@@ -68,6 +66,8 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
+  # gem 'vcr'
   # Adds support for Capybara system testing and selenium driver
   # gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
