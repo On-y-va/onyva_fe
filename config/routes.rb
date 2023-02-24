@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   post '/users/new', to: 'users#create'
   post '/trips/new', to: 'trips#create'
-  get '/login', to: "users#login_form"
-  post '/login', to: 'users#login_user'
+
+  get '/auth/:provider/callback', to: 'sessions#create'
 end
