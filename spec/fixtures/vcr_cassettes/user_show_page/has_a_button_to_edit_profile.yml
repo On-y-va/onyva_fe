@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://onyva-be.herokuapp.com/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Feb 2023 19:49:35 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e7683f3ce9f368da407ef168c33af05d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e245524-e7f5-4f4a-b2b7-030cdae012af
+      X-Runtime:
+      - '0.003260'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"braxton","last_name":"Eddings","phone_number":"1234567","email":"beddings81@gmail.com","password_digest":"$2a$12$iy3dTLWY5MoaHTnUg/75jeOns/fgyAhqyB/zsBeweHdLDARSHYYPK","emergency_contact_name":null,"emergency_contact_phone_number":null}}}'
+  recorded_at: Fri, 24 Feb 2023 19:49:36 GMT
+recorded_with: VCR 6.1.0

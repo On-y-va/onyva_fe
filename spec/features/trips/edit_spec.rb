@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'trips edit page', :vcr do
   it 'has a form to edit a trip' do
-    visit edit_trip_path
+    visit edit_trip_path("1")
 
     expect(page).to have_field(:name)
     expect(page).to have_field(:country)

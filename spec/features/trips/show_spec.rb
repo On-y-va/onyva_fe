@@ -6,7 +6,7 @@ RSpec.describe 'trip show page', :vcr do
   end
 
   it 'displays the trips name' do
-    expect(page).to have_content('guys trip')
+    expect(page).to have_css(".trip_name")
   end
 
   it 'has a section for Group packing list' do

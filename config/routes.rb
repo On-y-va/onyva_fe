@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :new]
 
-  resources :trips, only: [:show, :edit, :new]
+  resources :trips
 
   post '/users/new', to: 'users#create'
   post '/trips/new', to: 'trips#create'

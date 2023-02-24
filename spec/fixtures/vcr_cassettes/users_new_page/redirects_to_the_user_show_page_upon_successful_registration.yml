@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: user%5Bemail%5D=j%40email.com&user%5Bfirst_name%5D=John&user%5Blast_name%5D=Jenkins&user%5Bpassword%5D=test123&user%5Bpassword_confirmation%5D=test123&user%5Bphone_number%5D=
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Length:
+      - '0'
+      Server:
+      - AirTunes/620.8.2
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 24 Feb 2023 19:49:33 GMT
+recorded_with: VCR 6.1.0

@@ -1,11 +1,14 @@
 class TripsController < ApplicationController
 
   def show
-    trip_id = params[:id]
-    @trip = TripFacade.one_trip(trip_id)
+    # trip_id = params[:id]
+    # @trip = TripFacade.one_trip(trip_id)
+    @trip = TripFacade.one_trip(params[:id])
   end
-
+  
   def edit
+    @trip = TripFacade.one_trip(params[:id])
+    # require 'pry'; binding.pry
   end
 
   def new
