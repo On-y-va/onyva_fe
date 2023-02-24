@@ -40,6 +40,10 @@ gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
 gem 'faraday'
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -52,9 +56,6 @@ group :development, :test do
   gem 'webmock'
   # gem 'vcr'
   gem 'pry'
-  gem 'dotenv-rails'
-  gem 'omniauth-google-oauth2'
-  gem 'figaro'
 end
 
 group :development do
