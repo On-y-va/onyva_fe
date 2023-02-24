@@ -5,6 +5,9 @@ class TripsController < ApplicationController
     @trip = TripFacade.one_trip(trip_id)
   end
 
+  def edit
+  end
+
   def new
   end
 
@@ -17,7 +20,6 @@ class TripsController < ApplicationController
       "place_id": params[:place_id],
       "start_date": params[:start_date],
       "end_date": params[:end_date]
-
       })
       
       conn = Faraday.new

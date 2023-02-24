@@ -54,7 +54,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 4.0'
   gem 'orderly', '~> 0.1.1'
   gem 'webmock'
-  # gem 'vcr'
+  gem 'vcr'
   gem 'pry'
 end
 
