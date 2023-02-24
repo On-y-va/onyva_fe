@@ -8,7 +8,7 @@ RSpec.describe Trip do
             name: 'Guys trip',
             country: 'Italy',
             city: 'Rome',
-            postcode: '00140'
+            postcode: '00140',
             place_id: nil
           }}
 
