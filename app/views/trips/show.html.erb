@@ -4,6 +4,11 @@
 <center>
 <h1> <%= @trip.name %> </h1>
 image of city<br/>
+<div id="button" align="right">
+  <div class='btn-group'>
+    <%= button_to "Update Trip", edit_trip_path(@trip.id), method: :get, local: true, class:"btn btn-dark" %>
+  </div>
+</div>
 
 Group Packing list:<br/><br/><br/><br/>
 <div class="container text-center">

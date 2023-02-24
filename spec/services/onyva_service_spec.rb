@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe OnyvaService do
 
   describe '#one_user' do
-    it 'returns one user' do
+    it 'returns one user', :vcr do
       user = OnyvaService.one_user(1)
 
       expect(user).to have_key(:id)

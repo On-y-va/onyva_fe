@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'users new page' do
+RSpec.describe 'users new page', :vcr do
   it 'has a form to register a new user' do
     visit new_user_path
 
@@ -12,7 +12,7 @@ RSpec.describe 'users new page' do
     expect(page).to have_button("Register")
   end
 
-  xit 'redirects to the user show page upon successful registration' do
+  it 'redirects to the user show page upon successful registration' do
     visit new_user_path
 
     fill_in(:first_name, with: "John")

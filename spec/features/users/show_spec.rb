@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'user show page' do
+RSpec.describe 'user show page', :vcr do
   before :each do
     visit user_path(1)
   end
