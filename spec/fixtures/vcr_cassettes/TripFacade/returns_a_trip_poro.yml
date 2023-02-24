@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1
+    uri: https://onyva-be.herokuapp.com/api/v1/trips/1
     body:
       encoding: US-ASCII
       string: ''
@@ -18,20 +18,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Feb 2023 19:45:13 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9a41f0df10db0ef9c8bcc81170395868"
+      - W/"c7f8ae70882e3e5b9a2997d00b43e8f7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f077a476-9e4c-41c6-95f7-c34c21d84ba2
+      - '09657f43-1d02-46e8-997b-3ac8a8f8ccfe'
       X-Runtime:
-      - '0.107327'
+      - '0.052539'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"Braxton","last_name":"Eddings","phone_number":"1234567","email":"b@email.com","password_digest":"$2a$12$8ZbbNaboWpGBCxWOtrjQXuR9ERVT5RnLWuwJtfiOsEaNM1Is21Jm2","emergency_contact_name":null,"emergency_contact_phone_number":null}}}'
-  recorded_at: Thu, 23 Feb 2023 00:54:39 GMT
+      string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Girl''s trip","city":"San
+        Francisco","country":"United States","postcode":"94122","place_id":null,"start_date":"2/24/2023","end_date":"2/25/2023"}}}'
+  recorded_at: Fri, 24 Feb 2023 19:45:14 GMT
 recorded_with: VCR 6.1.0
