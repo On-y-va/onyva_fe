@@ -53,6 +53,7 @@ group :development, :test do
   # gem 'vcr'
   gem 'pry'
   gem 'dotenv-rails'
+  gem 'omniauth-google-oauth2'
 end
 
 group :development do
