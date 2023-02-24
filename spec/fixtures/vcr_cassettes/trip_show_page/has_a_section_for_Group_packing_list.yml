@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 24 Feb 2023 19:49:31 GMT
+      - Fri, 24 Feb 2023 20:39:54 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 68f14b0e-0a4e-4ca5-b5e9-c907b8a451ac
+      - 47588458-b4c3-4af5-a6a4-4d10e16d19be
       X-Runtime:
-      - '0.004352'
+      - '0.003222'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Girl''s trip","city":"San
         Francisco","country":"United States","postcode":"94122","place_id":null,"start_date":"2/24/2023","end_date":"2/25/2023"}}}'
-  recorded_at: Fri, 24 Feb 2023 19:49:31 GMT
+  recorded_at: Fri, 24 Feb 2023 20:39:54 GMT
 recorded_with: VCR 6.1.0
