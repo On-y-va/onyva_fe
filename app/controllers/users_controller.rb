@@ -22,9 +22,9 @@ class UsersController < ApplicationController
       })
       
       conn = Faraday.new
-      response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
+      response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
       user = JSON.parse(response.body, symbolize_names: true)[:data]
-      redirect_to user_path(user[:id].to_i)
+      redirect_to user_path(user[:id])
   end
 end
   

@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://onyva-be.herokuapp.com/api/v1/trips
+    body:
+      encoding: UTF-8
+      string: trip%5Bcity%5D=Cabo&trip%5Bcountry%5D=Mexico&trip%5Bend_date%5D=2023-03-09&trip%5Bname%5D=Trippin&trip%5Bplace_id%5D&trip%5Bpostcode%5D=00123&trip%5Bstart_date%5D=2023-02-28
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Feb 2023 20:33:38 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a0c17f79939ae287798aeaef7a250b69"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5d5cea77-9f61-47b4-afd7-7694f6a637cb
+      X-Runtime:
+      - '0.007600'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09"}}}'
+  recorded_at: Fri, 24 Feb 2023 20:33:39 GMT
+- request:
+    method: get
+    uri: https://onyva-be.herokuapp.com/api/v1/trips/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 24 Feb 2023 20:33:39 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a0c17f79939ae287798aeaef7a250b69"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4c0d3739-a560-4782-a675-5d1a7ebd6221
+      X-Runtime:
+      - '0.004438'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09"}}}'
+  recorded_at: Fri, 24 Feb 2023 20:33:39 GMT
+recorded_with: VCR 6.1.0

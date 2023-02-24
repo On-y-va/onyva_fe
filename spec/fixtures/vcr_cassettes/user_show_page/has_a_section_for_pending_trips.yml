@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 24 Feb 2023 19:49:34 GMT
+      - Fri, 24 Feb 2023 19:49:37 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa25da53-8131-4550-af30-0fa9f4a1c8f6
+      - 719c1cd9-8a10-420d-8fca-0af317ede124
       X-Runtime:
-      - '0.003103'
+      - '0.002996'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"braxton","last_name":"Eddings","phone_number":"1234567","email":"beddings81@gmail.com","password_digest":"$2a$12$iy3dTLWY5MoaHTnUg/75jeOns/fgyAhqyB/zsBeweHdLDARSHYYPK","emergency_contact_name":null,"emergency_contact_phone_number":null}}}'
-  recorded_at: Fri, 24 Feb 2023 19:49:34 GMT
+  recorded_at: Fri, 24 Feb 2023 19:49:37 GMT
 recorded_with: VCR 6.1.0

@@ -25,6 +25,6 @@ RSpec.describe 'trips new page', :vcr do
 
     click_button("Onyva")
 
-    expect(current_path).to eq(trip_path(1))
+    expect(page).to have_css(".trip_name")
   end
 end

@@ -282,6 +282,7 @@ GEM
     tzinfo (1.2.11)
       execjs (>= 0.3.0, < 3)
       thread_safe (~> 0.1)
+    vcr (6.1.0)
     version_gem (1.1.1)
     web-console (3.7.0)
       actionview (>= 5.0)
@@ -329,6 +330,7 @@ DEPENDENCIES
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
+  vcr
   web-console (>= 3.3.0)
   webmock
 
@@ -336,4 +338,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.4.6
+   2.4.7

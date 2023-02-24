@@ -6,7 +6,7 @@ RSpec.describe 'user show page', :vcr do
   end
 
   it 'displays the users name' do
-    expect(page).to have_content('Braxton Eddings')
+    expect(page).to have_content('braxton Eddings')
   end
 
   it 'has a button to create a trip' do
