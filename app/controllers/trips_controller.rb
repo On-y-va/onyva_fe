@@ -1,14 +1,11 @@
 class TripsController < ApplicationController
 
   def show
-    # trip_id = params[:id]
-    # @trip = TripFacade.one_trip(trip_id)
     @trip = TripFacade.one_trip(params[:id])
   end
   
   def edit
     @trip = TripFacade.one_trip(params[:id])
-    # require 'pry'; binding.pry
   end
 
   def update
@@ -30,7 +27,7 @@ class TripsController < ApplicationController
       })
       
       conn = Faraday.new
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
+      response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(trip[:id])
   end
