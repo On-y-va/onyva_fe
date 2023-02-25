@@ -6,6 +6,25 @@ class UsersController < ApplicationController
   end
 
   def edit
+    user_id = params[:id]
+    @user = UserFacade.one_user(user_id)
+  end
+
+  def update
+    update_params = ({
+      "first_name": params[:first_name],
+      "last_name": params[:last_name],
+      "phone_number": params[:phone_number],
+      "emergency_contact_name": params[:emergency_contact_name],
+      "emergency_contact_phone_number": params[:emergency_contact_phone_number]
+      })
+    user_id = params[:id].to_i
+    conn = Faraday.new
+    # response = conn.patch("https://onyva-be.herokuapp.com/api/v1/users/1", {user: update_params})
+    response = conn.patch("http://localhost:5000/api/v1/users/1", "user": update_params)
+    user = JSON.parse(response.body, symbolize_names: true)[:data]
+    # user = User.new(data)
+    redirect_to user_path(user[:id])
   end
 
   def new
