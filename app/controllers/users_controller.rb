@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   def show
     user_id = params[:id]
     @user = UserFacade.one_user(user_id)
+    # @pending_trips = User.facade.user_trips("pending") 
+    # @accepted_trips = User.facade.user_trips("accepted")
   end
 
   def edit
@@ -44,6 +46,12 @@ class UsersController < ApplicationController
       response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
       user = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to user_path(user[:id])
+  end
+
+  def destroy
+    user_id = params[:id]
+    redirect_to root_path
+    flash[:notice] = "User was successfully deleted."
   end
 end
   

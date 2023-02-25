@@ -4,7 +4,8 @@
 <div id="button" align="right">
   <div class='btn-group'>
     <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn btn-dark" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn btn-dark" %><br/><br/><br/><br/>
+    <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn btn-dark" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Delete #{@user.first_name}", user_path(@user.id), method: :delete, local: true, class:"btn btn-danger" %><br/><br/><br/><br/>
   </div>
 </div>
 <center>

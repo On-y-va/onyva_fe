@@ -43,4 +43,10 @@ class TripsController < ApplicationController
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(trip[:id])
   end
+
+  def destroy
+    trip_id = params[:id]
+    redirect_to root_path
+    flash[:notice] = "Trip was successfully deleted."
+  end
 end
