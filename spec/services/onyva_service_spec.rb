@@ -40,4 +40,26 @@ RSpec.describe OnyvaService do
       expect(trip[:attributes]).to have_key(:place_id)
     end
   end
+
+  describe '#user_flights' do
+    it 'returns a users flights' do
+      flights = OnyvaService.flights(1)
+
+      expect(flights).to be_a(Array)
+      expect(flights[0]).to have_key(:id)
+      expect(flights[0]).to have_key(:attributes)
+      expect(flights[0][:attributes]).to have_key(:airline_code)
+      expect(flights[0][:attributes]).to have_key(:flight_number)
+      expect(flights[0][:attributes]).to have_key(:date)
+    end
+  end
+
+  # describe '#user trips' do
+  #   it 'returns a users trips' do
+  #     trips = OnyvaService.user_trips(15, "pending")
+
+  #     require 'pry'; binding.pry
+  #     expect(trips).to have_key()
+  #   end
+  # end
 end

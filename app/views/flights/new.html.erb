@@ -1,0 +1,29 @@
+<center>
+<div id="logo" align="center">
+<img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+</div>
+</center>
+
+<%= form_with method: :post, local: true do |f| %>
+<div class="row">
+    <div class="col">
+        <%= f.label :email %>
+        <p><%= f.email_field :email, class: "form-control", placeholder: "Email" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :date %>
+        <p><%= f.date_field :date, class: "form-control" %></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <%= f.label :airline_code %>
+        <p><%= f.text_field :airline_code, class: "form-control", placeholder: "Airline Code('SW')" %></p>
+    </div>
+    <div class="col">
+        <%= f.label :flight_number %>
+        <p><%= f.text_field :flight_number, class: "form-control", placeholder: "Flight Number" %></p>
+    </div>
+</div>
+<%= f.submit "Add Flight", class:"btn btn-dark" %>
+<% end %>
