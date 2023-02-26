@@ -3,34 +3,61 @@
     <%= button_to "Flight Information", trip_flights_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Add Flight Information", new_trip_flight_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Update Trip", edit_trip_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Delete #{@trip.name}", trip_path(@trip.id), method: :delete, local: true, class:"btn btn-danger btn-sm" %><br/><br/><br/><br/>
+    <%= button_to "Delete #{@trip.name}", trip_path(@trip.id), method: :delete, local: true, class:"btn btn-danger btn-sm" %>
   </div>
 </div>
 <div id="logo" align="left">
   <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="200" height="200" />
 </div>
 <center>
-<h1 class="trip_name"> <%= @trip.name %> </h1>
-image of city<br/>
-
-Group Packing list:<br/><br/><br/><br/>
+  <h1 class="trip_name"> <%= @trip.name %> </h1><br/><br/>
+</center>
 <div class="container text-center">
   <div class="row align-items-start">
     <div class="col">
-      <h4>Places to eat:</h4>
-      <ul>
+      <img src="https://live.staticflickr.com/65535/52710747985_04cfa2da0d_z.jpg" class="img-fluid" alt="moon" width="300" height="100" />
+    </div>
+    <div class="col">
+      Group Packing list:
+    </div>
+  </div>
+</div>
+<br/><br/><br/><br/>
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      Places to eat:
       <% @trip_events.each do |trip_event| %>
-        <li>Name: <%= trip_event.name %>
-        Address: <%= trip_event.address %>
+        <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+          <div class="accordion-item">
+            <h6 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                 <%= trip_event.name %>
+              </button>
+            </h6>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong> <button> Vote </button> <%= trip_event.address %></strong>
+              </div>
+             </div>
+          </div>
+        </div>
       <% end %>
-      </ul>
     </div>
     <div class="col">
       Things to do:
+      <div class="overflow-auto p-3 bg-light"
+        style="max-width: 400px; max-height: 500px;">
+        <% @trip_events.each do |trip_event| %>
+         <button> Vote </button> Name: <%= trip_event.name %>
+        Address: <%= trip_event.address %></br></br>
+        <% end %>
+        This is an example of using <code>.overflow-auto</code>
+        on an element with set width and height dimensions. By design, this content will vertically scroll.
+      </div>
     </div>
     <div class="col">
       Todays Itinerary:
     </div>
   </div>
 </div>
-</center>
