@@ -31,4 +31,9 @@ class OnyvaService
     response = conn.get("/api/v1/users/#{id}/trips/find_all?status=#{status}")
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
+
+  def self.find_user_by_email(user_email)
+    response = conn.get("https://onyva-be.herokuapp.com/api/v1/users/find", email: user_email)
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
 end

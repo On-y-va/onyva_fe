@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
   def create
     auth_hash = request.env['omniauth.auth']
-    user_email = auth_hash[:info][:email] 
+    session[:user_email] = auth_hash[:info][:email] 
     if current_user
-      session[:user_id] = user[:id]
       redirect_to user_path(session[:user_id])
     else
       flash[:error] = "Please create an account to continue"
