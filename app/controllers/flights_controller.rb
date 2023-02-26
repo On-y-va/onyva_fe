@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
   def index
-    trip_id = params[:trip_id]
-    flights = FlightsFacade.flights(trip_id)
+    @trip_id = params[:trip_id]
+    flights = FlightsFacade.flights(@trip_id)
   end
 
   def new

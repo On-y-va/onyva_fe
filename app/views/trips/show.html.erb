@@ -1,6 +1,6 @@
 <div id="button" align="right">
   <div class='btn-group'>
-   <%= button_to "Flight Information", trip_flights_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Flight Information", trip_flights_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Add Flight Information", new_trip_flight_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Update Trip", edit_trip_path(@trip.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Delete #{@trip.name}", trip_path(@trip.id), method: :delete, local: true, class:"btn btn-danger btn-sm" %><br/><br/><br/><br/>
