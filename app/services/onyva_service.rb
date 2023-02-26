@@ -1,8 +1,8 @@
 class OnyvaService
 
   def self.conn
-    Faraday.new(url: "https://onyva-be.herokuapp.com")
-    # Faraday.new(url: "http://localhost:5000")
+    # Faraday.new(url: "https://onyva-be.herokuapp.com")
+    Faraday.new(url: "http://localhost:5000")
   end
 
   def self.one_user(id)
