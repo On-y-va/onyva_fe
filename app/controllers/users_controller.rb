@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     user_id = params[:id]
     @user = UserFacade.one_user(user_id)
+    
     # @pending_trips = User.facade.user_trips("pending") 
     # @accepted_trips = User.facade.user_trips("accepted")
   end
