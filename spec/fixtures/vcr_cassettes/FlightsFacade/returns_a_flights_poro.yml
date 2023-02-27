@@ -15,23 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"ccfa255440d715cda13907f2eadc9dc3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - da438a07-538d-4a1e-a8cf-0ad4ffccb96c
-      X-Runtime:
-      - '0.005573'
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '0'
+      Server:
+      - AirTunes/620.8.2
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"flight","attributes":{"airline_code":"SW","flight_number":"ewf3d","date":"2023-02-25T00:00:00.000Z"}},{"id":"2","type":"flight","attributes":{"airline_code":"SW","flight_number":"abc123","date":"2023-02-25T00:00:00.000Z"}}]}'
-  recorded_at: Sat, 25 Feb 2023 19:00:24 GMT
+      string: ''
+  recorded_at: Mon, 27 Feb 2023 04:17:31 GMT
 recorded_with: VCR 6.1.0
