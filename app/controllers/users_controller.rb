@@ -10,22 +10,11 @@ class UsersController < ApplicationController
   end
 
   def update
-      UserFacade.update_user(session[:id])
+      UserFacade.update_user(session[:id], update_params)
   end
 
   def destroy
     # flash[:notice] = "User was successfully deleted."
-  end
-
-  private
-  def update_params
-    {
-      first_name: params[:first_name],
-      last_name: params[:last_name],
-      phone_number: params[:phone_number],
-      emergency_contact_name: params[:emergency_contact_name],
-      emergency_contact_phone_number: params[:emergency_contact_phone_number]
-      }
   end
 end
   
