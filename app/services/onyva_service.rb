@@ -33,7 +33,12 @@ class OnyvaService
   end
 
   def self.find_user_by_email(user_email)
-    response = conn.get("https://onyva-be.herokuapp.com/api/v1/users/find", email: user_email)
+    response = conn.get("/api/v1/users/find", email: user_email)
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.find_user_by_uid(uid)
+    response = conn.get("/api/v1/users/find", uid: uid)
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 end
