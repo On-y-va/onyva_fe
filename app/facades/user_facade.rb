@@ -1,12 +1,35 @@
 class UserFacade
-
   def self.one_user(id)
-    result = OnyvaService.one_user(id)
-    user = User.new(result)
+    result = OnyvaService.one_user(id)[0]
+    User.new(result)
   end
-
+  
   def self.delete_one_user(id)
     result = OnyvaService.delete_one_user(id)
-    user = User.new(result)
+    User.new(result)
+  end
+  
+  def self.find_user_by_email(user_email)
+    result = OnyvaService.find_user_by_email(user_email)
+    User.new(result)
+  end
+  
+  def self.find_by_uid(uid)
+    result = OnyvaService.find_user_by_uid(uid)
+    if result == {}
+      return nil
+    else
+      User.new(result)
+    end
+  end
+
+  def self.update_user(id)
+    result = OnyvaService.update_user(id)
+    User.new(result)
+  end
+
+  def self.create_user(user)
+    result = OnyvaService.create_user(user)
+    User.new(result)
   end
 end

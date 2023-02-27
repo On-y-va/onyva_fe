@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://onyva-be.herokuapp.com/api/v1/users/1
+    uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -15,31 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
     headers:
+      Content-Length:
+      - '0'
       Server:
-      - Cowboy
-      Date:
-      - Fri, 24 Feb 2023 19:49:29 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"e7683f3ce9f368da407ef168c33af05d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 79e770a4-dccc-423d-aec9-72b72e66aef2
-      X-Runtime:
-      - '0.004021'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      - AirTunes/620.8.2
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"braxton","last_name":"Eddings","phone_number":"1234567","email":"beddings81@gmail.com","password_digest":"$2a$12$iy3dTLWY5MoaHTnUg/75jeOns/fgyAhqyB/zsBeweHdLDARSHYYPK","emergency_contact_name":null,"emergency_contact_phone_number":null}}}'
-  recorded_at: Fri, 24 Feb 2023 19:49:30 GMT
+      string: ''
+  recorded_at: Mon, 27 Feb 2023 04:17:31 GMT
 recorded_with: VCR 6.1.0
