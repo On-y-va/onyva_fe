@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :users, only: [:show, :edit, :update, :new, :destroy]
+  resources :users, only: [:show, :edit, :update, :destroy]
 
   resources :trips, only: [:show, :edit, :update, :new, :destroy] do
     resources :flights, only: [:index, :new]
