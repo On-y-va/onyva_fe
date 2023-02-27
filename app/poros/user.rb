@@ -1,5 +1,5 @@
 class User
-  attr_reader :id, :first_name, :last_name, :phone_number, :email, :password, :emergency_contact_name, :emergency_contact_phone_number
+  attr_reader :id, :first_name, :last_name, :phone_number, :email, :password, :emergency_contact_name, :emergency_contact_phone_number, :google_uid
 
   def initialize(data)
     @id = data[:id]
