@@ -1,8 +1,17 @@
 class UsersController < ApplicationController
-  
   def show
-    user_id = params[:id]
-    @user = UserFacade.one_user(user_id)
+    # if params[:id] == "new"
+      # redirect_to :controller => 'users', :action => "create"
+    # end
+
+    # user_id = params[:id]
+    # @user = UserFacade.one_user(user_id)
+    require 'pry'; binding.pry
+    if current_user
+      @user = UserFacade.one_user(session[:user_id])
+    else
+      redirect_to root_path
+    end
     
     # @pending_trips = User.facade.user_trips("pending") 
     # @accepted_trips = User.facade.user_trips("accepted")
