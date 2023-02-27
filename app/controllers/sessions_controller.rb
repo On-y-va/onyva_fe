@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         uid: auth_hash[:uid]
       }
       user = UserFacade.create_user(user)
-      redirect_to user_path(user[:id])
+      redirect_to user_path(user.id)
     end
   end
 
