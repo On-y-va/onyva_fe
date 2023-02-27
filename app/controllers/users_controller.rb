@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     user_id = params[:id]
     @user = UserFacade.one_user(user_id)
+    # require 'pry'; binding.pry
     # @pending_trips = User.facade.user_trips("pending") 
     # @accepted_trips = User.facade.user_trips("accepted")
   end
@@ -22,10 +23,9 @@ class UsersController < ApplicationController
       })
     user_id = params[:id].to_i
     conn = Faraday.new
-    response = conn.patch("https://onyva-be.herokuapp.com/api/v1/users/1", {user: update_params})
-    # response = conn.patch("http://localhost:5000/api/v1/users/1", "user": update_params)
+    # response = conn.patch("https://onyva-be.herokuapp.com/api/v1/users/#{user_id}", {user: update_params})
+    response = conn.patch("http://localhost:5000/api/v1/users/#{user_id}", "user": update_params)
     user = JSON.parse(response.body, symbolize_names: true)[:data]
-    # user = User.new(data)
     redirect_to user_path(params[:id])
   end
 
@@ -43,8 +43,8 @@ class UsersController < ApplicationController
       })
       
       conn = Faraday.new
-      response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
-      # response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
+      # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
+      response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
       user = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to user_path(user[:id])
   end

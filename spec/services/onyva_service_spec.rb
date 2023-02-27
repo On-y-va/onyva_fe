@@ -23,7 +23,7 @@ RSpec.describe OnyvaService do
   end
 
   describe '#one_trip' do
-    it 'returns one trip', :vcr do
+    it 'returns one trip' do
       trip = OnyvaService.one_trip(1)
 
       expect(trip).to have_key(:id)
