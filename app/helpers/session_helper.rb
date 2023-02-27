@@ -1,4 +1,4 @@
-module SessionsHelper
+module SessionHelper
   def user
     {
       first_name: auth_hash[:info][:first_name],

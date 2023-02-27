@@ -51,5 +51,6 @@ class OnyvaService
   def self.create_user(user)
     response = conn.post("/api/v1/users", user: user)
     JSON.parse(response.body, symbolize_names: true)[:data]
+    # if email is taken redirect to find by uid
   end
 end
