@@ -16,7 +16,8 @@ class FlightsController < ApplicationController
       })
       
       conn = Faraday.new
-      response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", flight: flight_params)
+      # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", flight: flight_params)
+      response = conn.post("http://localhost:5000/api/v1/trips", flight: flight_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(trip[:id])
   end

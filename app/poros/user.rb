@@ -7,7 +7,6 @@ class User
     @last_name = data[:attributes][:last_name]
     @phone_number = data[:attributes][:phone_number]
     @email = data[:attributes][:email]
-    # @password = data[:password]
     @emergency_contact_name = data[:attributes][:emergency_contact_name]
     @emergency_contact_phone_number = data[:attributes][:emergency_contact_phone_number]
   end

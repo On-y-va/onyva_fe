@@ -1,7 +1,8 @@
 class OnyvaService
 
   def self.conn
-    Faraday.new(url: "https://onyva-be.herokuapp.com")
+    # Faraday.new(url: "https://onyva-be.herokuapp.com")
+    Faraday.new(url: "http://localhost:5000")
   end
 
   def self.one_user(id)
@@ -40,5 +41,10 @@ class OnyvaService
   def self.find_user_by_uid(uid)
     response = conn.get("/api/v1/users/find", uid: uid)
     result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.update_user(id)
+    response = conn.patch("/api/v1/users/1", {user: update_params})
+    JSON.parse(response.body, symbolize_names: true)[:data]
   end
 end

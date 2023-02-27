@@ -22,4 +22,9 @@ class UserFacade
       User.new(result)
     end
   end
+
+  def self.update_user(id)
+    result = OnyvaService.update_user(id)
+    User.new(result)
+  end
 end

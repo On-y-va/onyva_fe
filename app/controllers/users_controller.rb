@@ -1,44 +1,31 @@
 class UsersController < ApplicationController
+  before_action :current_user
+
   def show
-    # if params[:id] == "new"
-      # redirect_to :controller => 'users', :action => "create"
-    # end
-    require 'pry'; binding.pry
-    if current_user
-      @user = UserFacade.one_user(session[:user_id])
-    else
-      redirect_to root_path
-    end
-    
-    # @pending_trips = User.facade.user_trips("pending") 
-    # @accepted_trips = User.facade.user_trips("accepted")
+    @user = UserFacade.one_user(session[:user_id])
   end
 
   def edit
-    user_id = params[:id]
-    @user = UserFacade.one_user(user_id)
+      @user = UserFacade.one_user(session[:user_id])
   end
 
   def update
-    update_params = ({
-      "first_name": params[:first_name],
-      "last_name": params[:last_name],
-      "phone_number": params[:phone_number],
-      "emergency_contact_name": params[:emergency_contact_name],
-      "emergency_contact_phone_number": params[:emergency_contact_phone_number]
-      })
-    user_id = params[:id].to_i
-    conn = Faraday.new
-    # response = conn.patch("https://onyva-be.herokuapp.com/api/v1/users/1", {user: update_params})
-    response = conn.patch("http://localhost:5000/api/v1/users/1", "user": update_params)
-    user = JSON.parse(response.body, symbolize_names: true)[:data]
-    redirect_to user_path(user[:id])
+      UserFacade.update_user(session[:id])
   end
 
   def destroy
-    user_id = params[:id]
-    redirect_to root_path
-    flash[:notice] = "User was successfully deleted."
+    # flash[:notice] = "User was successfully deleted."
+  end
+
+  private
+  def update_params
+    {
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      phone_number: params[:phone_number],
+      emergency_contact_name: params[:emergency_contact_name],
+      emergency_contact_phone_number: params[:emergency_contact_phone_number]
+      }
   end
 end
   
