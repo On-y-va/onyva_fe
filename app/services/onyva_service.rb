@@ -47,4 +47,9 @@ class OnyvaService
     response = conn.patch("/api/v1/users/1", {user: update_params})
     JSON.parse(response.body, symbolize_names: true)[:data]
   end
+
+  def self.create_user(user)
+    response = conn.post("/api/v1/users", user: user)
+    JSON.parse(response.body, symbolize_names: true)[:data]
+  end
 end

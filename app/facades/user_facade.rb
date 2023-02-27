@@ -29,6 +29,7 @@ class UserFacade
   end
 
   def self.create_user
-    
+    result = OnyvaService.create_user(user)
+    User.new(result)
   end
 end
