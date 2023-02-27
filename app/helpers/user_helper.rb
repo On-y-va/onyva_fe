@@ -1,4 +1,4 @@
-module UsersHelper
+module UserHelper
   def update_params
     {
       first_name: params[:first_name],

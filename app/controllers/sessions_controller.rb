@@ -6,6 +6,12 @@ class SessionsController < ApplicationController
       session[:user_id] = @current_user.id
       redirect_to profile_path(session[:user_id])
     else
+      user =    {
+        first_name: auth_hash[:info][:first_name],
+        last_name: auth_hash[:info][:last_name],
+        email: auth_hash[:info][:unverified_email],
+        uid: auth_hash[:uid]
+      }
       user = UserFacade.create_user(user)
       redirect_to user_path(user.id)
     end
