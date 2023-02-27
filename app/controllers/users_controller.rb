@@ -39,24 +39,25 @@ class UsersController < ApplicationController
     redirect_to user_path(user[:id])
   end
 
-  def new
-  end
+  # def new
+  #   require 'pry'; binding.pry
+  # end
 
-  def create
-    user_params = ({
-      "first_name": params[:first_name],
-      "last_name": params[:last_name],
-      "phone_number": params[:phone_number],
-      "email": params[:email],
-      "password": params[:password],
-      "password_confirmation": params[:password_confirmation]
-      })
+  # def create
+  #   user_params = ({
+  #     "first_name": params[:first_name],
+  #     "last_name": params[:last_name],
+  #     "phone_number": params[:phone_number],
+  #     "email": params[:email],
+  #     "google_uid": params[:uid]
+  #     })
       
-      conn = Faraday.new
-      response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
-      user = JSON.parse(response.body, symbolize_names: true)[:data]
-      redirect_to user_path(user[:id])
-  end
+  #     conn = Faraday.new
+  #     # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
+  #     response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
+  #     user = JSON.parse(response.body, symbolize_names: true)[:data]
+  #     # redirect_to user_path(user[:id])
+  # end
 
   def destroy
     user_id = params[:id]
