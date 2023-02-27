@@ -3,9 +3,6 @@ class UsersController < ApplicationController
     # if params[:id] == "new"
       # redirect_to :controller => 'users', :action => "create"
     # end
-
-    # user_id = params[:id]
-    # @user = UserFacade.one_user(user_id)
     require 'pry'; binding.pry
     if current_user
       @user = UserFacade.one_user(session[:user_id])
@@ -35,29 +32,8 @@ class UsersController < ApplicationController
     # response = conn.patch("https://onyva-be.herokuapp.com/api/v1/users/1", {user: update_params})
     response = conn.patch("http://localhost:5000/api/v1/users/1", "user": update_params)
     user = JSON.parse(response.body, symbolize_names: true)[:data]
-    # user = User.new(data)
     redirect_to user_path(user[:id])
   end
-
-  # def new
-  #   require 'pry'; binding.pry
-  # end
-
-  # def create
-  #   user_params = ({
-  #     "first_name": params[:first_name],
-  #     "last_name": params[:last_name],
-  #     "phone_number": params[:phone_number],
-  #     "email": params[:email],
-  #     "google_uid": params[:uid]
-  #     })
-      
-  #     conn = Faraday.new
-  #     # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users", user: user_params)
-  #     response = conn.post("http://localhost:5000/api/v1/users", user: user_params)
-  #     user = JSON.parse(response.body, symbolize_names: true)[:data]
-  #     # redirect_to user_path(user[:id])
-  # end
 
   def destroy
     user_id = params[:id]
