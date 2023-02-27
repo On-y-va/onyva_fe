@@ -19,7 +19,7 @@ class UserFacade
     if result == {}
       return nil
     else
-      User.new(result)
+    User.new(result)
     end
   end
 
@@ -31,5 +31,10 @@ class UserFacade
   def self.create_user(user)
     result = OnyvaService.create_user(user)
     User.new(result)
+  end
+
+  def self.user_trips(user_id, status)
+    result = OnyvaService.user_trips(user_id, status)[0]
+    Trip.new(result)
   end
 end

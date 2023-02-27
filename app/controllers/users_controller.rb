@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     if current_user
       @user = current_user
+      @trips = 
     else
       @user = UserFacade.one_user(session[:user_id])
     end
