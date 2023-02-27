@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+include SessionHelper
   def create
     auth_hash = request.env['omniauth.auth'] 
     session[:uid] = auth_hash[:uid]
@@ -6,19 +7,15 @@ class SessionsController < ApplicationController
       session[:user_id] = @current_user.id
       redirect_to profile_path(session[:user_id])
     else
-      user =    {
-        first_name: auth_hash[:info][:first_name],
-        last_name: auth_hash[:info][:last_name],
-        email: auth_hash[:info][:unverified_email],
-        uid: auth_hash[:uid]
-      }
-      user = UserFacade.create_user(user)
-      redirect_to user_path(user.id)
+      user = UserFacade.create_user(user(auth_hash))
+      session[:user_id] = user.id
+      redirect_to profile_path(session[:user_id])
     end
   end
 
   def destroy
     session.delete(:user_id)
+    session.delete(:uid)
     @current_user = nil
     flash[:notice] = "You have successfully logged out."
     redirect_to root_url

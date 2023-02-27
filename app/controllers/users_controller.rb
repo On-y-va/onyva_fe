@@ -1,16 +1,24 @@
 class UsersController < ApplicationController
-  before_action :current_user
+  # before_action :current_user
 
   def show
-    @user = UserFacade.one_user(session[:user_id])
+    if current_user
+      @user = current_user
+    else
+      @user = UserFacade.one_user(session[:user_id])
+    end
   end
 
   def edit
+    if current_user
+      @user = current_user
+    else
       @user = UserFacade.one_user(session[:user_id])
+    end
   end
 
   def update
-      UserFacade.update_user(session[:id], update_params)
+    UserFacade.update_user(session[:id], update_params)
   end
 
   def destroy

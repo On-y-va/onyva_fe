@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resource :user, except: [:show]
   get 'profile', to: 'users#show'
-  get 'dashboard', to: 'users#show'
 
   resources :trips do
     resources :flights, only: [:index, :new]
