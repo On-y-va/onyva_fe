@@ -2,6 +2,10 @@ class TripsController < ApplicationController
 
   def show
     @trip = TripFacade.one_trip(params[:id])
+    @restuarants = @trip.events
+    #for later iterations
+    # @restuarants = TripEventFacade.trip_events(params[:id], "restuarant")
+    # @excursions = TripEventFacade.trip_events(params[:id], "entertainment")
   end
   
   def edit

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       redirect_to profile_path(session[:user_id])
     else
       user = UserFacade.create_user(user)
-      redirect_to user_path(user[:id])
+      redirect_to user_path(user.id)
     end
   end
 

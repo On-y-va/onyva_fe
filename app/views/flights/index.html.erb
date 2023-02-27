@@ -1,3 +1,8 @@
+<div id="button" align="right">
+  <div class='btn-group'>
+    <%= button_to "Trip Details", trip_path(@trip_id), method: :get, local: true, class:"btn btn-dark btn-sm" %>
+  </div>
+</div>
 <center>
 <div id="logo" align="center">
 <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
@@ -5,7 +10,7 @@
 </center>
 
 <table class="table">
-  <thead>
+  <thead class="table-secondary">
     <tr>
       <th scope="col">User email</th>
       <th scope="col">Airline Code</th>
@@ -13,12 +18,13 @@
       <th scope="col">Date</th>
     </tr>
   </thead>
+  <tbody class="table-group-divider">
   <tbody>
     <tr>
       <td>john@email.com</td>
-      <td>SW</td>
+      <td><%= @flights %></td>
       <td>1223</td>
-      <td>Date</td>
+      <td>02/26/2023</td>
     </tr>
   </tbody>
 </table>

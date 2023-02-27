@@ -1,14 +1,16 @@
 class Trip
-  attr_reader :id, :name, :country, :city, :postcode, :place_id, :start_time, :end_time
+  attr_reader :trip_id, :name, :country, :city, :postcode, :place_id, :start_time, :end_time, :events, :image_url
 
-  def initialize(data)
-    @id = data[:id]
-    @name = data[:attributes][:name]
-    @country = data[:attributes][:country]
-    @city = data[:attributes][:city]
-    @postcode = data[:attributes][:postcode]
-    @place_id = data[:attributes][:place_id]
-    @start_time = data[:attributes][:start_time]
-    @end_time = data[:attributes][:end_time]
+  def initialize(info)
+    @trip_id = info[:data][:id]
+    @name = info[:data][:attributes][:name]
+    @country = info[:data][:attributes][:country]
+    @city = info[:data][:attributes][:city]
+    @postcode = info[:data][:attributes][:postcode]
+    @place_id = info[:data][:attributes][:place_id]
+    @start_time = info[:data][:attributes][:start_time]
+    @end_time = info[:data][:attributes][:end_time]
+    @image_url = info[:data][:attributes][:image_url]
+    @events = info[:included]
   end
 end

@@ -11,7 +11,8 @@ RSpec.describe Trip do
             postcode: '00140',
             place_id: nil,
             start_time: "2023-02-28",
-            end_time: "2023-03-09"
+            end_time: "2023-03-09",
+            events: []
           }}
 
     trip = Trip.new(data)
@@ -25,5 +26,8 @@ RSpec.describe Trip do
     expect(trip.place_id).to eq(nil)
     expect(trip.start_time).to eq("2023-02-28")
     expect(trip.end_time).to eq("2023-03-09")
+    expect(trip.events).to eq([])
+    
+
   end
 end
