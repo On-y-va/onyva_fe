@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/2
+    uri: http://localhost:5000/api/v1/users/find?google_uid=113236883765066486494
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7d67c54ac489d7cdb2feef214861567e"
+      - W/"742f7225fe50424deb41e16f243eab12"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 13668af7-2b75-4c07-a8bd-232c6dbfe2e0
+      - c7a612e8-117f-432a-addc-f5e75d2e868b
       X-Runtime:
-      - '0.002543'
+      - '0.006848'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Alastair","last_name":"Lloyd","phone_number":"1234567890","email":"1@email","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":null}}}'
-  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
+      string: '{"data":{"id":"3","type":"user","attributes":{"first_name":"Alastair","last_name":"Lloyd","phone_number":null,"email":"dex8056@gmail.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"113236883765066486494"}}}'
+  recorded_at: Tue, 28 Feb 2023 19:37:10 GMT
 recorded_with: VCR 6.1.0

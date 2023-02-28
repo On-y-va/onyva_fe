@@ -24,6 +24,4 @@ RSpec.describe User do
     expect(user.emergency_contact_name).to eq(nil)
     expect(user.emergency_contact_phone_number).to eq(nil)
   end
-
-  it 'creates an empty'
 end

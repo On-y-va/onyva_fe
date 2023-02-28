@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/2
+    uri: http://localhost:5000/api/v1/trips/3/flights
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7d67c54ac489d7cdb2feef214861567e"
+      - W/"aec50c72f212b657109d4571efdbcc1f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 13668af7-2b75-4c07-a8bd-232c6dbfe2e0
+      - 6e33814d-671c-4fd8-9b0f-942586cf64c7
       X-Runtime:
-      - '0.002543'
+      - '0.037616'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Alastair","last_name":"Lloyd","phone_number":"1234567890","email":"1@email","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":null}}}'
-  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
+      string: '{"data":[{"id":"1","type":"flight","attributes":{"airline_code":"sw","flight_number":"123","date":"2023-03-01T00:00:00.000Z"}}]}'
+  recorded_at: Tue, 28 Feb 2023 19:45:21 GMT
 recorded_with: VCR 6.1.0

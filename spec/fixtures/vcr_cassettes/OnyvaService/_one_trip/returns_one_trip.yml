@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/trips/1
+    uri: http://localhost:5000/api/v1/trips/2
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"82dd3f0e5b6b3262195e1e51fb8e7f0f"
+      - W/"528220b542e541ccf8fc052cbb24dfb1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd39b492-2489-446f-b98d-98783cbd2f31
+      - f4fdf790-fc4b-4a97-b090-a6b4c7dc0821
       X-Runtime:
-      - '0.034505'
+      - '0.020881'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"trip","attributes":{"name":"guys trip","city":"rome","country":"rome","postcode":"00123","place_id":null,"start_date":null,"end_date":null,"image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
-  recorded_at: Tue, 28 Feb 2023 15:45:25 GMT
+      string: '{"data":{"id":"2","type":"trip","attributes":{"name":"Trippin","city":"Rome","country":"Italy","postcode":"00123","place_id":null,"start_date":null,"end_date":null,"image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
+  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
 recorded_with: VCR 6.1.0

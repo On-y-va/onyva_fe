@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:5000/api/v1/users/2
+    uri: http://localhost:5000/api/v1/trips/2
     body:
       encoding: US-ASCII
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 89d3eb8b-e069-4da3-b50a-d6cb33cbacce
+      - 117a22c7-d466-421e-b7f0-7c4ae4c33229
       X-Runtime:
-      - '0.044790'
+      - '0.045629'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
+  recorded_at: Tue, 28 Feb 2023 19:15:54 GMT
 recorded_with: VCR 6.1.0

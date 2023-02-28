@@ -9,8 +9,8 @@ RSpec.describe UserTrip do
                 country: 'Italy',
                 city: 'Rome',
                 postcode: '00140',
-                start_time: "2023-02-28",
-                end_time: "2023-03-09"
+                start_date: "2023-02-28",
+                end_date: "2023-03-09"
           }
         }
 
@@ -22,7 +22,7 @@ RSpec.describe UserTrip do
     expect(user_trip.country).to eq("Italy")
     expect(user_trip.city).to eq("Rome")
     expect(user_trip.postcode).to eq("00140")
-    expect(user_trip.start_time).to eq("2023-02-28")
-    expect(user_trip.end_time).to eq("2023-03-09")
+    expect(user_trip.start_date).to eq("2023-02-28")
+    expect(user_trip.end_date).to eq("2023-03-09")
   end
 end
