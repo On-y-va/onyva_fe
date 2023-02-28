@@ -1,8 +1,8 @@
 <div id="button" align="right">
   <div class='btn-group'>
-    <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn btn-dark btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Delete #{@user.first_name}", user_path(@user.id), method: :delete, local: true, class:"btn btn-danger btn-sm" %><br/><br/><br/><br/>
+    <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Delete #{@user.first_name}", user_path(@user.id), method: :delete, local: true, class:"btn button-danger btn-sm" %><br/><br/><br/><br/>
   </div>
 </div>
 <div id="logo" align="left">
@@ -11,7 +11,7 @@
 <center>
   <p><h3>Welcome <%= @user.first_name %> <%= @user.last_name %></h3></p>
 
-  <div class="bg-secondary p-1 rounded-lg m-5">
+  <div class="bg p-1 rounded-lg m-5">
     <h4> Upcoming Trips </h4><br/><br/><br/><br/>
     <% @upcoming_trips.each do |trip| %>
       <p><b><%= trip.name %></p></b>
@@ -20,7 +20,7 @@
       <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
     <% end %>
   </div>
-  <div class="bg-secondary p-1 rounded-lg m-5">
+  <div class="bg p-1 rounded-lg m-5">
     <h4> Pending Trips </h4><br/><br/><br/><br/>
     <% @pending_trips.each do |trip| %>
       <p><b><%= trip.name %></p></b>

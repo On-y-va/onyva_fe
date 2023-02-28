@@ -22,7 +22,18 @@
   font-family: "Garamond", sans-serif;
 }
 
+.button-danger{
+  background-color: rgb(92, 141, 255);
+  color: white;
+  box-shadow: 0px 0px 2px 2px #6a5acd;
+  font-family: "Garamond", sans-serif;
+}
+
 .button:hover {
   background-color: #DA70D6;
   transition: 0.7s;
+}
+
+.bg {
+  background-color:  rgb(105, 115, 207);
 }
