@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1
+    uri: http://localhost:5000/api/v1/users/2
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6ae2c98929b315be0a5051c2759e9f4c"
+      - W/"7d67c54ac489d7cdb2feef214861567e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fefa306e-6033-4508-851c-d17940691a06
+      - 13668af7-2b75-4c07-a8bd-232c6dbfe2e0
       X-Runtime:
-      - '0.002952'
+      - '0.002543'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"johan","last_name":"Eddings","phone_number":"1234567890","email":"test@email","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":null}}}'
-  recorded_at: Tue, 28 Feb 2023 15:39:07 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Alastair","last_name":"Lloyd","phone_number":"1234567890","email":"1@email","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":null}}}'
+  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
 recorded_with: VCR 6.1.0

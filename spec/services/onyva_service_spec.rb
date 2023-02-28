@@ -4,7 +4,7 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#one_user' do
     it 'returns one user' do      
-      user = OnyvaService.one_user(1)
+      user = OnyvaService.one_user(2)
 
       expect(user).to be_a(Hash)
       expect(user).to have_key(:id)
@@ -24,7 +24,7 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#delete_one_user' do
     it 'deletes one user' do      
-      user = OnyvaService.delete_one_user(1)
+      user = OnyvaService.delete_one_user(2)
 
       expect(user[:response_body]).to eq nil
     end
@@ -32,7 +32,7 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#one_trip' do
     it 'returns one trip' do
-      trip = OnyvaService.one_trip(1)
+      trip = OnyvaService.one_trip(2)
 
       expect(trip).to be_a(Hash)
       expect(trip[:data]).to have_key(:id)
