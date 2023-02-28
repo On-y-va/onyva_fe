@@ -1,4 +1,4 @@
-class TripEvent
+class Event
   attr_reader :name, :address
 
   def initialize(data)
