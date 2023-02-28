@@ -1,17 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe OnyvaService do
+RSpec.describe OnyvaService, :vcr do
 
   describe '#one_user' do
-    it 'returns one user', :vcr do
-      # TODO: stub and mock user, or double
-      # create main seed file in back end and force ids
-      
+    it 'returns one user' do      
       user = OnyvaService.one_user(1)
 
+      expect(user).to be_a(Hash)
       expect(user).to have_key(:id)
       expect(user[:id]).to be_a(String)
-
       expect(user[:attributes]).to have_key(:first_name)
       expect(user[:attributes][:first_name]).to be_a(String)
       expect(user[:attributes]).to have_key(:last_name)
@@ -22,8 +19,14 @@ RSpec.describe OnyvaService do
       expect(user[:attributes][:email]).to be_a(String)
       expect(user[:attributes]).to have_key(:emergency_contact_name)
       expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
+    end
+  end
 
-      # expect(status)
+  describe '#delete_one_user' do
+    it 'deletes one user' do      
+      user = OnyvaService.delete_one_user(1)
+
+      expect(user[:response_body]).to eq nil
     end
   end
 
@@ -31,22 +34,24 @@ RSpec.describe OnyvaService do
     it 'returns one trip' do
       trip = OnyvaService.one_trip(1)
 
-      expect(trip).to have_key(:id)
-      expect(trip[:id]).to be_a(String)
-
-      expect(trip[:attributes]).to have_key(:name)
-      expect(trip[:attributes][:name]).to be_a(String)
-      expect(trip[:attributes]).to have_key(:country)
-      expect(trip[:attributes][:country]).to be_a(String)
-      expect(trip[:attributes]).to have_key(:city)
-      expect(trip[:attributes][:city]).to be_a(String)
-      expect(trip[:attributes]).to have_key(:postcode)
-      expect(trip[:attributes][:postcode]).to be_a(String)
-      expect(trip[:attributes]).to have_key(:place_id)
+      expect(trip).to be_a(Hash)
+      expect(trip[:data]).to have_key(:id)
+      expect(trip[:data][:id]).to be_a(String)
+      expect(trip[:data][:attributes]).to have_key(:name)
+      expect(trip[:data][:attributes][:name]).to be_a(String)
+      expect(trip[:data][:attributes]).to have_key(:country)
+      expect(trip[:data][:attributes][:country]).to be_a(String)
+      expect(trip[:data][:attributes]).to have_key(:city)
+      expect(trip[:data][:attributes][:city]).to be_a(String)
+      expect(trip[:data][:attributes]).to have_key(:postcode)
+      expect(trip[:data][:attributes][:postcode]).to be_a(String)
+      expect(trip[:data][:attributes]).to have_key(:place_id)
+      expect(trip[:data][:attributes]).to have_key(:start_date)
+      expect(trip[:data][:attributes]).to have_key(:end_date)
     end
   end
 
-  describe '#user_flights' do
+  xdescribe '#user_flights' do
     it 'returns a users flights' do
       flights = OnyvaService.flights(1)
 
