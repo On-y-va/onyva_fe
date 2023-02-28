@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  include UserModule
-  # before_action :current_user
+  include UserHelper
+  before_action :current_user
+  before_action :authenticate
 
   def show
     # need error handling if no trips
@@ -16,11 +17,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if current_user
-      @user = current_user
-    else
-      @user = UserFacade.one_user(session[:user_id])
-    end
+    @user = current_user
   end
 
   def update

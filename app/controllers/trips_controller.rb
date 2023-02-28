@@ -1,4 +1,6 @@
 class TripsController < ApplicationController
+  before_action :current_user
+  before_action :authenticate
 
   def show
     @trip = TripFacade.one_trip(params[:id])
