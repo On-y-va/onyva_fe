@@ -11,8 +11,6 @@ class User
       @email = data[:attributes][:email]
       @emergency_contact_name = data[:attributes][:emergency_contact_name]
       @emergency_contact_phone_number = data[:attributes][:emergency_contact_phone_number]
-    else
-      require 'pry'; binding.pry
     end
   end
 end
