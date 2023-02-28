@@ -59,9 +59,9 @@ RSpec.describe OnyvaService, :vcr do
     end
   end
 
-  xdescribe '#user_flights' do
+  describe '#user_flights' do
     it 'returns a users flights' do
-      flights = OnyvaService.flights(1)
+      flights = OnyvaService.flights(3)
 
       expect(flights).to be_a(Array)
       expect(flights[0]).to have_key(:id)
@@ -69,6 +69,59 @@ RSpec.describe OnyvaService, :vcr do
       expect(flights[0][:attributes]).to have_key(:airline_code)
       expect(flights[0][:attributes]).to have_key(:flight_number)
       expect(flights[0][:attributes]).to have_key(:date)
+    end
+  end
+
+  xdescribe '#user_trips' do
+    it 'returns a users trips' do      
+      user_trip = OnyvaService.user_trips(3, 'accepted')
+
+      expect(user_trip).to be_a(Hash)
+    end
+  end
+
+  describe '#find_user_by_google_uid' do
+    it 'returns a users' do      
+      user = OnyvaService.find_user_by_google_uid(113236883765066486494)
+
+      expect(user).to be_a(Hash)
+      expect(user).to have_key(:id)
+      expect(user[:id]).to be_a(String)
+      expect(user[:attributes]).to have_key(:first_name)
+      expect(user[:attributes][:first_name]).to be_a(String)
+      expect(user[:attributes]).to have_key(:last_name)
+      expect(user[:attributes][:last_name]).to be_a(String)
+      expect(user[:attributes]).to have_key(:phone_number)
+      expect(user[:attributes]).to have_key(:email)
+      expect(user[:attributes][:email]).to be_a(String)
+      expect(user[:attributes]).to have_key(:emergency_contact_name)
+      expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
+    end
+  end
+
+  xdescribe '#update_user' do #this wont run as it doesnt know what update params are in onyva_service/controller
+    it 'updates a user' do      
+      user = OnyvaService.update_user(3)
+
+      expect(user).to be_a(Hash)
+      expect(user).to have_key(:id)
+      expect(user[:id]).to be_a(String)
+      expect(user[:attributes]).to have_key(:first_name)
+      expect(user[:attributes][:first_name]).to be_a(String)
+      expect(user[:attributes]).to have_key(:last_name)
+      expect(user[:attributes][:last_name]).to be_a(String)
+      expect(user[:attributes]).to have_key(:phone_number)
+      expect(user[:attributes][:phone_number]).to be_a(String)
+      expect(user[:attributes]).to have_key(:email)
+      expect(user[:attributes][:email]).to be_a(String)
+      expect(user[:attributes]).to have_key(:emergency_contact_name)
+      expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
+    end
+  end
+
+  xdescribe '#create_user' do #not sure how we are testing this as its a post 
+    it 'creates a user' do      
+      user = OnyvaService.create_user(4)
     end
   end
 end
