@@ -4,16 +4,10 @@ class UsersController < ApplicationController
   before_action :authenticate
 
   def show
-    # need error handling if no trips
-    if current_user
-      @user = current_user
-      @pending_trips = UserFacade.user_trips(@user.id, 0)
-      @upcoming_trips = UserFacade.user_trips(@user.id, 1)
-    else
-      @user = UserFacade.one_user(session[:user_id])
-      @pending_trips = UserFacade.user_trips(@user.id, 0)
-      @upcoming_trips = UserFacade.user_trips(@user.id, 1)
-    end
+  # need error handling if no trip
+    @user = current_user
+    @pending_trips = UserFacade.user_trips(@user.id, 0)
+    @upcoming_trips = UserFacade.user_trips(@user.id, 1)
   end
 
   def edit
