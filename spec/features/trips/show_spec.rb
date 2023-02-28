@@ -61,8 +61,8 @@ RSpec.describe 'trip show page', :vcr do
   xit 'has a section for places to eat and list the name and address' do
     within("#food") do
       expect(page).to have_content('Places to eat')
-      # expect(page).to have_content(restuarant[0][:attributes][:name])
-      # expect(page).to have_content(restuarant[0][:attributes][:address])
+      # expect(page).to have_content(restaurant[0][:attributes][:name])
+      # expect(page).to have_content(restaurant[0][:attributes][:address])
     end
   end
 
