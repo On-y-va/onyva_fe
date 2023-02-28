@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :users
+  resources :users, except: [:index]
   resources :trips do
     resources :flights, only: [:index, :new]
   end
