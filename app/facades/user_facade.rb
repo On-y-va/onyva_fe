@@ -1,6 +1,7 @@
 class UserFacade
   def self.one_user(id)
     result = OnyvaService.one_user(id)
+    # require 'pry'; binding.pry
     return User.new(result)
   end
   

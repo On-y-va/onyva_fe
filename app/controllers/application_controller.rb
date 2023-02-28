@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
+    # require 'pry'; binding.pry
     @current_user = UserFacade.one_user(session[:user_id]) if session[:user_id]
     # redirect_to root_path, status: :unauthorized if @current_user.nil?
   end
