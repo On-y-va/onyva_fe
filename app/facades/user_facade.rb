@@ -1,7 +1,7 @@
 class UserFacade
   def self.one_user(id)
-    result = OnyvaService.one_user(id)[0]
-    User.new(result)
+    result = OnyvaService.one_user(id)
+    return User.new(result)
   end
   
   def self.delete_one_user(id)

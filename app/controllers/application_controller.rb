@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= UserFacade.find_by_uid(session[:uid]) if session[:uid]
+    @current_user ||= UserFacade.find_by_uid(session[:google_uid]) if session[:google_uid]
     # redirect_to root_path, status: :unauthorized if @current_user.nil?
   end
 end

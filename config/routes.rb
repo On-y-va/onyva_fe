@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resource :user, except: [:show]
-  get 'profile', to: 'users#show'
+  get 'profile/:id', to: 'users#show', as: :user_profile
 
   resources :trips do
     resources :flights, only: [:index, :new]
