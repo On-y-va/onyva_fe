@@ -2,11 +2,15 @@ class UsersController < ApplicationController
   # before_action :current_user
 
   def show
+    # need error handling if no trips
     if current_user
       @user = current_user
-      @trips = 
+      @pending_trips = UserFacade.user_trips(@user.id, 0)
+      @upcoming_trips = UserFacade.user_trips(@user.id, 1)
     else
       @user = UserFacade.one_user(session[:user_id])
+      @pending_trips = UserFacade.user_trips(@user.id, 0)
+      @upcoming_trips = UserFacade.user_trips(@user.id, 1)
     end
   end
 

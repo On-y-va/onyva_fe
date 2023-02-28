@@ -15,7 +15,7 @@ RSpec.describe UserTrip do
         }
 
     user_trip = UserTrip.new(data)
-
+    
     expect(user_trip).to be_a(UserTrip)
     expect(user_trip.trip_id).to eq("1")
     expect(user_trip.name).to eq("Guys trip")

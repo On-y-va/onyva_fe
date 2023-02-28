@@ -34,7 +34,9 @@ class UserFacade
   end
 
   def self.user_trips(user_id, status)
-    result = OnyvaService.user_trips(user_id, status)[0]
-    Trip.new(result)
+    results = OnyvaService.user_trips(user_id, status)
+    results.map do |user_trip|
+      UserTrip.new(user_trip)
+    end
   end
 end
