@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UserModule
   # before_action :current_user
 
   def show
