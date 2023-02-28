@@ -1,12 +1,23 @@
 class SessionsController < ApplicationController
+include SessionHelper
   def create
-    auth_hash = request.env['omniauth.auth']
-    user_email = auth_hash[:info][:email] 
-    conn = Faraday.new
-    response = conn.get("https://onyva-be.herokuapp.com/api/v1/users/find", email: user_email)
-    # response = conn.get("http://localhost:5000/api/v1/users/find", email: user_email)
-    user = JSON.parse(response.body, symbolize_names: true)[:data]
-    session[:user_id] = user[:id]
-    redirect_to user_path(session[:user_id])
+    auth_hash = request.env['omniauth.auth'] 
+    session[:uid] = auth_hash[:uid]
+    if current_user
+      session[:user_id] = @current_user.id
+      redirect_to profile_path(session[:user_id])
+    else
+      user = UserFacade.create_user(user(auth_hash))
+      session[:user_id] = user.id
+      redirect_to profile_path(session[:user_id])
+    end
+  end
+
+  def destroy
+    session.delete(:user_id)
+    session.delete(:uid)
+    @current_user = nil
+    flash[:notice] = "You have successfully logged out."
+    redirect_to root_url
   end
 end

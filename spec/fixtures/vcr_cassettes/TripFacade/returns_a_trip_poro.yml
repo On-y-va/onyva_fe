@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://onyva-be.herokuapp.com/api/v1/trips/1
+    uri: http://localhost:5000/api/v1/trips/1
     body:
       encoding: US-ASCII
       string: ''
@@ -15,32 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 403
+      message: Forbidden
     headers:
+      Content-Length:
+      - '0'
       Server:
-      - Cowboy
-      Date:
-      - Fri, 24 Feb 2023 19:45:13 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"c7f8ae70882e3e5b9a2997d00b43e8f7"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - '09657f43-1d02-46e8-997b-3ac8a8f8ccfe'
-      X-Runtime:
-      - '0.052539'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
+      - AirTunes/620.8.2
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Girl''s trip","city":"San
-        Francisco","country":"United States","postcode":"94122","place_id":null,"start_date":"2/24/2023","end_date":"2/25/2023"}}}'
-  recorded_at: Fri, 24 Feb 2023 19:45:14 GMT
+      string: ''
+  recorded_at: Mon, 27 Feb 2023 04:17:31 GMT
 recorded_with: VCR 6.1.0

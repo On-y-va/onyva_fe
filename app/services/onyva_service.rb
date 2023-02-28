@@ -25,7 +25,6 @@ class OnyvaService
 
   def self.flights(id)
     response = conn.get("/api/v1/trips/#{id}/flights")
-    require 'pry'; binding.pry
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
@@ -34,9 +33,24 @@ class OnyvaService
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
-  def self.trip_events(id)
-    response = conn.get("/api/v1/trips/#{id}/trip_events")
-    # response = conn.get("/api/v1/trips/#{id}/trip_events/find_all?type=#{type}")
+  def self.find_user_by_email(user_email)
+    response = conn.get("/api/v1/users/find", email: user_email)
     result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.find_user_by_uid(uid)
+    response = conn.get("/api/v1/users/find", uid: uid)
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.update_user(id)
+    response = conn.patch("/api/v1/users/1", {user: update_params})
+    JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.create_user(user)
+    response = conn.post("/api/v1/users", user: user)
+    JSON.parse(response.body, symbolize_names: true)[:data]
+    # if email is taken redirect to find by uid
   end
 end

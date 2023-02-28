@@ -34,20 +34,23 @@ class TripsController < ApplicationController
 
   def create
     trip_params = ({
-      "name": params[:name],
-      "country": params[:country],
-      "city": params[:city],
-      "postcode": params[:postcode],
-      "place_id": params[:place_id],
-      "start_date": params[:start_date],
-      "end_date": params[:end_date]
-      })
-      
+      name: params[:name],
+      country: params[:country],
+      city: params[:city],
+      postcode: params[:postcode],
+      start_date: params[:start_date],
+      end_date: params[:end_date]
+    })
+    trip_params.delete_if { |k, v| v == "" } 
       conn = Faraday.new
       # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: trip_params)
       response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
-      redirect_to trip_path(trip[:id])
+      unless trip.nil? || trip.empty?
+        redirect_to trip_path(trip[:id]) 
+      else
+        redirect_to new_trip_path
+      end
   end
 
   def destroy
