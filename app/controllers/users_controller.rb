@@ -4,20 +4,11 @@ class UsersController < ApplicationController
   before_action :authenticate
 
   def show
-    require 'pry'; binding.pry
-    if current_user
-      @user = current_user
-    else
-      # @user = UserFacade.one_user(session[:user_id])
-    end
+    @user = current_user
   end
 
   def edit
-    if current_user
-      @user = current_user
-    else
-      @user = UserFacade.one_user(session[:user_id])
-    end
+    @user = current_user
   end
 
   def update

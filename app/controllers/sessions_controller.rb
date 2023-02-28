@@ -2,13 +2,11 @@ class SessionsController < ApplicationController
 include SessionHelper
   def create
     session[:user_id] = find_or_create_from_auth_hash(request.env["omniauth.auth"])
-    # require 'pry'; binding.pry
     redirect_to user_path(session[:user_id])
   end
 
   def destroy
     session.delete(:user_id)
-    # session.delete(:uid)
     @current_user = nil
     flash[:notice] = "You have successfully logged out."
     redirect_to root_url
@@ -17,7 +15,6 @@ include SessionHelper
   private
 
   def find_or_create_from_auth_hash(auth_hash)
-    # require 'pry'; binding.pry
     user = UserFacade.find_by_google_uid(auth_hash[:uid])
     if user
       session[:user_id] = user.id
