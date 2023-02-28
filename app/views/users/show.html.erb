@@ -10,7 +10,11 @@
 </div>
 <center>
   <p><h3>Welcome <%= @user.first_name %> <%= @user.last_name %></h3></p>
-
+  <div id="econtact">
+    <p>Emergency Contact:</p>
+    <p><%= @user.emergency_contact_name %></p>
+    <p><%= @user.emergency_contact_phone_number %></p>
+  </div>
   <div class="bg p-1 rounded-lg m-5">
     <h4> Upcoming Trips </h4><br/><br/><br/><br/>
     <% @upcoming_trips.each do |trip| %>

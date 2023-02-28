@@ -15,7 +15,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    UserFacade.update_user(session[:id], update_params)
+    UserFacade.update_user(params[:id], update_params)
+    # UserFacade.update_user(session[:id], update_params)
+    redirect_to user_path(params[:id])
   end
 
   def destroy
