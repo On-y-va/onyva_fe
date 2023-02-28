@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resource :user, except: [:show]
-  get 'profile/:id', to: 'users#show', as: :user_profile
-
+  resources :users
   resources :trips do
     resources :flights, only: [:index, :new]
   end
+
   post '/trips/:trip_id/flights/new', to: 'flights#create'
   post '/trips/new', to: 'trips#create'
   get '/auth/:provider/callback', to: 'sessions#create'
