@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'trips new page', :vcr do
   xit 'has the onyva logo' do
     within ('#logo') do
-      expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']") #not sure this is accurate way to test
+      expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']")
     end
   end
 
@@ -28,7 +28,7 @@ RSpec.describe 'trips new page', :vcr do
     expect(page).to have_button("Onyva")
   end
 
-  xit 'redirects to the trip show page upon successful registration' do
+  it 'redirects to the trip show page upon successful registration' do
     visit new_trip_path
 
     fill_in(:name, with: "Trippin")
@@ -40,11 +40,11 @@ RSpec.describe 'trips new page', :vcr do
 
     click_button("Onyva")
 
-    expect(current_path).to eq trip_path(1)
+    expect(current_path).to eq trip_path(8)
     expect(page).to have_css(".trip_name")
   end
 
-  xit 'doesnt create a trip if country is missing' do
+  it 'doesnt create a trip if country is missing' do
     visit new_trip_path
 
     fill_in :name, with: "Trippin"
@@ -60,7 +60,7 @@ RSpec.describe 'trips new page', :vcr do
     # expect(page).to have_content(#error message)
   end
 
-  xit 'doesnt create a trip if city is missing' do
+  it 'doesnt create a trip if city is missing' do
     visit new_trip_path
 
     fill_in :name, with: "Trippin"
@@ -76,7 +76,7 @@ RSpec.describe 'trips new page', :vcr do
     # expect(page).to have_content(#error message)
   end
 
-  xit 'doesnt create a trip if postcode is missing' do
+  it 'doesnt create a trip if postcode is missing' do
     visit new_trip_path
 
     fill_in :name, with: "Trippin"
@@ -92,7 +92,7 @@ RSpec.describe 'trips new page', :vcr do
     # expect(page).to have_content(#error message)
   end
 
-  xit 'doesnt create a trip if dates are missing' do
+  it 'doesnt create a trip if dates are missing' do
     visit new_trip_path
 
     fill_in :name, with: "Trippin"

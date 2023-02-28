@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"82dd3f0e5b6b3262195e1e51fb8e7f0f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03eee297-3134-4106-bd7b-1a22681d9669
+      X-Runtime:
+      - '0.033600'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"trip","attributes":{"name":"guys trip","city":"rome","country":"rome","postcode":"00123","place_id":null,"start_date":null,"end_date":null,"image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
+  recorded_at: Tue, 28 Feb 2023 14:45:03 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/trips
+    body:
+      encoding: UTF-8
+      string: trip%5Bcity%5D=Cabo&trip%5Bcountry%5D=Mexico&trip%5Bend_date%5D=2023-03-09&trip%5Bname%5D=Trippin&trip%5Bpostcode%5D=00123&trip%5Bstart_date%5D=2023-02-28
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3d4d367ae7e383704b799e678fef1599"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dcfbf98d-d32e-4bc6-aeee-c61c5a50d0b7
+      X-Runtime:
+      - '0.005227'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09","image_url":null},"relationships":{"events":{"data":[]}}}}'
+  recorded_at: Tue, 28 Feb 2023 14:45:03 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f36462dad3c9fa818b4a4e2204a0b901"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8dd2b211-092d-47a2-b7d9-1afceffa7ccf
+      X-Runtime:
+      - '0.003207'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"9","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09","image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
+  recorded_at: Tue, 28 Feb 2023 14:45:03 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/trips
+    body:
+      encoding: UTF-8
+      string: trip%5Bcity%5D=Cabo&trip%5Bcountry%5D=Mexico&trip%5Bend_date%5D=2023-03-09&trip%5Bname%5D=Trippin&trip%5Bpostcode%5D=00123&trip%5Bstart_date%5D=2023-02-28
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"87ce152ee928301624fcd49f033e975c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4425a703-4075-4786-ade6-b44f92d5676c
+      X-Runtime:
+      - '0.030942'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"8","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09","image_url":null},"relationships":{"events":{"data":[]}}}}'
+  recorded_at: Tue, 28 Feb 2023 14:35:32 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fdde104ac182bbc1e4bf5653eba61e2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ab27dc5f-1198-4768-a700-813dc7d5521e
+      X-Runtime:
+      - '0.005788'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"8","type":"trip","attributes":{"name":"Trippin","city":"Cabo","country":"Mexico","postcode":"00123","place_id":null,"start_date":"2023-02-28","end_date":"2023-03-09","image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
+  recorded_at: Tue, 28 Feb 2023 14:35:32 GMT
+recorded_with: VCR 6.1.0
