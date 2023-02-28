@@ -16,18 +16,22 @@
 
 #SimpleCov
 require 'simplecov'
+require 'omniauth'
+
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'application_cable', 'application_job', 'application_mailer', 'application_record']
 
-#Vcr/Webmock
-# require 'webmock/rspec'
-# require 'vcr'
-# VCR.configure do |config|
-#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-#   config.hook_into :webmock
-#   config.configure_rspec_metadata!
-#   # config.filter_sensitive_data('<govt_api_key>') { ENV['govt_api_key'] }
-# end
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_oauth2] = {
+                                              :provider => 'google_oauth2', 
+                                              :uid => '1235456789',
+                                              :info => {
+                                                :name => "John Doe",
+                                                :unverified_email => "john.doe@example.com",
+                                                :first_name => "John",
+                                                :last_name => "Doe" }
+                                            }
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
