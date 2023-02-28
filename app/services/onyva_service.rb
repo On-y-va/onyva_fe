@@ -38,8 +38,8 @@ class OnyvaService
     return JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
-  def self.update_user(id)
-    response = conn.patch("/api/v1/users/1", {user: update_params})
+  def self.update_user(id, update_params)
+    response = conn.patch("/api/v1/users/#{id}", {user: update_params})
     JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
