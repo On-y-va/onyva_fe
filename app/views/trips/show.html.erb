@@ -1,9 +1,9 @@
 <div id="button" align="right">
   <div class='btn-group'>
-    <%= button_to "Flight Information", trip_flights_path(@trip.trip_id), method: :get, local: true, class:"btn btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Add Flight Information", new_trip_flight_path(@trip.trip_id), method: :get, local: true, class:"btn btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Update Trip", edit_trip_path(@trip.trip_id), method: :get, local: true, class:"btn btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Delete #{@trip.name}", trip_path(@trip.trip_id), method: :delete, local: true, class:"btn btn-outline-danger btn-sm" %>
+    <%= button_to "Flight Information", trip_flights_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Add Flight Information", new_trip_flight_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Update Trip", edit_trip_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Delete #{@trip.name}", trip_path(@trip.trip_id), method: :delete, local: true, class:"button-danger btn-outline-danger btn-sm" %>
   </div>
 </div>
 <div id="logo" align="left">
@@ -30,20 +30,22 @@
     <div id="food">
       <div class="col">
         Places to eat:
-        <% @restuarants.each do |restuarant| %>
-          <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-            <div class="accordion-item">
-              <h6 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <%= restuarant[:attributes][:name] %>
-                </button>
-              </h6>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong> <button> Vote </button> <%= restuarant[:attributes][:address] %></strong>
+        <% @events.each do |event| %>
+          <% if event[:attributes][:category] == "restaurant" %>
+            <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <%= event[:attributes][:name] %>
+                  </button>
+                </h6>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong> <button> Vote </button> <%= event[:attributes][:address] %></strong>
+                  </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -51,20 +53,24 @@
     <div id="sights">
       <div class="col">
         Things to do:
-          <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-            <div class="accordion-item">
-              <h6 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  sights placeholder
-                </button>
-              </h6>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong> <button> Vote </button> sights placeholder </strong>
+        <% @events.each do |event| %>
+          <% if event[:attributes][:category] == "attraction" %>
+            <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+              <div class="accordion-item">
+                <h6 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <%= event[:attributes][:name] %>
+                  </button>
+                </h6>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong> <button> Vote </button> <%= event[:attributes][:address] %></strong>
+                  </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           </div>
+        <% end %>
       </div>
     </div>
     <div id="schedule">

@@ -4,10 +4,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = TripFacade.one_trip(params[:id])
-    @restuarants = @trip.events
-    #for later iterations
-    # @restuarants = TripEventFacade.trip_events(params[:id], "restuarant")
-    # @excursions = TripEventFacade.trip_events(params[:id], "entertainment")
+    @events = @trip.events
   end
   
   def edit
@@ -46,7 +43,9 @@ class TripsController < ApplicationController
     trip_params.delete_if { |k, v| v == "" } 
       conn = Faraday.new
       # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: trip_params)
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
+
+      ## need to change to make dynamic
+      response = conn.post("http://localhost:5000/api/v1/users/1/trips", trip: trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       unless trip.nil? || trip.empty?
         redirect_to trip_path(trip[:id]) 
