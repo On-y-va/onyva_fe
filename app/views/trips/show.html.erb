@@ -14,8 +14,10 @@
 </center>
 <div class="container text-center">
   <div class="row align-items-start">
-    <div class="col">
-      <img src=<%= "#{@trip.image_url}" %> class="img-fluid" alt="moon" width="300" height="100" />
+    <div id="pic" >
+      <div class="col">
+        <img src=<%= "#{@trip.image_url}" %> class="img-fluid" alt="location image" width="300" height="100" />
+      </div>
     </div>
     <div class="col">
       Group Packing list:
@@ -25,30 +27,50 @@
 <br/><br/><br/><br/>
 <div class="container text-center">
   <div class="row align-items-start">
-    <div class="col">
-      Places to eat:
-      <% @restuarants.each do |restuarant| %>
-        <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-          <div class="accordion-item">
-            <h6 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                 <%= restuarant[:attributes][:name] %>
-              </button>
-            </h6>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong> <button> Vote </button> <%= restuarant[:attributes][:address] %></strong>
+    <div id="food">
+      <div class="col">
+        Places to eat:
+        <% @restuarants.each do |restuarant| %>
+          <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <%= restuarant[:attributes][:name] %>
+                </button>
+              </h6>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong> <button> Vote </button> <%= restuarant[:attributes][:address] %></strong>
+                </div>
               </div>
-             </div>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-    <div class="col">
-      Things to do:
+    <div id="sights">
+      <div class="col">
+        Things to do:
+          <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <%= sights placeholder %>
+                </button>
+              </h6>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong> <button> Vote </button> <%= sights placeholder %></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
-    <div class="col">
-      Todays Itinerary:
+    <div id="schedule">
+      <div class="col">
+        Todays Itinerary:
+      </div>
     </div>
   </div>
 </div>

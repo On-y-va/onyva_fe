@@ -5,33 +5,39 @@
 <h3> Update Trip Details </h3>
 <%= form_with url: trip_path(@trip.id), method: :patch, local: true do |f| %>
 <div class="row">
-    <div class="col">
-        <%= f.label :name %>
-        <p><%= f.text_field :name, class: "form-control", placeholder: "Name" %></p>
-    </div>
-    <div class="col">
-        <%= f.label :country %>
-        <p><%= f.text_field :country, class: "form-control", placeholder: "Country" %></p>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        <%= f.label :city %>
-        <p><%= f.text_field :city, class: "form-control", placeholder: "City" %></p>
-    </div>
-    <div class="col">
-        <%= f.label :postcode %>
-        <p><%= f.text_field :postcode, class: "form-control", placeholder: "Postcode" %></p>
+    <div id=formline1>
+        <div class="col">
+            <%= f.label :name %>
+            <p><%= f.text_field :name, class: "form-control", placeholder: "Name" %></p>
+        </div>
+        <div class="col">
+            <%= f.label :country %>
+            <p><%= f.text_field :country, class: "form-control", placeholder: "Country" %></p>
+        </div>
     </div>
 </div>
 <div class="row">
-    <div class="col">
-        <%= f.label :start_date, "Vacation Start" %>
-        <p><%= f.date_field :start_date, class: "form-control" %></p>
+    <div id=formline2>
+        <div class="col">
+            <%= f.label :city %>
+            <p><%= f.text_field :city, class: "form-control", placeholder: "City" %></p>
+        </div>
+        <div class="col">
+            <%= f.label :postcode %>
+            <p><%= f.text_field :postcode, class: "form-control", placeholder: "Postcode" %></p>
+        </div>
     </div>
-    <div class="col">
-        <%= f.label :end_date, "Vacation End" %>
-        <p><%= f.date_field :end_date, class: "form-control" %></p>
+</div>
+<div class="row">
+    <div id=formline3>
+        <div class="col">
+            <%= f.label :start_date, "Vacation Start" %>
+            <p><%= f.date_field :start_date, class: "form-control" %></p>
+        </div>
+        <div class="col">
+            <%= f.label :end_date, "Vacation End" %>
+            <p><%= f.date_field :end_date, class: "form-control" %></p>
+        </div>
     </div>
 </div>
 <%= f.submit "Update", class:"btn btn-dark" %>

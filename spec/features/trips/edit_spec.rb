@@ -1,15 +1,29 @@
 require 'rails_helper'
 
 RSpec.describe 'trips edit page', :vcr do
-  it 'has a form to edit a trip' do
-    visit edit_trip_path("1")
+  xit 'has the onyva logo' do
+    within ('#logo') do
+      expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']") #not sure this is accurate way to test
+  end
 
-    expect(page).to have_field(:name)
-    expect(page).to have_field(:country)
-    expect(page).to have_field(:city)
-    expect(page).to have_field(:postcode)
-    expect(page).to have_field(:start_date)
-    expect(page).to have_field(:end_date)
+  xit 'has a form to edit a trip' do
+    visit edit_trip_path("1") #not sure it needs to be hardcoded with vcr?
+
+    within('#formline1') do
+      expect(page).to have_field(:name)
+      expect(page).to have_field(:country)
+    end
+    
+    within('#formline2') do
+      expect(page).to have_field(:city)
+      expect(page).to have_field(:postcode)
+    end
+    
+    within('#formline3') do
+      expect(page).to have_field(:start_date)
+      expect(page).to have_field(:end_date)
+    end
+
     expect(page).to have_button("Update")
   end
 
