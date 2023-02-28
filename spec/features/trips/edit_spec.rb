@@ -3,11 +3,12 @@ require 'rails_helper'
 RSpec.describe 'trips edit page', :vcr do
   xit 'has the onyva logo' do
     within ('#logo') do
-      expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']") #not sure this is accurate way to test
+      expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']")
+    end
   end
 
   xit 'has a form to edit a trip' do
-    visit edit_trip_path("1") #not sure it needs to be hardcoded with vcr?
+    visit edit_trip_path("1") 
 
     within('#formline1') do
       expect(page).to have_field(:name)
@@ -27,7 +28,7 @@ RSpec.describe 'trips edit page', :vcr do
     expect(page).to have_button("Update")
   end
 
-  xit 'redirects to the trip show page upon update' do
+  it 'redirects to the trip show page upon update' do
     visit edit_trip_path(1)
 
     fill_in(:name, with: "Trippin")
@@ -39,7 +40,7 @@ RSpec.describe 'trips edit page', :vcr do
 
     click_button("Update")
 
-    expect(current_path).to eq(trip_path(1))
+    expect(current_path).to eq(trip_path(9))
     expect(page).to have_content('Trippin')
   end
 end

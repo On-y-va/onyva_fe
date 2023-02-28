@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd39b492-2489-446f-b98d-98783cbd2f31
+      - e67e8d3d-0dc7-4500-a499-410b8cfbf043
       X-Runtime:
-      - '0.034505'
+      - '0.003102'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"guys trip","city":"rome","country":"rome","postcode":"00123","place_id":null,"start_date":null,"end_date":null,"image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
-  recorded_at: Tue, 28 Feb 2023 15:45:25 GMT
+  recorded_at: Tue, 28 Feb 2023 14:27:37 GMT
 recorded_with: VCR 6.1.0
