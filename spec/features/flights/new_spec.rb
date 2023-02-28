@@ -8,6 +8,7 @@ RSpec.describe 'flight index page', :vcr do
   xit 'has the onyva logo' do
     within ('#logo') do
       expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']") #not sure this is accurate way to test
+    end
   end
 
   xit 'has a field to add email' do
