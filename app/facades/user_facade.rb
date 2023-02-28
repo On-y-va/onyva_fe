@@ -9,13 +9,8 @@ class UserFacade
     User.new(result)
   end
   
-  def self.find_user_by_email(user_email)
-    result = OnyvaService.find_user_by_email(user_email)
-    User.new(result)
-  end
-  
-  def self.find_by_uid(uid)
-    result = OnyvaService.find_user_by_uid(uid)
+  def self.find_by_google_uid(google_uid)
+    result = OnyvaService.find_user_by_google_uid(google_uid)
     if result == {}
       return nil
     else

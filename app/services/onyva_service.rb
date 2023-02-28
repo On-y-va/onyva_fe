@@ -33,14 +33,9 @@ class OnyvaService
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
-  def self.find_user_by_email(user_email)
-    response = conn.get("/api/v1/users/find", email: user_email)
-    result = JSON.parse(response.body, symbolize_names: true)[:data]
-  end
-
-  def self.find_user_by_uid(uid)
-    response = conn.get("/api/v1/users/find", uid: uid)
-    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  def self.find_user_by_google_uid(google_uid)
+    response = conn.get("/api/v1/users/find", google_uid: google_uid)
+    return JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
   def self.update_user(id)
