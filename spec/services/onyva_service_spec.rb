@@ -118,10 +118,4 @@ RSpec.describe OnyvaService, :vcr do
       expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
     end
   end
-
-  xdescribe '#create_user' do #not sure how we are testing this as its a post 
-    it 'creates a user' do      
-      user = OnyvaService.create_user(4)
-    end
-  end
 end
