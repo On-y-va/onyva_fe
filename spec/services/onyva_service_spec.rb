@@ -51,6 +51,14 @@ RSpec.describe OnyvaService, :vcr do
     end
   end
 
+  describe '#delete_one_trip' do
+    it 'deletes one trip' do      
+      trip = OnyvaService.delete_one_trip(2)
+
+      expect(trip[:response_body]).to eq nil
+    end
+  end
+
   xdescribe '#user_flights' do
     it 'returns a users flights' do
       flights = OnyvaService.flights(1)
