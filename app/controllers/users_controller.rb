@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  include UserModule
+  include UserHelper
   # before_action :current_user
 
   def show
