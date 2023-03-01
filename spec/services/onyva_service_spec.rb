@@ -53,9 +53,11 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#delete_one_trip' do
     it 'deletes one trip' do      
-      trip = OnyvaService.delete_one_trip(2)
+      response = OnyvaService.delete_one_trip(2)
 
-      expect(trip[:response_body]).to eq nil
+      response = JSON.parse(response.body, symbolize_names: true)
+      expect(response).to have_key(:data)
+      expect(response.status).to eq(204)
     end
   end
 
