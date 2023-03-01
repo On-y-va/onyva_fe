@@ -2,7 +2,6 @@
   <div class='btn-group'>
     <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Delete #{@user.first_name}", user_path(@user.id), method: :delete, local: true, class:"btn button-danger btn-sm" %><br/><br/><br/><br/>
   </div>
 </div>
 <div id="logo" align="left">
