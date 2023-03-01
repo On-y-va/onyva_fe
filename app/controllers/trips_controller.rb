@@ -27,8 +27,8 @@ class TripsController < ApplicationController
         })
       
       conn = Faraday.new
-        # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: update_trip_params)
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: update_trip_params)
+      response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: update_trip_params)
+      # response = conn.post("http://localhost:5000/api/v1/trips", trip: update_trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(trip[:id])
     end
@@ -53,8 +53,8 @@ class TripsController < ApplicationController
       })
       trip_params.delete_if { |k, v| v == "" } 
       conn = Faraday.new
-        # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users/#{session[:user_id]}/trips", trip: trip_params)
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
+      response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: trip_params)
+      # response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       unless trip.nil? || trip.empty?
         redirect_to trip_path(trip[:id]) 
