@@ -53,9 +53,7 @@ class TripsController < ApplicationController
   end
 
   def destroy
-    conn = Faraday.new
-    # response = conn.delete("https://onyva-be.herokuapp.com/api/v1/trips/#{params[:id]}")
-    response = conn.delete("http://localhost:5000/api/v1/trips/#{params[:id]}")
+    OnyvaService.destroy_trip(params[:id])
     redirect_to user_path(session[:user_id])
     flash[:notice] = "Trip was successfully deleted."
   end
