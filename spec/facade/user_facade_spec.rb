@@ -33,4 +33,23 @@ RSpec.describe UserFacade do
       expect(user).to be_a(User)
     end
   end
+
+  describe '#create_user' do
+    it 'returns a created user', :vcr do
+
+      user = {
+        id: 1,
+        attributes: {
+                      first_name: "John",
+                      last_name: "Jones",
+                      email: "john@gmail.com",
+                      google_uid: "sdfefefe"
+                    }
+              }
+
+      user = UserFacade.create_user(user)
+
+      expect(user).to be_a(User)
+    end
+  end
 end

@@ -29,4 +29,9 @@ class UserFacade
       UserTrip.new(user_trip)
     end
   end
+
+  def self.create_user(user)
+    result = OnyvaService.create_user(user)
+    User.new(user)
+  end
 end

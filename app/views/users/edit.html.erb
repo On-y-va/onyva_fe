@@ -17,17 +17,17 @@
 <div class="row">
     <div class="col">
         <%= f.label :phone_number %>
-        <p><%= f.text_field :phone_number, class: "form-control", placeholder: "1234567890" %></p>
+        <p><%= f.text_field :phone_number, class: "form-control", :value => "#{@user.phone_number}" %></p>
     </div>
 </div>
 <div class="row">
     <div class="col">
         <%= f.label :emergency_contact_name %>
-        <p><%= f.text_field :emergency_contact_name, class: "form-control", placeholder: "Emergency Contact Name" %></p>
+        <p><%= f.text_field :emergency_contact_name, class: "form-control", :value => "#{@user.emergency_contact_name}" %></p>
     </div>
     <div class="col">
         <%= f.label :emergency_contact_phone_number %>
-        <p><%= f.text_field :emergency_contact_phone_number, class: "form-control", placeholder: "Emergency Contact Phone Number" %></p>
+        <p><%= f.text_field :emergency_contact_phone_number, class: "form-control", :value => "#{@user.emergency_contact_phone_number}" %></p>
     </div>
 </div>
 <%= f.submit "Update", class:"btn btn-dark" %>
