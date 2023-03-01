@@ -24,9 +24,10 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#delete_one_user' do
     it 'deletes one user' do      
-      user = OnyvaService.delete_one_user(2)
+      response = OnyvaService.delete_one_user(2)
 
-      expect(user[:response_body]).to eq nil
+      expect(response.status).to eq 204
+      expect(response.body).to eq("")
     end
   end
 
