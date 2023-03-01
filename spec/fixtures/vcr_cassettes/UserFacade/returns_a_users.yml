@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/find?google_uid=113236883765066486494
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"742f7225fe50424deb41e16f243eab12"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a3b82472-0973-48bb-80b5-ee1d3d82b6ed
+      X-Runtime:
+      - '0.003199'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3","type":"user","attributes":{"first_name":"Alastair","last_name":"Lloyd","phone_number":null,"email":"dex8056@gmail.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"113236883765066486494"}}}'
+  recorded_at: Tue, 28 Feb 2023 23:14:28 GMT
+recorded_with: VCR 6.1.0
