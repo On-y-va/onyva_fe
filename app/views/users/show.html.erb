@@ -20,7 +20,7 @@
   <div class="bg p-1 rounded-lg m-5">
     <h4> Upcoming Trips </h4><br/><br/><br/><br/>
     <% @upcoming_trips.each do |trip| %>
-      <p><b><%= trip.name %></p></b>
+      <p><b><%= trip.name %> <%= button_to "Remove", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get %></p></b>
       <p><%= trip.start_date %> - <%= trip.end_date %></p>
       <p><%= trip.city %>, <%= trip.country %></p>
       <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
@@ -29,7 +29,7 @@
   <div class="bg p-1 rounded-lg m-5">
     <h4> Pending Trips </h4><br/><br/><br/><br/>
     <% @pending_trips.each do |trip| %>
-      <p><b><%= trip.name %></p></b>
+      <p><b><%= trip.name %> <%= button_to "Accept", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}", method: :get %> <%= button_to "Decline", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get %></p></b>
       <p><%= trip.start_date %> - <%= trip.end_date %></p>
       <p><%= trip.city %>, <%= trip.country %></p>
       <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
