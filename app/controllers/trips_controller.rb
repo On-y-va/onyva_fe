@@ -53,6 +53,15 @@ class TripsController < ApplicationController
   end
 
   def destroy
+    conn = Faraday.new
+    # require 'pry'; binding.pry
+    response = conn.delete("https://onyva-be.herokuapp.com/api/v1/trips/#{params[:id]}")
+    require 'pry'; binding.pry
+    # response = conn.post("http://localhost:5000/api/v1/trips/#{trip_id}/flights")
+    var = JSON.parse(response.body, symbolize_names: true)
+    require 'pry'; binding.pry
+    redirect_to trip_path(trip_id)
+    require 'pry'; binding.pry
     trip_id = params[:id]
     redirect_to root_path
     flash[:notice] = "Trip was successfully deleted."

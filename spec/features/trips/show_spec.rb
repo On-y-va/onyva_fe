@@ -2,7 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'trip show page', :vcr do
   before :each do
-    visit trip_path(1)
+    visit "/auth/google_oauth2"
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+    
+    # visit root_path
+    # click_button "Continue with Google"
+    
   end
 
   xit 'has the onyva logo' do
@@ -38,13 +43,34 @@ RSpec.describe 'trip show page', :vcr do
     # expect(current_path).to eq edit_trip_path(@trip.trip_id)
   end
 
-  xit 'has a button to delete the trip' do
-    within("#button") do
-      expect(page).to have_button "Delete #{@trip.name}" #not reconising @trip.name
-    end
+  it 'deletes the trip' do
+    visit new_trip_path
 
-    click_button "Delete #{@trip.name}"
-    expect(current_path).to eq trip_path(@trip.trip_id) #should this go somewhere else? the trip and id should no longer exist?
+    fill_in "Name", with: "Trippin"
+    fill_in(:country, with: "Mexico")
+    fill_in(:city, with: "Cabo")
+    fill_in(:postcode, with: "00123")
+    fill_in(:start_date, with: "2023-02-28")
+    fill_in(:end_date, with: "2023-03-09")
+
+    click_button("ONYVA!")
+
+    # within("#button") do
+    #   expect(page).to have_button "Delete #{@trip.name}"
+    # end
+    
+    trip_show_uri = current_path
+    click_button "Delete Trippin"
+
+    expect(current_path.partition("/")[0]).to eq("users")
+    current_path.partition("/").each_char do |char|
+      expect(char.to_i.to_s).to eq(char)
+    end
+    visit trip_show_uri
+    expect(current_path.partition("/")[0]).to eq("users")
+    current_path.partition("/").each_char do |char|
+      expect(char.to_i.to_s).to eq(char)
+    end 
     # expect(page).to have_content 'Trip succesfully deleted'
   end
 
