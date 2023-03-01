@@ -44,15 +44,31 @@ RSpec.describe 'trip show page', :vcr do
     # expect(current_path).to eq edit_trip_path(@trip.trip_id)
   end
 
-  it 'has a button to delete the trip' do
-    visit trip_path(3)
-    within("#button") do
-      expect(page).to have_button "Delete Stag Do" #not reconising @trip.name
+  it 'deletes the trip' do
+    visit new_trip_path
+
+    fill_in "Name", with: "Trippin"
+    fill_in(:country, with: "Mexico")
+    fill_in(:city, with: "Cabo")
+    fill_in(:postcode, with: "00123")
+    fill_in(:start_date, with: "2023-02-28")
+    fill_in(:end_date, with: "2023-03-09")
+
+    click_button("ONYVA!")
+
+    trip_show_uri = current_path
+    click_button "Delete Trippin"
+    # expect(page).to have_content 'Trip succesfully deleted'
+
+    expect(current_path[1..-1].partition("/")[0]).to eq("users")
+    current_path[1..-1].partition("/").last.each_char do |char|
+      expect(char.to_i.to_s).to eq(char)
     end
 
-    # click_button "Delete Stag Do"
-    # expect(current_path).to eq trip_path(@trip.trip_id) #should this go somewhere else? the trip and id should no longer exist?
-    # expect(page).to have_content 'Trip succesfully deleted'
+    # visit trip_show_uri
+    # expect(current_path.partition("/")[0]).to eq("users")
+    # user_id = current_path.partition("/")[-1]
+    # expect(user_id.to_i.to_s).to eq(user_id)
   end
 
   it 'displays the trips name' do
