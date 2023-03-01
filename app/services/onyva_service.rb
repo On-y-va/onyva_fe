@@ -48,4 +48,9 @@ class OnyvaService
     JSON.parse(response.body, symbolize_names: true)[:data]
     # if email is taken redirect to find by uid
   end
+
+  def self.destroy_trip(trip_id)
+    # response = conn.delete("api/v1/trips/#{trip_id}")
+    response = conn.delete("api/v1/trips/#{trip_id}")
+  end
 end
