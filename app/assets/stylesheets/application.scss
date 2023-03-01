@@ -20,6 +20,7 @@
   color: white;
   box-shadow: 0px 0px 2px 2px #6a5acd;
   font-family: "arial rounded mt", sans-serif;
+  border-radius: 12px;
 }
 
 .button-danger{
@@ -27,6 +28,7 @@
   color: white;
   box-shadow: 0px 0px 2px 2px #6a5acd;
   font-family: "arial rounded mt", sans-serif;
+  border-radius: 12px;
 }
 
 .button:hover {
@@ -36,6 +38,7 @@
 
 .bg {
   background-color:  rgb(185, 192, 255);
+  border-radius: 50px;
 }
 
 a:link {
@@ -54,3 +57,6 @@ a:hover {
   color: white;
   font-family: "arial rounded mt bold", sans-serif;
 }
+
+
+@import 'carousel';
