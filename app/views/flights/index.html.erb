@@ -23,12 +23,14 @@
     </thead>
     <tbody class="table-group-divider">
     <tbody>
+    <% @flights.each do |flight| %>
       <tr>
-        <td>john@email.com</td>
-        <td><%= @flights %></td>
-        <td>1223</td>
-        <td>02/26/2023</td>
+        <td>User Email</td>
+        <td><%= flight.airline_code %></td>
+        <td><%= flight.flight_number %></td>
+        <td><%= flight.date %></td>
       </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
