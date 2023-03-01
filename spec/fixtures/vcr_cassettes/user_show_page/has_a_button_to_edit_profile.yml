@@ -21,6 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -28,15 +29,18 @@ http_interactions:
       - 2983c7bb-02d0-48d6-9580-18cf0d5c1672
       X-Runtime:
       - '0.002068'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -55,6 +59,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -62,15 +67,18 @@ http_interactions:
       - 548adb5b-9dda-4da1-865c-c11b09ab7813
       X-Runtime:
       - '0.001948'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -89,6 +97,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+<
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -96,15 +105,18 @@ http_interactions:
       - 2b247b53-6af9-4e5d-9b44-7fe54cc4450e
       X-Runtime:
       - '0.001781'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -123,6 +135,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -130,15 +143,18 @@ http_interactions:
       - 6cfc3336-0e3a-4b8e-a95f-b9c6db5a3dee
       X-Runtime:
       - '0.001936'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5/trips/find_all?status=0
+
     body:
       encoding: US-ASCII
       string: ''
@@ -157,6 +173,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"532a9e4736a26360b4814a966fe7de26"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -174,6 +191,7 @@ http_interactions:
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5/trips/find_all?status=1
+
     body:
       encoding: US-ASCII
       string: ''
@@ -196,18 +214,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+
       - d8a15d90-7acf-4946-bd54-ec84a59b0fbf
       X-Runtime:
       - '0.003476'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
+
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -226,6 +248,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -233,15 +256,18 @@ http_interactions:
       - 99e0d1a8-1d0f-4cb2-ae9e-de8ebc6cc30c
       X-Runtime:
       - '0.002277'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -260,6 +286,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -267,15 +294,18 @@ http_interactions:
       - 902d3486-64f0-4814-8e24-b89ffed9e01d
       X-Runtime:
       - '0.001919'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5
+
     body:
       encoding: US-ASCII
       string: ''
@@ -294,6 +324,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"33474866ff26ffbd096544406280ff69"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -301,15 +332,18 @@ http_interactions:
       - c3ff481a-f0a0-42a1-8e86-77fb004e10de
       X-Runtime:
       - '0.001878'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
+
       string: '{"data":{"id":"5","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5/trips/find_all?status=0
+
     body:
       encoding: US-ASCII
       string: ''
@@ -328,6 +362,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"532a9e4736a26360b4814a966fe7de26"
       Cache-Control:
       - max-age=0, private, must-revalidate
@@ -345,6 +380,7 @@ http_interactions:
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/5/trips/find_all?status=1
+
     body:
       encoding: US-ASCII
       string: ''
@@ -367,13 +403,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+
       - c2d5de23-02af-4db9-a87a-047f5506fdf4
       X-Runtime:
       - '0.003743'
+
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
+
   recorded_at: Wed, 01 Mar 2023 20:36:00 GMT
+
 recorded_with: VCR 6.1.0

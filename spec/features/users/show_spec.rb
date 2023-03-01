@@ -8,7 +8,6 @@ RSpec.describe 'user show page', :vcr do
   end
 
   it 'displays the users name' do
-    visit user_path(1)
     expect(page).to have_content('John Doe')
   end
 
