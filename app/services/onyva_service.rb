@@ -47,6 +47,11 @@ class OnyvaService
     JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
+  def self.create_trip(trip)
+    response = conn.post("/api/v1/trips", trip: trip)
+    JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
   def self.destroy_trip(trip_id)
     response = conn.delete("api/v1/trips/#{trip_id}")
   end
