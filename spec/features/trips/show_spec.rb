@@ -49,10 +49,6 @@ RSpec.describe 'trip show page', :vcr do
     within("#button") do
       expect(page).to have_button "Delete Stag Do" #not reconising @trip.name
     end
-
-    # click_button "Delete Stag Do"
-    # expect(current_path).to eq trip_path(@trip.trip_id) #should this go somewhere else? the trip and id should no longer exist?
-    # expect(page).to have_content 'Trip succesfully deleted'
   end
 
   it 'displays the trips name' do
@@ -71,8 +67,6 @@ RSpec.describe 'trip show page', :vcr do
     visit trip_path(3)
     within("#food") do
       expect(page).to have_content('Places to eat')
-      # expect(page).to have_content(restaurant[0][:attributes][:name])
-      # expect(page).to have_content(restaurant[0][:attributes][:address])
     end
   end
 
@@ -88,10 +82,5 @@ RSpec.describe 'trip show page', :vcr do
     within("#schedule") do
       expect(page).to have_content('Todays Itinerary')
     end
-  end
-
-  it 'has a section for Group packing list' do #think this is extension and back burner?
-    visit trip_path(3)
-    expect(page).to have_content('Group Packing list')
   end
 end
