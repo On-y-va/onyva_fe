@@ -38,12 +38,13 @@ class TripsController < ApplicationController
       city: params[:city],
       postcode: params[:postcode],
       start_date: params[:start_date],
-      end_date: params[:end_date]
+      end_date: params[:end_date],
+      user_id: session[:user_id]
     })
     trip_params.delete_if { |k, v| v == "" } 
       conn = Faraday.new
       # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users/#{session[:user_id]}/trips", trip: trip_params)
-      response = conn.post("http://localhost:5000/api/v1/users/#{session[:user_id]}/trips", trip: trip_params)
+      response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       unless trip.nil? || trip.empty?
         redirect_to trip_path(trip[:id]) 

@@ -30,46 +30,52 @@
     <div id="food">
       <div class="col">
         Places to eat:
-        <% @events.each do |event| %>
-          <% if event[:attributes][:category] == "restaurant" %>
-            <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <%= event[:attributes][:name] %>
-                  </button>
-                </h6>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong> <button> Vote </button> <%= event[:attributes][:address] %></strong>
+        <% if @events.nil? %>
+        <% else %>
+          <% @events.each do |event| %>
+            <% if event[:category] == "restaurant" %>
+              <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                <div class="accordion-item">
+                  <h6 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <%= event[:name] %>
+                    </button>
+                  </h6>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong> <button> Vote </button> <%= event[:address] %></strong>
+                    </div>
                   </div>
                 </div>
               </div>
             <% end %>
-          </div>
+          <% end %>
         <% end %>
       </div>
     </div>
     <div id="sights">
       <div class="col">
         Things to do:
-        <% @events.each do |event| %>
-          <% if event[:attributes][:category] == "attraction" %>
-            <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    <%= event[:attributes][:name] %>
-                  </button>
-                </h6>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong> <button> Vote </button> <%= event[:attributes][:address] %></strong>
+        <% if @events.nil? %>
+        <% else %>
+          <% @events.each do |event| %>
+            <% if event[:category] == "attraction" %>
+              <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                <div class="accordion-item">
+                  <h6 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <%= event[:name] %>
+                    </button>
+                  </h6>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong> <button> Vote </button> <%= event[:address] %></strong>
+                    </div>
                   </div>
                 </div>
               </div>
             <% end %>
-          </div>
+          <% end %>
         <% end %>
       </div>
     </div>

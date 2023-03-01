@@ -11,6 +11,6 @@ class Trip
     @start_time = info[:attributes][:start_time]
     @end_time = info[:attributes][:end_time]
     @image_url = info[:attributes][:image_url]
-    @events = info[:included]
+    @events = info[:attributes][:events]
   end
 end
