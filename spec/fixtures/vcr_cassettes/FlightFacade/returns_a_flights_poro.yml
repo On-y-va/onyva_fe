@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/trips/17
+    uri: http://localhost:5000/api/v1/trips/1/flights
     body:
       encoding: US-ASCII
       string: ''
@@ -21,18 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7cd9f1473f3f919e747605048968ebe3"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e3b17fb-e859-404f-b74a-3458b06b2419
+      - 98f38476-44cc-45e4-a4cc-f26bdfa2f9e7
       X-Runtime:
-      - '0.004991'
+      - '0.009045'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"17","type":"trip","attributes":{"name":"test","city":"murfreesboro","country":"united
-        states","postcode":"37128","place_id":null,"start_date":"12/12/23","end_date":"12/24/23","image_url":null,"events":[]},"relationships":{"events":{"data":[]}}},"included":[]}'
-  recorded_at: Thu, 02 Mar 2023 04:04:35 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 02 Mar 2023 03:01:57 GMT
 recorded_with: VCR 6.1.0

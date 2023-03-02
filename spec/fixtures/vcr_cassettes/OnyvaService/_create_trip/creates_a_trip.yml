@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/trips
+    body:
+      encoding: UTF-8
+      string: trip%5Bcity%5D=Murfreesboro&trip%5Bcountry%5D=United+States&trip%5Bend_date%5D=12%2F12%2F23&trip%5Bname%5D=Bachelor%27s+Trip&trip%5Bpostcode%5D=37128&trip%5Bstart_date%5D=12%2F12%2F23&trip%5Buser_id%5D=2
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"78f123afe09e9a2912d7a478c5223f8d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d78cce0b-fd3a-433b-9bb9-7c4378c8da64
+      X-Runtime:
+      - '4.176326'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"72","type":"trip","attributes":{"name":"Bachelor''s
+        Trip","city":"Murfreesboro","country":"United States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"12/12/23","end_date":"12/12/23","image_url":"https://live.staticflickr.com/7868/46616698835_8570b4bf7e_w.jpg","events":[{"id":1284,"trip_id":72,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.940Z","updated_at":"2023-03-02T04:00:48.940Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":1285,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.942Z","updated_at":"2023-03-02T04:00:48.942Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":1286,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5167a60fb8099c55c059b8dab00eeced4140f00103f90152bd36c7010000009203154a7569637927732057656c6c6e6573732043616665","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.945Z","updated_at":"2023-03-02T04:00:48.945Z","name":"Juicy''s
+        Wellness Cafe","address":"2314 Medical Center Parkway, Murfreesboro, TN 37129,
+        United States of America","category":"restaurant"},{"id":1287,"trip_id":72,"event_date":null,"event_time":null,"event_id":"515a1d4afe719b55c05970282154a9f04140f00103f901537f38fa0100000092031053616c616473204f6e2044656d616e64","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.947Z","updated_at":"2023-03-02T04:00:48.947Z","name":"Salads
+        On Demand","address":"2137 Northwest Broad Street, Murfreesboro, TN 37129,
+        United States of America","category":"restaurant"},{"id":1288,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5111514cde009c55c059db9c268aebed4140f00103f9014061d6fd01000000920312556761646920496e6469616e204772696c6c","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.949Z","updated_at":"2023-03-02T04:00:48.949Z","name":"Ugadi
+        Indian Grill","address":"2306 Medical Center Parkway, Murfreesboro, TN 37129,
+        United States of America","category":"restaurant"},{"id":1289,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5148f59d5f949c55c0597114523019ec4140f00103f90110ee7a1e0200000092030a4c75636b792054686169","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.952Z","updated_at":"2023-03-02T04:00:48.952Z","name":"Lucky
+        Thai","address":"2705 STE N Old Fort Parkway, Murfreesboro, TN 37128, United
+        States of America","category":"restaurant"},{"id":1290,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51175c73477f9655c0596b08f034f4ea4140f00103f90146d3394d0200000092030b464b53204b69746368656e","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.954Z","updated_at":"2023-03-02T04:00:48.954Z","name":"FKS
+        Kitchen","address":"2333 Dr. Martin Luther King Jr. Blvd, Murfreesboro, TN
+        37130, United States of America","category":"restaurant"},{"id":1291,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5108de02f9289c55c0594bc1c197d2ed4140f00102f901d33d9b110000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.958Z","updated_at":"2023-03-02T04:00:48.958Z","name":"Culver''s","address":"2411
+        Medical Center Parkway, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":1292,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51c1066d850b9955c059e69d3be32fec4140f00102f901eaacd3150000000092030a426f726f20426f776c73","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.960Z","updated_at":"2023-03-02T04:00:48.960Z","name":"Boro
+        Bowls","address":"123 South Church Street, Murfreesboro, TN 37130, United
+        States of America","category":"restaurant"},{"id":1293,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51596b28b5179b55c059da8469db30ec4140f00103f9013a86f02301000000920309436865646461722773","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.962Z","updated_at":"2023-03-02T04:00:48.962Z","name":"Cheddar''s","address":"1829
+        Old Fort Parkway, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":1294,"trip_id":72,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.964Z","updated_at":"2023-03-02T04:00:48.964Z","name":"Hazen''s
+        Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
+        United States of America","category":"attraction"},{"id":1295,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.968Z","updated_at":"2023-03-02T04:00:48.968Z","name":"Rideout
+        Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"},{"id":1296,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5180b29110579855c0591db1ef677ff04140f00102f9019aa02f2300000000920313416972706c616e65206f6e206120537469636b","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.977Z","updated_at":"2023-03-02T04:00:48.977Z","name":"Airplane
+        on a Stick","address":"Murfreesboro Muni Airport, Murfreesboro, TN 37130,
+        United States of America","category":"attraction"},{"id":1297,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51d4f9ae90629955c059d64daf8404ec4140f00102f9018cd6ef370000000092031c43616e6e6f6e7362757267685f50696f6e6565725f56696c6c616765","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.995Z","updated_at":"2023-03-02T04:00:48.995Z","name":"Cannonsburgh_Pioneer_Village","address":"South
+        Front Street, Murfreesboro, TN 37129, United States of America","category":"attraction"},{"id":1298,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51e0dfb1e9d29a55c05962ddbeaf36ef4140f00103f9012865f6b00000000092031a47656e6572616c20427261676720486561647175617274657273","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:48.998Z","updated_at":"2023-03-02T04:00:48.998Z","name":"General
+        Bragg Headquarters","address":"Murfreesboro Greenway, Murfreesboro, TN 37129,
+        United States of America","category":"attraction"},{"id":1299,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5159ae6d403a9a55c059e72a036feded4140f00103f9010ff3f6b0000000009203245265646f756274204272616e6e616e2028466f72747265737320526f73656372616e7329","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:49.003Z","updated_at":"2023-03-02T04:00:49.003Z","name":"Redoubt
+        Brannan (Fortress Rosecrans)","address":"West College Street, Murfreesboro,
+        TN 37167, United States of America","category":"attraction"},{"id":1300,"trip_id":72,"event_date":null,"event_time":null,"event_id":"515403835a429b55c05951534b80abf14140f00103f9013029b1dd00000000920312417274696c6c657279204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:49.005Z","updated_at":"2023-03-02T04:00:49.005Z","name":"Artillery
+        Monument","address":"Van Cleave Lane, Murfreesboro, TN 37129, United States
+        of America","category":"attraction"},{"id":1301,"trip_id":72,"event_date":null,"event_time":null,"event_id":"5163a4cd27619c55c059593907cbd8f14140f00103f901782bb1dd00000000920316526f73656372616e7320486561647175617274657273","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:49.008Z","updated_at":"2023-03-02T04:00:49.008Z","name":"Rosecrans
+        Headquarters","address":"Old Nashville Highway, Murfreesboro, TN 37167, United
+        States of America","category":"attraction"},{"id":1302,"trip_id":72,"event_date":null,"event_time":null,"event_id":"51e5b16664109d55c0598006364f1aef4140f00103f9017aecc39c0100000092030b4261746579204661726d73","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:49.009Z","updated_at":"2023-03-02T04:00:49.009Z","name":"Batey
+        Farms","address":"Asbury Lane, Murfreesboro, TN 37129, United States of America","category":"attraction"},{"id":1303,"trip_id":72,"event_date":null,"event_time":null,"event_id":"511d15ff77c49755c059abe462192cec4140f00103f901f0f10ba001000000920311507265736964656e74277320486f757365","votes":null,"confirmed":false,"created_at":"2023-03-02T04:00:49.011Z","updated_at":"2023-03-02T04:00:49.011Z","name":"President''s
+        House","address":"1301 East Main Street, Murfreesboro, TN 37130, United States
+        of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1284","type":"event"},{"id":"1285","type":"event"},{"id":"1286","type":"event"},{"id":"1287","type":"event"},{"id":"1288","type":"event"},{"id":"1289","type":"event"},{"id":"1290","type":"event"},{"id":"1291","type":"event"},{"id":"1292","type":"event"},{"id":"1293","type":"event"},{"id":"1294","type":"event"},{"id":"1295","type":"event"},{"id":"1296","type":"event"},{"id":"1297","type":"event"},{"id":"1298","type":"event"},{"id":"1299","type":"event"},{"id":"1300","type":"event"},{"id":"1301","type":"event"},{"id":"1302","type":"event"},{"id":"1303","type":"event"}]}}}}'
+  recorded_at: Thu, 02 Mar 2023 04:00:49 GMT
+recorded_with: VCR 6.1.0
