@@ -1,5 +1,5 @@
-require 'date'
 class TripsController < ApplicationController
+  include TripHelper
   before_action :current_user
   before_action :authenticate
 
@@ -39,29 +39,13 @@ class TripsController < ApplicationController
   end
 
   def create
-    if (DateTime.parse(params[:start_date])) > (DateTime.parse(params[:end_date]))
-      flash[:notice] = "Vacation end date must be after the vacation start date"
-      redirect_to new_trip_path
+    trip = TripFacade.create_trip(trip_params)
+    unless trip.trip_id.nil?
+      flash[:notice] = "Trip successfully created."
+      redirect_to trip_path(trip.trip_id) 
     else
-      trip_params = ({
-        name: params[:name],
-        country: params[:country],
-        city: params[:city],
-        postcode: params[:postcode],
-        start_date: params[:start_date],
-        end_date: params[:end_date],
-        user_id: session[:user_id]
-      })
-      trip_params.delete_if { |k, v| v == "" } 
-      conn = Faraday.new
-        # response = conn.post("https://onyva-be.herokuapp.com/api/v1/users/#{session[:user_id]}/trips", trip: trip_params)
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: trip_params)
-      trip = JSON.parse(response.body, symbolize_names: true)[:data]
-      unless trip.nil? || trip.empty?
-        redirect_to trip_path(trip[:id]) 
-      else
-        redirect_to new_trip_path
-      end
+      flash[:notice] = "Trip could not be created, all fields must filled out & vacation end date must be after vacation start date."
+      redirect_to new_trip_path
     end
   end
 
