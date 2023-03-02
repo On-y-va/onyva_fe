@@ -55,4 +55,17 @@ class OnyvaService
   def self.destroy_trip(trip_id)
     response = conn.delete("api/v1/trips/#{trip_id}")
   end
+  
+  def self.create_flight(trip_id, flight)
+    response = conn.post("/api/v1/trips/#{trip_id}/flgihts", flight: flight)
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.update_trip_attendee(user_id, trip_id)
+    conn.patch("/api/v1/users/#{user_id}/trips/#{trip_id}")
+  end
+
+  def self.delete_trip_attendee(user_id, trip_id)
+    conn.delete("/api/v1/users/#{user_id}/trips/#{trip_id}")
+  end
 end

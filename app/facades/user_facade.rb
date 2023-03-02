@@ -4,11 +4,6 @@ class UserFacade
     return User.new(result)
   end
   
-  # def self.delete_one_user(id)
-  #   result = OnyvaService.delete_one_user(id)
-  #   User.new(result)
-  # end
-  
   def self.find_by_google_uid(google_uid)
     result = OnyvaService.find_user_by_google_uid(google_uid)
     if result == {}
