@@ -5,6 +5,7 @@
     <%= button_to "Update Trip", edit_trip_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "My Home Page", user_path(@user.id), method: :get, local: true, class:"button btn-outline-danger btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Delete #{@trip.name}", trip_path(@trip.trip_id), method: :delete, local: true, class:"button-danger btn-outline-danger btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Invite Friends", trip_invite_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
   </div>
 </div>
 <div id="logo" align="left">

@@ -1,0 +1,18 @@
+<center>
+<div id="logo" align="center">
+  <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+</div>
+<div id="trip_name">
+  <p>Invite friends to <h4><%= @trip.name %></h4><p>
+</div>
+</center>
+<%= form_with url: trip_invite_path(@trip.trip_id), method: :post, local: true do |f| %>
+<div class="title_name" id="formline1">
+  <div class="row"> 
+    <div class="col">
+      <%= label_tag(:user_emails, 'User Emails') %>
+      <p><%= text_field_tag(:user_emails, '', multiple: true, class: "form-control") %></p>
+  </div>
+</div>
+<center><%= f.submit "Invite", class: "button" %></center>
+<% end %>
