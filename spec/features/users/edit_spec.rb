@@ -22,5 +22,14 @@ RSpec.describe 'users edit page', :vcr do
     click_button 'Edit Profile'
 
     expect(page).to have_button "Update"
+    expect(current_path).to eq(edit_user_path(1))
+
+    fill_in(:phone_number, with: "123456789")
+    fill_in(:emergency_contact_phone_number, with: "987654321")
+    fill_in(:emergency_contact_name, with: "Ben Smith")
+
+    click_on("Update")
+
+    expect(current_path).to eq(user_path(1))
   end
 end

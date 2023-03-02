@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :authenticate
 
   def show
-  # need error handling if no trip
     @user = current_user
     @pending_trips = UserFacade.user_trips(@user.id, 0)
     @upcoming_trips = UserFacade.user_trips(@user.id, 1)
@@ -16,7 +15,6 @@ class UsersController < ApplicationController
 
   def update
     UserFacade.update_user(params[:id], update_params)
-    # UserFacade.update_user(session[:id], update_params)
     redirect_to user_path(params[:id])
   end
 
