@@ -8,7 +8,7 @@ RSpec.describe 'users edit page', :vcr do
   end
   
   it 'has a form to edit user' do
-    visit edit_user_path(2)
+    click_button 'Edit Profile'
 
     expect(page).to have_field(:first_name)
     expect(page).to have_field(:last_name)
@@ -19,15 +19,15 @@ RSpec.describe 'users edit page', :vcr do
   end
 
   it 'redirects to the user show page upon successful update' do
-    visit edit_user_path(2)
+    click_button 'Edit Profile'
 
-    fill_in(:first_name, with: "Ashley")
+    fill_in(:first_name, with: "Jack")
     
     click_button("Update")
 
-    #this within block is on user show page
+    expect(current_path).to eq user_path(1)
     within("#user_name") do
-      expect(page).to have_content("Ashley")
+      expect(page).to have_content("Jack")
     end
   end
 end
