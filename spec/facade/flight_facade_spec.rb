@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe FlightFacade do
   it 'returns a flights poro', :vcr do
-   flights = FlightsFacade.flights(1)
+   flights = FlightFacade.flights(1)
 
    expect(flights).to be_a(Array)
    expect(flights[0]).to be_a(Flight)
