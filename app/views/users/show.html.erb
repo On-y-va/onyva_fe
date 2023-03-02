@@ -18,10 +18,10 @@
   </div>
   <div class="bg p-1 rounded-lg m-5">
     <div class="font-class">
-      <h4> Upcoming Trips </h4><br/><br/><br/><br/></h4>
+      <h4> Upcoming Trips </h4><br/></h4>
         <% @upcoming_trips.each do |trip| %>
           <p><b><%= link_to "#{trip.name}", trip_path(trip.trip_id) %></p></b>
-          <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
+          <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="200" height="200" />
           <p><%= trip.city %>, <%= trip.country %></p>
           <p><%= trip.start_date %> - <%= trip.end_date %></p>
           <%= button_to "Remove", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get, class:"btn button btn-sm" %>
@@ -30,11 +30,11 @@
   </div>
   <div class="bg p-1 rounded-lg m-5">
     <div class="font-class">
-      <h4> Pending Trips </h4><br/><br/><br/><br/></h4>
+      <h4> Pending Trips </h4><br/></h4>
       <% @pending_trips.each do |trip| %>
         <div class="a:link">
           <p><b><%= link_to "#{trip.name}", trip_path(trip.trip_id) %> </p></b></div>
-        <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="100" height="100" />
+        <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="200" height="200" />
         <p><%= trip.city %>, <%= trip.country %></p>
         <p><%= trip.start_date %> - <%= trip.end_date %></p>
           <div class='btn-group' role="group">
