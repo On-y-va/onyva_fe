@@ -18,12 +18,6 @@ class TripsController < ApplicationController
       flash[:notice] = "Vacation end date must be after the vacation start date"
       redirect_to new_trip_path
     else
-      update_trip_params = ({
-        "name": params[:name],
-        "start_date": params[:start_date],
-        "end_date": params[:end_date]
-        })
-      
       conn = Faraday.new
         # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: update_trip_params)
       response = conn.patch("http://localhost:5000/api/v1/trips/#{params[:id]}", trip: update_trip_params)
@@ -50,5 +44,11 @@ class TripsController < ApplicationController
     OnyvaService.destroy_trip(params[:id])
     redirect_to user_path(session[:user_id])
     flash[:notice] = "Trip was successfully deleted."
+  end
+
+  private
+
+  def update_trip_params
+    params.permit(:name, :start_date, :end_date)
   end
 end
