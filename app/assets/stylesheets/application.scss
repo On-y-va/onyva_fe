@@ -63,5 +63,18 @@ a:hover {
   font-family: "arial rounded mt bold", sans-serif;
 }
 
+.bg-collapse {
+  background-color: #DA70D6;
+}
 
-// @import 'carousel';
+.btn_inner-color {
+  color: rgb(105, 115, 207);
+}
+
+.btn_inner-color:hover {
+  color: #DA70D6;
+}
+
+.btn_inner-colorcollapsed {
+  color: rgb(105, 115, 207);
+}
