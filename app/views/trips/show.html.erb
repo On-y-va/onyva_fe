@@ -39,21 +39,25 @@
                 <% if event[:category] == "restaurant" %>
                     <div class="accordion-item">
                       <h6 class="accordion-header" id="heading<%= event[:id] %>">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= event[:id] %>" aria-expanded="false" aria-controls="collapse<%= event[:id] %>" href="#collapse<%= event[:id] %>">
-                          <%= event[:name] %>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= event[:id] %>" aria-expanded="false" aria-controls="collapse<%= event[:id] %> " style="background-color:white" href="#collapse<%= event[:id] %>">
+                            <div class="btn_inner-color">
+                              <%= event[:name] %>
+                            </div>
                           <div id="collapse<%= event[:id] %>" class="accordion-body collapse in">
                         </button>
                       </h6>
                       <div id="collapse<%= event[:id] %>" class="accordion-collapse collapse" aria-labelledby="heading<%= event[:id] %>" data-bs-parent="#accordionExample">    
                         <div class="accordion-body">
-                          <strong> <button> Vote </button> <%= event[:address] %></strong>
+                        <div class="btn_inner-color">
+                          <strong> <button class="button"> Vote </button> <%= event[:address] %></strong>
+                        </div>
                         </div>
                       </div>
                     </div>
                 <% end %>
               <% end %>
             </div>
-          <% end %>
+          <% end %>      
         </div>
         <div class="col" id="sights">
           <h4>Things to do:</h4>
@@ -64,14 +68,18 @@
                 <% if event[:category] == "attraction" %>
                     <div class="accordion-item">
                       <h6 class="accordion-header" id="heading<%= event[:id] %>">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= event[:id] %>" aria-expanded="false" aria-controls="collapse<%= event[:id] %>" href="#collapse<%= event[:id] %>">
-                          <%= event[:name] %>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= event[:id] %>" aria-expanded="false" aria-controls="collapse<%= event[:id] %>" style="background-color:white" href="#collapse<%= event[:id] %>">
+                          <div class="btn_inner-color">
+                            <%= event[:name] %>
+                          </div>
                           <div id="collapse<%= event[:id] %>" class="accordion-body collapse in">
                         </button>
                       </h6>
                       <div id="collapse<%= event[:id] %>" class="accordion-collapse collapse" aria-labelledby="heading<%= event[:id] %>" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong> <button> Vote </button> <%= event[:address] %></strong>
+                          <div class="btn_inner-color">
+                            <strong> <button class="button"> Vote </button> <%= event[:address] %></strong>
+                          </div>
                         </div>
                       </div>
                     </div>
