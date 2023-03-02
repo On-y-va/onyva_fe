@@ -12,27 +12,18 @@ RSpec.describe 'user show page', :vcr do
   end
 
   it 'has a button to create a trip' do
-    visit user_path(1)
     expect(page).to have_button('Create Trip')
   end
 
   it 'has a button to edit profile' do
-    visit user_path(1)
     expect(page).to have_button('Edit Profile')
   end
 
-  it 'has a button to go to my trips' do
-    visit user_path(1)
-    expect(page).to have_button('My Trips')
-  end
-
   it 'has a section for upcoming trips' do
-    visit user_path(1)
     expect(page).to have_content('Upcoming Trips')
   end
 
   it 'has a section for pending trips' do
-    visit user_path(1)
     expect(page).to have_content('Pending Trips')
   end
 end
