@@ -1,4 +1,6 @@
 class FlightsController < ApplicationController
+  before_action :authenticate
+
   def index
     @trip_id = params[:trip_id]
     @flights = FlightFacade.flights(@trip_id)
