@@ -20,16 +20,13 @@ class TripsController < ApplicationController
     else
       update_trip_params = ({
         "name": params[:name],
-        "country": params[:country],
-        "city": params[:city],
-        "postcode": params[:postcode],
         "start_date": params[:start_date],
         "end_date": params[:end_date]
         })
       
       conn = Faraday.new
         # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: update_trip_params)
-      response = conn.post("http://localhost:5000/api/v1/trips", trip: update_trip_params)
+      response = conn.patch("http://localhost:5000/api/v1/trips/#{params[:id]}", trip: update_trip_params)
       trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(trip[:id])
     end
