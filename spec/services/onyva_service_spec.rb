@@ -75,7 +75,7 @@ RSpec.describe OnyvaService, :vcr do
     end
   end
 
-  xdescribe '#user_trips' do
+  describe '#user_trips' do
     it 'returns a users trips' do      
       user_trip = OnyvaService.user_trips(3, 'accepted')
 
@@ -102,8 +102,8 @@ RSpec.describe OnyvaService, :vcr do
     end
   end
 
-  xdescribe '#update_user' do #this wont run as it doesnt know what update params are in onyva_service/controller
-    it 'updates a user' do      
+  describe '#update_user' do #this wont run as it doesnt know what update params are in onyva_service/controller
+    xit 'updates a user' do      
       user = OnyvaService.update_user(3)
 
       expect(user).to be_a(Hash)
@@ -119,6 +119,40 @@ RSpec.describe OnyvaService, :vcr do
       expect(user[:attributes][:email]).to be_a(String)
       expect(user[:attributes]).to have_key(:emergency_contact_name)
       expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
+    end
+  end
+
+  describe '#create_trip' do
+    it 'creates a trip' do
+      trip = {
+                name: "Bachelor's Trip",
+                country: "United States",
+                city: "Murfreesboro",
+                postcode: "37128",
+                start_date: "12/12/23",
+                end_date: "12/12/23",
+                user_id: 2
+              }
+      
+      trip = OnyvaService.create_trip(trip)
+
+      expect(trip).to be_a(Hash)
+      expect(trip).to have_key(:id)
+      expect(trip[:id]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:name)
+      expect(trip[:attributes][:name]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:city)
+      expect(trip[:attributes][:city]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:country)
+      expect(trip[:attributes][:country]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:postcode)
+      expect(trip[:attributes][:postcode]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:end_date)
+      expect(trip[:attributes][:end_date]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:start_date)
+      expect(trip[:attributes][:start_date]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:events)
+      expect(trip[:attributes][:events]).to be_a(Array)
     end
   end
 end
