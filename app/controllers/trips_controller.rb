@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  include TripHelper
+  # include TripHelper
   before_action :current_user
   before_action :authenticate
 
@@ -47,6 +47,10 @@ class TripsController < ApplicationController
   end
 
   private
+
+  def trip_params
+    params.permit(:name, :country, :city, :postcode, :start_date, :end_date).merge({user_id: session[:user_id]})
+  end
 
   def update_trip_params
     params.permit(:name, :start_date, :end_date)
