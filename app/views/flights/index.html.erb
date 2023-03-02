@@ -1,6 +1,6 @@
 <div id="button" align="right">
   <div class='btn-group'>
-    <%= button_to "Trip Details", trip_path(@trip_id), method: :get, local: true, class:"btn btn-dark btn-sm" %>
+    <%= button_to "Trip Details", trip_path(@trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>
   </div>
 </div>
 <center>
@@ -9,13 +9,13 @@
 </div>
 </center>
 <center>
-  <h3> Flight Information </h3>
+  <h3> Group Flight Information </h3>
 </center>
 <div id="table" >
   <table class="table">
     <thead class="table-secondary">
       <tr>
-        <th scope="col">User email</th>
+        <th scope="col">User Email</th>
         <th scope="col">Airline Code</th>
         <th scope="col">Flight Number</th>
         <th scope="col">Date</th>

@@ -8,7 +8,8 @@ RSpec.describe 'trips edit page', :vcr do
   end
 
   it 'has the onyva logo' do
-    visit edit_trip_path(3)
+    click_on "Trippin"
+    click_button "Update Trip"
 
     within ('#logo') do
       expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']")
@@ -16,39 +17,34 @@ RSpec.describe 'trips edit page', :vcr do
   end
 
   it 'has a form to edit a trip' do
-    visit edit_trip_path(3)
+    click_on "Trippin"
+    click_button "Update Trip"
 
     within('#formline1') do
       expect(page).to have_field(:name)
-      expect(page).to have_field(:country)
     end
     
     within('#formline2') do
-      expect(page).to have_field(:city)
-      expect(page).to have_field(:postcode)
+      expect(page).to have_field(:start_date)
     end
     
     within('#formline3') do
-      expect(page).to have_field(:start_date)
       expect(page).to have_field(:end_date)
     end
 
     expect(page).to have_button("Update")
   end
 
-  xit 'redirects to the trip show page upon update' do
-    visit edit_trip_path(3)
+  it 'redirects to the trip show page upon update' do
+    click_on "Trippin"
+    click_button "Update Trip"
 
     fill_in(:name, with: "Trippin")
-    fill_in(:country, with: "Mexico")
-    fill_in(:city, with: "Cabo")
-    fill_in(:postcode, with: "00123")
     fill_in(:start_date, with: "2023-02-28")
     fill_in(:end_date, with: "2023-03-09")
 
     click_button("Update")
 
-    expect(current_path).to eq(trip_path(3))
-    expect(page).to have_content('Trippin')
+    expect(current_path).to eq trip_path(1)
   end
 end
