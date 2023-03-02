@@ -60,7 +60,7 @@ class OnyvaService
     conn.patch("/api/v1/users/#{user_id}/trips/#{trip_id}")
   end
 
-  def self.delete_trip_attende(user_id, trip_id)e
+  def self.delete_trip_attendee(user_id, trip_id)
     conn.delete("/api/v1/users/#{user_id}/trips/#{trip_id}")
   end
 end
