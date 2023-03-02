@@ -55,4 +55,8 @@ class OnyvaService
     response = conn.post("/api/v1/trips/#{trip_id}/flgihts", flight: flight)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.update_trip_attendee
+    conn.patch("/api/v1/users/#{user_id}/trips/#{trip_id}")
+  end
 end
