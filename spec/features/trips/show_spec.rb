@@ -64,11 +64,6 @@ RSpec.describe 'trip show page', :vcr do
     current_path[1..-1].partition("/").last.each_char do |char|
       expect(char.to_i.to_s).to eq(char)
     end
-
-    # visit trip_show_uri
-    # expect(current_path.partition("/")[0]).to eq("users")
-    # user_id = current_path.partition("/")[-1]
-    # expect(user_id.to_i.to_s).to eq(user_id)
   end
 
   it 'displays the trips name' do
@@ -87,8 +82,6 @@ RSpec.describe 'trip show page', :vcr do
     visit trip_path(3)
     within("#food") do
       expect(page).to have_content('Places to eat')
-      # expect(page).to have_content(restaurant[0][:attributes][:name])
-      # expect(page).to have_content(restaurant[0][:attributes][:address])
     end
   end
 
@@ -104,10 +97,5 @@ RSpec.describe 'trip show page', :vcr do
     within("#schedule") do
       expect(page).to have_content('Todays Itinerary')
     end
-  end
-
-  it 'has a section for Group packing list' do #think this is extension and back burner?
-    visit trip_path(3)
-    expect(page).to have_content('Group Packing list')
   end
 end

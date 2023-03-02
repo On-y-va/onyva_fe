@@ -4,7 +4,7 @@
 </div>
 </center>
 <%= form_with url: '/trips', method: :post, local: true do |f| %>
-<div id="formline1">
+<div class="title_name" id="formline1">
   <div class="row"> 
     <div class="col">
         <%= f.label :name %>
@@ -16,7 +16,7 @@
     </div>
   </div>
 </div>
-<div id="formline2">
+<div class="title_name" id="formline2">
   <div class="row">
     <div class="col">
         <%= f.label :country %>
@@ -28,7 +28,7 @@
     </div>
   </div> 
 </div>
-<div id="formline3">
+<div class="title_name" id="formline3">
   <div class="row">
     <div class="col">
         <%= f.label :start_date, "Vacation Start" %>
@@ -40,5 +40,5 @@
     </div>
   </div>
 </div>
-<center><%= f.submit "ONYVA!", class:"btn btn-dark" %></center>
+<center><%= f.submit "ONYVA!", class: "button" %></center>
 <% end %>

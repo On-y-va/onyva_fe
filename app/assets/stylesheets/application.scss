@@ -7,7 +7,7 @@
 
 .navbar a {
   color: white;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "arial rounded mt bold", sans-serif;
 }
 
 .navbar a:hover {
@@ -19,14 +19,16 @@
   background-color: rgb(105, 115, 207);
   color: white;
   box-shadow: 0px 0px 2px 2px #6a5acd;
-  font-family: "Garamond", sans-serif;
+  font-family: "arial rounded mt", sans-serif;
+  border-radius: 12px;
 }
 
 .button-danger{
   background-color: rgb(92, 141, 255);
   color: white;
   box-shadow: 0px 0px 2px 2px #6a5acd;
-  font-family: "Garamond", sans-serif;
+  font-family: "arial rounded mt", sans-serif;
+  border-radius: 12px;
 }
 
 .button:hover {
@@ -35,5 +37,31 @@
 }
 
 .bg {
-  background-color:  rgb(105, 115, 207);
+  background-color:  rgb(185, 192, 255);
+  border-radius: 50px;
 }
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #DA70D6;
+}
+
+.font-class {
+  color: white;
+  font-family: "arial rounded mt bold", sans-serif;
+}
+
+.title_name {
+  color: rgb(105, 115, 207);
+  font-family: "arial rounded mt bold", sans-serif;
+}
+
+
+// @import 'carousel';

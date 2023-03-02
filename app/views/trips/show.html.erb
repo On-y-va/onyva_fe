@@ -3,14 +3,17 @@
     <%= button_to "Flight Information", trip_flights_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Add Flight Information", new_trip_flight_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Update Trip", edit_trip_path(@trip.trip_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "Delete #{@trip.name}", trip_path(@trip.trip_id), method: :delete, local: true, class:"button-danger btn-outline-danger btn-sm" %>
+    <%= button_to "My Home Page", user_path(@user.id), method: :get, local: true, class:"button btn-outline-danger btn-sm" %>&nbsp;&nbsp;&nbsp;
+    <%= button_to "Delete #{@trip.name}", trip_path(@trip.trip_id), method: :delete, local: true, class:"button-danger btn-outline-danger btn-sm" %>&nbsp;&nbsp;&nbsp;
   </div>
 </div>
 <div id="logo" align="left">
   <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="200" height="200" />
 </div>
 <center>
-  <h1 class="trip_name"> <%= @trip.name %> </h1><br/><br/>
+  <div id="title-font">
+    <h1 class="title_name"> <%= @trip.name %> </h1><br/><br/>
+  </div>
 </center>
 <div class="container text-center">
   <div class="row align-items-start">
@@ -19,69 +22,65 @@
         <img src=<%= "#{@trip.image_url}" %> class="img-fluid" alt="location image" width="300" height="100" />
       </div>
     </div>
-    <div class="col">
-      Group Packing list:
-    </div>
   </div>
 </div>
 <br/><br/><br/><br/>
-<div class="container text-center">
-  <div class="row align-items-start">
-    <div id="food">
-      <div class="col">
-        Places to eat:
-        <% if @events.nil? %>
-        <% else %>
-          <% @events.each do |event| %>
-            <% if event[:category] == "restaurant" %>
-              <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-                <div class="accordion-item">
-                  <h6 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <%= event[:name] %>
-                    </button>
-                  </h6>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong> <button> Vote </button> <%= event[:address] %></strong>
+
+<div class="bg p-1 rounded-lg m-5">
+  <div class="font-class">
+    <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col" id="food">
+          <h4>Places to eat:</h4>
+          <% if @events.nil? %>
+          <% else %>
+            <% @events.each do |event| %>
+              <% if event[:category] == "restaurant" %>
+                <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                  <div class="accordion-item">
+                    <h6 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <%= event[:name] %>
+                      </button>
+                    </h6>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">    
+                      <div class="accordion-body">
+                        <strong> <button> Vote </button> <%= event[:address] %></strong>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div id="sights">
-      <div class="col">
-        Things to do:
-        <% if @events.nil? %>
-        <% else %>
-          <% @events.each do |event| %>
-            <% if event[:category] == "attraction" %>
-              <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
-                <div class="accordion-item">
-                  <h6 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <%= event[:name] %>
-                    </button>
-                  </h6>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong> <button> Vote </button> <%= event[:address] %></strong>
+        </div>
+        <div class="col" id="sights">
+          <h4>Things to do:</h4>
+          <% if @events.nil? %>
+          <% else %>
+            <% @events.each do |event| %>
+              <% if event[:category] == "attraction" %>
+                <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                  <div class="accordion-item">
+                    <h6 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <%= event[:name] %>
+                      </button>
+                    </h6>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong> <button> Vote </button> <%= event[:address] %></strong>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div id="schedule">
-      <div class="col">
-        Todays Itinerary:
+        </div>
+        <div class="col", id="schedule">
+          <h4>Todays Itinerary:</h4>
+        </div>
       </div>
     </div>
   </div>

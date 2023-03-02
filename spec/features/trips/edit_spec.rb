@@ -1,14 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe 'trips edit page', :vcr do
-  xit 'has the onyva logo' do
+  before :each do
+    visit "/auth/google_oauth2"
+
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+  end
+
+  it 'has the onyva logo' do
+    visit edit_trip_path(3)
+
     within ('#logo') do
       expect(page).to have_css("img[src*='https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png']")
     end
   end
 
-  xit 'has a form to edit a trip' do
-    visit edit_trip_path("1") 
+  it 'has a form to edit a trip' do
+    visit edit_trip_path(3)
 
     within('#formline1') do
       expect(page).to have_field(:name)
@@ -28,8 +36,8 @@ RSpec.describe 'trips edit page', :vcr do
     expect(page).to have_button("Update")
   end
 
-  it 'redirects to the trip show page upon update' do
-    visit edit_trip_path(1)
+  xit 'redirects to the trip show page upon update' do
+    visit edit_trip_path(3)
 
     fill_in(:name, with: "Trippin")
     fill_in(:country, with: "Mexico")
@@ -40,7 +48,7 @@ RSpec.describe 'trips edit page', :vcr do
 
     click_button("Update")
 
-    expect(current_path).to eq(trip_path(9))
+    expect(current_path).to eq(trip_path(3))
     expect(page).to have_content('Trippin')
   end
 end

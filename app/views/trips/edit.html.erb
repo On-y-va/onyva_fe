@@ -1,45 +1,26 @@
 <center>
-<div id="logo" align="center">
-  <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
-</div>
-<h3> Update Trip Details </h3>
-<%= form_with url: trip_path(@trip.trip_id), method: :patch, local: true do |f| %>
-<div class="row">
-    <div id=formline1>
-        <div class="col">
-            <%= f.label :name %>
-            <p><%= f.text_field :name, class: "form-control", :value => "#{@trip.name}" %></p>
+  <div id="logo" align="center">
+    <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="400" height="auto" />
+  </div>
+  <div class="title_name">
+    <h3> Update Trip Details </h3>
+  </div>
+  <%= form_with url: trip_path(@trip.trip_id), method: :patch, local: true do |f| %>
+    <div class="title_name" id="formline1">
+      <div class="form-outline w-50" class="col">
+        <%= f.label :name %>
+        <p><%= f.text_field :name, class: "form-control", :value => "#{@trip.name}" %></p>
+      </div>
+    <div class="title_name" id="formline2">
+      <div class="form-outline w-50" class="col">
+        <%= f.label :start_date, "Vacation Start" %>
+        <p><%= f.date_field :start_date, class: "form-control", :value => "#{@trip.start_time}" %></p>
+      </div>
+        <div class="form-outline w-50" class="col">
+          <%= f.label :end_date, "Vacation End" %>
+          <p><%= f.date_field :end_date, class: "form-control", :value => "#{@trip.end_time}" %></p>
         </div>
-        <div class="col">
-            <%= f.label :country %>
-            <p><%= f.text_field :country, class: "form-control", :value => "#{@trip.country}" %></p>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div id=formline2>
-        <div class="col">
-            <%= f.label :city %>
-            <p><%= f.text_field :city, class: "form-control", :value => "#{@trip.city}" %></p>
-        </div>
-        <div class="col">
-            <%= f.label :postcode %>
-            <p><%= f.text_field :postcode, class: "form-control", :value => "#{@trip.postcode}" %></p>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div id=formline3>
-        <div class="col">
-            <%= f.label :start_date, "Vacation Start" %>
-            <p><%= f.date_field :start_date, class: "form-control", :value => "#{@trip.start_time}" %></p>
-        </div>
-        <div class="col">
-            <%= f.label :end_date, "Vacation End" %>
-            <p><%= f.date_field :end_date, class: "form-control", :value => "#{@trip.end_time}" %></p>
-        </div>
-    </div>
-</div>
-<%= f.submit "Update", class:"btn btn-dark" %>
-<% end %>
+      </div>
+    <%= f.submit "Update", class: "button" %>
+  <% end %>
 </center>
