@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe FlightsFacade do
+RSpec.describe FlightFacade do
   it 'returns a flights poro', :vcr do
    flights = FlightsFacade.flights(1)
 
