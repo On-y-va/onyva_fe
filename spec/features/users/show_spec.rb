@@ -26,4 +26,10 @@ RSpec.describe 'user show page', :vcr do
   it 'has a section for pending trips' do
     expect(page).to have_content('Pending Trips')
   end
+
+  it 'can log a user out' do
+    click_on "Log Out"
+    expect(page).to have_content("You have successfully logged out.")
+    expect(current_path).to eq('/')
+  end
 end
