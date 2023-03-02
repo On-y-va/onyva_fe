@@ -2,37 +2,46 @@
   <div class='btn-group'>
     <%= button_to "Create Trip", new_trip_path, method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
     <%= button_to "Edit Profile", edit_user_path(@user.id), method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
-    <%= button_to "My Trips", method: :get, local: true, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp;
   </div>
 </div>
 <div id="logo" align="left">
   <img src="https://raw.githubusercontent.com/On-y-va/onyva_fe/main/src/assets/onyva_logo.png" class="img-fluid" alt="onyva logo" width="200" height="200" />
 </div>
 <center>
-<div id="user_name">
+<div class="title_name" id="user_name">
   <p><h3>Welcome <%= @user.first_name %> <%= @user.last_name %></h3></p>
 </div>
-  <div id="econtact">
+  <div class="title_name" id="econtact">
     <p>Emergency Contact:</p>
     <p><%= @user.emergency_contact_name %></p>
     <p><%= @user.emergency_contact_phone_number %></p>
   </div>
   <div class="bg p-1 rounded-lg m-5">
-    <h4> Upcoming Trips </h4><br/><br/><br/><br/>
-    <% @upcoming_trips.each do |trip| %>
-      <p><b><%= trip.name %> <%= button_to "Remove", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get %></p></b>
-      <p><%= trip.start_date %> - <%= trip.end_date %></p>
-      <p><%= trip.city %>, <%= trip.country %></p>
-      <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
-    <% end %>
+    <div class="font-class">
+      <h4> Upcoming Trips </h4><br/><br/><br/><br/></h4>
+        <% @upcoming_trips.each do |trip| %>
+          <p><b><%= link_to "#{trip.name}", trip_path(trip.trip_id) %></p></b>
+          <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
+          <p><%= trip.city %>, <%= trip.country %></p>
+          <p><%= trip.start_date %> - <%= trip.end_date %></p>
+          <%= button_to "Remove", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get, class:"btn button btn-sm" %>
+        <% end %>
+    </div>
   </div>
   <div class="bg p-1 rounded-lg m-5">
-    <h4> Pending Trips </h4><br/><br/><br/><br/>
-    <% @pending_trips.each do |trip| %>
-      <p><b><%= trip.name %> <%= button_to "Accept", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}", method: :get %> <%= button_to "Decline", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get %></p></b>
-      <p><%= trip.start_date %> - <%= trip.end_date %></p>
-      <p><%= trip.city %>, <%= trip.country %></p>
-      <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="50" height="50" />
-    <% end %>
+    <div class="font-class">
+      <h4> Pending Trips </h4><br/><br/><br/><br/></h4>
+      <% @pending_trips.each do |trip| %>
+        <div class="a:link">
+          <p><b><%= link_to "#{trip.name}", trip_path(trip.trip_id) %> </p></b></div>
+        <p><img src=<%= "#{trip.image_url}" %> class="img-fluid" alt="moon" width="100" height="100" />
+        <p><%= trip.city %>, <%= trip.country %></p>
+        <p><%= trip.start_date %> - <%= trip.end_date %></p>
+          <div class='btn-group' role="group">
+            <%= button_to "Accept", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}", method: :get, class:"btn button btn-sm" %>&nbsp;&nbsp;&nbsp; 
+            <%= button_to "Decline", "/api/v1/users/#{@user.id}/trips/#{trip.trip_id}/delete", method: :get, class:"btn button btn-sm" %><br>
+          </div><br><br><br><br>  
+      <% end %>
+    </div>
   </div>
 </center>
