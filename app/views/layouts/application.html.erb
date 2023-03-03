@@ -4,19 +4,23 @@
     <title>OnyvaFe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%# <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .flashMessage { color: hotpink;
+                      text-align: center; }
+    </style>
   </head>
-
   <body>
   <%= render 'layouts/navbar' %>
     <div class="container">
       <br/>
+      <div>
       <% flash.each do |type, msg| %>
       <div class="title_name">
-        <%= msg %>
+        <div class="flashMessage">
+          <%= msg %>
+        </div>
       </div>
       <% end %>
       <%= yield %>
