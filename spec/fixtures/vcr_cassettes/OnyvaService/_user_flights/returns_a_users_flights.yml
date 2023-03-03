@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6e33814d-671c-4fd8-9b0f-942586cf64c7
+      - d4e4e86e-dc11-4bba-8886-8261f370f3c1
       X-Runtime:
-      - '0.037616'
+      - '0.006293'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"flight","attributes":{"airline_code":"sw","flight_number":"123","date":"2023-03-01T00:00:00.000Z"}}]}'
-  recorded_at: Tue, 28 Feb 2023 19:45:21 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:53 GMT
 recorded_with: VCR 6.1.0

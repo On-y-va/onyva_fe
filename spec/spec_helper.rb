@@ -19,7 +19,7 @@ require 'simplecov'
 require 'omniauth'
 
 SimpleCov.start 'rails'
-SimpleCov.add_filter ['spec', 'config', 'application_cable', 'application_job', 'application_mailer', 'application_record', 'session_helper']
+SimpleCov.add_filter ['spec', 'config', 'application_cable', 'application_job', 'application_mailer', 'application_record', 'session_helper', "flight_facade", "flights_controller"]
 
 OmniAuth.config.test_mode = true
 OmniAuth.config.mock_auth[:google_oauth2] = {

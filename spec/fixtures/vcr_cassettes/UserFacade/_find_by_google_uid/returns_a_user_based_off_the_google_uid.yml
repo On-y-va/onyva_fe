@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/find?google_uid=109319244970235769326
+    uri: http://localhost:5000/api/v1/users/find?google_uid=1235456789
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"02bb9b3291b3f1a841e625a2227deddf"
+      - W/"fc8b0509bf63094121a131e74fce0359"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9194fa7f-b5af-4de1-8fbf-91bd6b803e11
+      - 3c761541-198e-4b98-a0a4-3d89698f876d
       X-Runtime:
-      - '0.007329'
+      - '0.011365'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"braxton","last_name":"eddings","phone_number":null,"email":"beddings81@gmail.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"109319244970235769326"}}}'
-  recorded_at: Tue, 28 Feb 2023 23:31:47 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Fri, 03 Mar 2023 02:48:01 GMT
 recorded_with: VCR 6.1.0

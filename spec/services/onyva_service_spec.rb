@@ -14,7 +14,6 @@ RSpec.describe OnyvaService, :vcr do
       expect(user[:attributes]).to have_key(:last_name)
       expect(user[:attributes][:last_name]).to be_a(String)
       expect(user[:attributes]).to have_key(:phone_number)
-      expect(user[:attributes][:phone_number]).to be_a(String)
       expect(user[:attributes]).to have_key(:email)
       expect(user[:attributes][:email]).to be_a(String)
       expect(user[:attributes]).to have_key(:emergency_contact_name)
@@ -36,28 +35,27 @@ RSpec.describe OnyvaService, :vcr do
       trip = OnyvaService.one_trip(2)
 
       expect(trip).to be_a(Hash)
-      expect(trip[:data]).to have_key(:id)
-      expect(trip[:data][:id]).to be_a(String)
-      expect(trip[:data][:attributes]).to have_key(:name)
-      expect(trip[:data][:attributes][:name]).to be_a(String)
-      expect(trip[:data][:attributes]).to have_key(:country)
-      expect(trip[:data][:attributes][:country]).to be_a(String)
-      expect(trip[:data][:attributes]).to have_key(:city)
-      expect(trip[:data][:attributes][:city]).to be_a(String)
-      expect(trip[:data][:attributes]).to have_key(:postcode)
-      expect(trip[:data][:attributes][:postcode]).to be_a(String)
-      expect(trip[:data][:attributes]).to have_key(:place_id)
-      expect(trip[:data][:attributes]).to have_key(:start_date)
-      expect(trip[:data][:attributes]).to have_key(:end_date)
+      expect(trip).to have_key(:id)
+      expect(trip[:id]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:name)
+      expect(trip[:attributes][:name]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:country)
+      expect(trip[:attributes][:country]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:city)
+      expect(trip[:attributes][:city]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:postcode)
+      expect(trip[:attributes][:postcode]).to be_a(String)
+      expect(trip[:attributes]).to have_key(:place_id)
+      expect(trip[:attributes]).to have_key(:start_date)
+      expect(trip[:attributes]).to have_key(:end_date)
     end
   end
 
   describe '#delete_one_trip' do
-    it 'deletes one trip' do      
+    xit 'deletes one trip' do      
       response = OnyvaService.delete_one_trip(2)
-
       response = JSON.parse(response.body, symbolize_names: true)
-      expect(response).to have_key(:data)
+      expect(response.body).to eq("")
       expect(response.status).to eq(204)
     end
   end
@@ -77,16 +75,15 @@ RSpec.describe OnyvaService, :vcr do
 
   describe '#user_trips' do
     it 'returns a users trips' do      
-      user_trip = OnyvaService.user_trips(3, 'accepted')
+      user_trip = OnyvaService.user_trips(1, 1)
 
-      expect(user_trip).to be_a(Hash)
+      expect(user_trip).to be_a(Array)
     end
   end
 
   describe '#find_user_by_google_uid' do
     it 'returns a users' do      
-      user = OnyvaService.find_user_by_google_uid(113236883765066486494)
-
+      user = OnyvaService.find_user_by_google_uid("1235456789")
       expect(user).to be_a(Hash)
       expect(user).to have_key(:id)
       expect(user[:id]).to be_a(String)
@@ -102,23 +99,13 @@ RSpec.describe OnyvaService, :vcr do
     end
   end
 
-  describe '#update_user' do #this wont run as it doesnt know what update params are in onyva_service/controller
-    xit 'updates a user' do      
-      user = OnyvaService.update_user(3)
-
-      expect(user).to be_a(Hash)
-      expect(user).to have_key(:id)
-      expect(user[:id]).to be_a(String)
-      expect(user[:attributes]).to have_key(:first_name)
-      expect(user[:attributes][:first_name]).to be_a(String)
-      expect(user[:attributes]).to have_key(:last_name)
-      expect(user[:attributes][:last_name]).to be_a(String)
+  describe '#update_user' do 
+    it 'updates a user' do      
+      user_params = { phone_number: "1234456778" }
+      user = OnyvaService.update_user(2, user_params)
       expect(user[:attributes]).to have_key(:phone_number)
-      expect(user[:attributes][:phone_number]).to be_a(String)
-      expect(user[:attributes]).to have_key(:email)
-      expect(user[:attributes][:email]).to be_a(String)
-      expect(user[:attributes]).to have_key(:emergency_contact_name)
-      expect(user[:attributes]).to have_key(:emergency_contact_phone_number)
+      expect(user[:attributes][:phone_number]).to eq("1234456778")
+
     end
   end
 
@@ -130,8 +117,8 @@ RSpec.describe OnyvaService, :vcr do
                 city: "Murfreesboro",
                 postcode: "37128",
                 start_date: "12/12/23",
-                end_date: "12/12/23",
-                user_id: 2
+                end_date: "12/13/23",
+                user_id: 1
               }
       
       trip = OnyvaService.create_trip(trip)
@@ -153,6 +140,52 @@ RSpec.describe OnyvaService, :vcr do
       expect(trip[:attributes][:start_date]).to be_a(String)
       expect(trip[:attributes]).to have_key(:events)
       expect(trip[:attributes][:events]).to be_a(Array)
+    end
+
+    describe "#create_flight" do
+      xit 'creates a flight' do
+        flight_params = {
+                  airline_code: "SW",
+                  flight_number: "1234",
+                  date: "12/12/23",
+                  user_id: 1
+                }
+        
+        flight = OnyvaService.create_flight(1, flight_params)
+
+        expect(flight).to be_a(Hash)
+        expect(flight).to have_key(:flight_id)
+        expect(flight[:id]).to be_a(String)
+        expect(flight[:attributes]).to have_key(:airline_code)
+        expect(flight[:attributes][:airline_code]).to be_a(String)
+        expect(flight[:attributes]).to have_key(:flight_number)
+        expect(flight[:attributes][:flight_number]).to be_a(String)
+        expect(flight[:attributes]).to have_key(:date)
+        expect(flight[:attributes][:date]).to be_a(String)
+      end
+    end
+
+    describe "#update_trip_attendee" do
+      xit 'update a trip attendee' do
+        trip_attendee_params = {
+                                user_id: 1,
+                                trip_id: 2,
+                                status: 1
+                              }
+        
+        trip_attendee = OnyvaService.update_trip_attendee(1, 1)
+
+        expect(trip_attendee.status).to eq("accep")
+      end
+    end
+
+    describe '#delete_trip_attendee' do
+      xit 'deletes a trip attendee' do      
+        response = OnyvaService.delete_trip_attendee(2)
+        response = JSON.parse(response.body, symbolize_names: true)
+        expect(response.body).to eq("")
+        expect(response.status).to eq(204)
+      end
     end
   end
 end

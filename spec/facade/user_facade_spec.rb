@@ -19,7 +19,7 @@ RSpec.describe UserFacade do
 
   describe '#find_by_google_uid' do
     it 'returns a user based off the google uid', :vcr do
-      user = UserFacade.find_by_google_uid(109319244970235769326)
+      user = UserFacade.find_by_google_uid("1235456789")
 
       expect(user).to be_a(User)
     end
