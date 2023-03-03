@@ -39,6 +39,8 @@ This application was designed according to the project specs [here](https://back
 
 ## OAuth
 
+This app uses the Google Sign-In API and OAuth 2.0 protocol to authenticate users and retrieve their basic profile information. This information is stored to allow users to sign in and create accounts using their Google credentials. 
+
 ## Contributors
 
 :mortar_board: <i>All participants in this project are graduates from the Turing School of Software & Design.</i> <br> <br>
