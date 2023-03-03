@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/2/trips/find_all?status=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7e23889d91544ace0d5fdecaea3441a9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc948fe1-7bb2-4aba-baf2-26363fe1a6a5
+      X-Runtime:
+      - '0.024861'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"17","type":"trip","attributes":{"name":"test","city":"murfreesboro","country":"united
+        states","postcode":"37128","place_id":null,"start_date":"12/12/23","end_date":"12/24/23","image_url":null},"relationships":{"events":{"data":[]}}}]}'
+  recorded_at: Tue, 28 Feb 2023 23:31:06 GMT
+recorded_with: VCR 6.1.0
