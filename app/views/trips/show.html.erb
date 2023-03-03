@@ -21,6 +21,14 @@
     <div id="pic" >
       <div class="col">
         <img src=<%= "#{@trip.image_url}" %> class="img-fluid" alt="location image" width="300" height="100" />
+        <div class="bg p-1 rounded-lg m-5">
+          <div class="font-class">
+        <h4>Attending</h4>
+        <% @users.each do |user| %>
+        <p><%= user.first_name %> <%= user.last_name %></p>
+        <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -91,6 +99,7 @@
           </div>
         <div class="col", id="schedule">
           <h4>Todays Itinerary:</h4>
+          COMING SOON!
         </div>
       </div>
     </div>

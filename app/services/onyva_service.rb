@@ -75,7 +75,6 @@ class OnyvaService
 
   def self.trip_users(trip_id)
     response = conn.get("/api/v1/trips/#{trip_id}/users")
-    require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)[:data]
   end
 end

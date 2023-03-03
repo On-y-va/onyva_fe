@@ -11,7 +11,6 @@ class TripFacade
 
   def self.trip_users(id)
     results = OnyvaService.trip_users(id)
-    require 'pry'; binding.pry
     results.map do |user|
       User.new(user)
     end
