@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
   helper_method :current_user
 
   def current_user
@@ -12,6 +11,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-    redirect_to root_path unless user_signed_in?
+    if !user_signed_in?
+      flash[:alert] = "Authentication failed"
+      redirect_to root_path
+    end
   end
 end
