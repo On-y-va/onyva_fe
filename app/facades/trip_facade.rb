@@ -8,4 +8,11 @@ class TripFacade
     result = OnyvaService.create_trip(trip)
     Trip.new(result)
   end
+
+  def self.trip_users(id)
+    results = OnyvaService.trip_users(id)
+    results.map do |user|
+      User.new(user)
+    end
+  end
 end

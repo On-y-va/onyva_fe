@@ -7,6 +7,7 @@ class TripsController < ApplicationController
     @user = current_user
     @trip = TripFacade.one_trip(params[:id])
     @events = @trip.events
+    @users = TripFacade.trip_users(params[:id])
   end
   
   def edit
