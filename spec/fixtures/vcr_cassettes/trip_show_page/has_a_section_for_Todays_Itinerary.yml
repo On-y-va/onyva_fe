@@ -25,15 +25,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6dfb4189-1b77-4bd3-88a2-0b1ca1bbe767
+      - '09c7b0a3-aab8-4f12-a0fc-212253998179'
       X-Runtime:
-      - '0.002327'
+      - '0.003179'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -59,15 +59,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a67d3dce-a92d-424a-bb5a-5617d09d1f90
+      - 98507b8e-b027-42bd-a120-4210ccbac243
       X-Runtime:
-      - '0.002072'
+      - '0.002444'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -93,15 +93,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dce4d2db-3dd7-4cba-9206-c55fcd974eea
+      - 10b28833-ffd7-4dec-9ce3-d1f2c831de07
       X-Runtime:
-      - '0.005741'
+      - '0.002235'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -127,15 +127,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd37b153-8203-48f6-89cc-ab7910920f0a
+      - 318f6d7a-f803-4887-89d9-3576780e0e36
       X-Runtime:
-      - '0.002152'
+      - '0.008736'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=0
@@ -157,19 +157,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cb8a911fcb58e5f8afed75abb30a9643"
+      - W/"259629e9af73da338de42f35e59b25eb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a192253a-335e-4efa-a9a8-a91dff7ee43c
+      - 2005b5e8-be59-4f4d-a28e-18d5d57261c7
       X-Runtime:
-      - '0.004230'
+      - '0.011107'
       Transfer-Encoding:
       - chunked
     body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"trip","attributes":{"name":"Stag Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-05-01","end_date":"2023-05-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}}]}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IjMiLCJ0eXBlIjoidHJpcCIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IlN0YWcgRG8iLCJjaXR5IjoiQ2FibyIsImNvdW50cnkiOiJNZXhpY28iLCJwb3N0Y29kZSI6IjAwMTIzIiwicGxhY2VfaWQiOiI1MTgxMjBlNWNjMWI4NDQxYzA1OTRmMDdiMjllNWE5MTIwYzBmMDAxMDFmOTAxODhhMjA0MDAwMDAwMDAwMGMwMDIwOCIsInN0YXJ0X2RhdGUiOiIyMDIzLTA1LTAxIiwiZW5kX2RhdGUiOiIyMDIzLTA1LTEwIiwiaW1hZ2VfdXJsIjoiaHR0cHM6Ly9saXZlLnN0YXRpY2ZsaWNrci5jb20vNjU1MzUvNTcxNjc2NjA2NF82NDU1OTQ5MWEzX3cuanBnIiwiZXZlbnRzIjpbXX0sInJlbGF0aW9uc2hpcHMiOnsiZXZlbnRzIjp7ImRhdGEiOltdfX19LHsiaWQiOiI1IiwidHlwZSI6InRyaXAiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJURVNUIFRSSVAiLCJjaXR5IjoiQ2FibyIsImNvdW50cnkiOiJNZXhpY28iLCJwb3N0Y29kZSI6IjAwMTIzIiwicGxhY2VfaWQiOiI1MTgxMjBlNWNjMWI4NDQxYzA1OTRmMDdiMjllNWE5MTIwYzBmMDAxMDFmOTAxODhhMjA0MDAwMDAwMDAwMGMwMDIwOCIsInN0YXJ0X2RhdGUiOiIyMDIzLTAyLTI4IiwiZW5kX2RhdGUiOiIyMDIzLTAzLTA5IiwiaW1hZ2VfdXJsIjoiaHR0cHM6Ly9saXZlLnN0YXRpY2ZsaWNrci5jb20vNjU1MzUvNTIzNzg2MjAyMTNfNzZmMDEzMzBlMF93LmpwZyIsImV2ZW50cyI6W3siaWQiOjI1LCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxZDMwNzM2YjEwOTgzNDFjMDU5NmYwM2ZjMWM4MDhlMjBjMGYwMDEwMmY5MDEzOTQ3NmQyNTAwMDAwMDAwOTIwMzBhNDEyMDQzNjhjM2ExNjM2MTcyNjEiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMDg0WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjA4NFoiLCJuYW1lIjoiQSBDaMOhY2FyYSIsImFkZHJlc3MiOiJSdWEgVHJhcGljaGUsIENhYm8gZGUgU2FudG8gQWdvc3RpbmhvIC0gUEUsIDU0NTE1LTMzMCwgQnJhemlsIiwiY2F0ZWdvcnkiOiJyZXN0YXVyYW50In0seyJpZCI6MjYsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTFlYzhkZDFlMDZiN2E0MWMwNTk2YTM4YjM3MGNjOTUyMGMwZjAwMTAyZjkwMTFhN2Y1YzNlMDAwMDAwMDA5MjAzMGM0MjYxNzIyMDY0NmYyMDQyNjk2ZTY3NmYiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMDg4WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjA4OFoiLCJuYW1lIjoiQmFyIGRvIEJpbmdvIiwiYWRkcmVzcyI6IkF2ZW5pZGEgQWxjaWRlcyBBbHZlcyBkZSBTb3V6YSAzODMsIEl0YXB1YW1hLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUyMi01MjAsIEJyYXppbCIsImNhdGVnb3J5IjoicmVzdGF1cmFudCJ9LHsiaWQiOjI3LCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxNTMyOGU2ODcwODdhNDFjMDU5MzVkYmNjNmUyYTk2MjBjMGYwMDEwMmY5MDE5YWJlNjAzZTAwMDAwMDAwOTIwMzFiNDk3NDYxNzA3NTYxNmQ2MTIwNDg2MTZkNjI3NTcyNjc3NTY1NzI2OTYxMjA1MDcyNjk2ZDY1Iiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjA5MVoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ni4wOTFaIiwibmFtZSI6Ikl0YXB1YW1hIEhhbWJ1cmd1ZXJpYSBQcmltZSIsImFkZHJlc3MiOiJBdmVuaWRhIEFsY2lkZXMgQWx2ZXMgZGUgU291emEgcy9uLCBJdGFwdWFtYSwgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgNTQ1MjItNTIwLCBCcmF6aWwiLCJjYXRlZ29yeSI6InJlc3RhdXJhbnQifSx7ImlkIjoyOCwidHJpcF9pZCI6NSwiZXZlbnRfZGF0ZSI6bnVsbCwiZXZlbnRfdGltZSI6bnVsbCwiZXZlbnRfaWQiOiI1MTMxMGViYmUxMzE4MjQxYzA1OTZlYThhOThmMDNiMzIwYzBmMDAxMDJmOTAxNDJhOWM2MTAwMDAwMDAwMDkyMDMwYjRmMjA0MTZjNjY3MjY1NjRjM2EzNmYiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMDk1WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjA5NVoiLCJuYW1lIjoiTyBBbGZyZWTDo28iLCJhZGRyZXNzIjoiUnVhIERvaXMsIENhYm8gZGUgU2FudG8gQWdvc3RpbmhvIC0gUEUsIDU0NTAwLTAwMSwgQnJhemlsIiwiY2F0ZWdvcnkiOiJyZXN0YXVyYW50In0seyJpZCI6MjksInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTEwYTM2MjhhYzQxOTQ0MWMwNTlkZTMzNjk3MzM3OTAyMGMwZjAwMTAyZjkwMWUzMzYwOTM2MDAwMDAwMDA5MjAzMDI0YTUyIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjA5N1oiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ni4wOTdaIiwibmFtZSI6IkpSIiwiYWRkcmVzcyI6IlBFLTAzOSwgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgQnJhemlsIiwiY2F0ZWdvcnkiOiJyZXN0YXVyYW50In0seyJpZCI6MzAsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTE5MWFkYzljMzYzN2E0MWMwNTk0ZTJhNWQxZjU4OTUyMGMwZjAwMTAyZjkwMTMyN2Y1YzNlMDAwMDAwMDA5MjAzMGU0MjYxNzIyMDY0NmYyMDUyNmY2MjY5NmU2ODZmIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjEwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ni4xMDBaIiwibmFtZSI6IkJhciBkbyBSb2JpbmhvIiwiYWRkcmVzcyI6IkF2ZW5pZGEgSm9zZWZhIEFuYSBkYSBDb25jZWnDp8OjbyBzL24sIEl0YXB1YW1hLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUyMi01MTUsIEJyYXppbCIsImNhdGVnb3J5IjoicmVzdGF1cmFudCJ9LHsiaWQiOjMxLCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxMTllZmVhM2Y2ZDdhNDFjMDU5MmQ1NjM5YjU5ZTk1MjBjMGYwMDEwMmY5MDEzNDdmNWMzZTAwMDAwMDAwOTIwMzBkNDI2MTcyMjA2NDYxMjA1MzY5NmU3NTYzNjEiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMTAzWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjEwM1oiLCJuYW1lIjoiQmFyIGRhIFNpbnVjYSIsImFkZHJlc3MiOiJBdmVuaWRhIElzYWFjIEdvbWVzIGRhIENvc3RhIHMvbiwgSXRhcHVhbWEsIENhYm8gZGUgU2FudG8gQWdvc3RpbmhvIC0gUEUsIDU0NTIyLTU5NSwgQnJhemlsIiwiY2F0ZWdvcnkiOiJyZXN0YXVyYW50In0seyJpZCI6MzIsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTFkMDlmNDJhMzZkN2E0MWMwNTk3ZGU3YzEwZDgyOTUyMGMwZjAwMTAyZjkwMTRmN2Y1YzNlMDAwMDAwMDA5MjAzMGY0MjYxNzI3MjYxNjM2MTIwNjQ2MTIwNTI2OTc0NjEiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMTA2WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjEwNloiLCJuYW1lIjoiQmFycmFjYSBkYSBSaXRhIiwiYWRkcmVzcyI6IkF2ZW5pZGEgSXNhYWMgR29tZXMgZGEgQ29zdGEgcy9uLCBJdGFwdWFtYSwgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgNTQ1MjItNTk1LCBCcmF6aWwiLCJjYXRlZ29yeSI6InJlc3RhdXJhbnQifSx7ImlkIjozMywidHJpcF9pZCI6NSwiZXZlbnRfZGF0ZSI6bnVsbCwiZXZlbnRfdGltZSI6bnVsbCwiZXZlbnRfaWQiOiI1MTBmNWMwZWRkNmU3YTQxYzA1OTcxM2NmOWQ4YWI5NTIwYzBmMDAxMDJmOTAxOTM4OTVjM2UwMDAwMDAwMDkyMDMwYzUwNzM3OTYzNmY2Mjc1NzI2Nzc1NjU3MiIsInZvdGVzIjpudWxsLCJjb25maXJtZWQiOmZhbHNlLCJjcmVhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ni4xMjRaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMTI0WiIsIm5hbWUiOiJQc3ljb2J1cmd1ZXIiLCJhZGRyZXNzIjoiQXZlbmlkYSBJc2FhYyBHb21lcyBkYSBDb3N0YSAyNzIsIEl0YXB1YW1hLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUyMi01OTUsIEJyYXppbCIsImNhdGVnb3J5IjoicmVzdGF1cmFudCJ9LHsiaWQiOjM0LCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxODAzODdhNjNmNzc5NDFjMDU5NGFhYjQ5ODMxMDk2MjBjMGYwMDEwMmY5MDE5OGJlNjAzZTAwMDAwMDAwOTIwMzBkNTI2Zjc0NjEyMDY0NjEyMDQzNmY3Mzc0NjEiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDYuMTI3WiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ2LjEyN1oiLCJuYW1lIjoiUm90YSBkYSBDb3N0YSIsImFkZHJlc3MiOiJBdmVuaWRhIEJlaXJhIE1hciBzL24sIEl0YXB1YW1hLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUyMi02NjAsIEJyYXppbCIsImNhdGVnb3J5IjoicmVzdGF1cmFudCJ9LHsiaWQiOjM1LCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxMmNlYzk4YjRmNjc4NDFjMDU5NGRkZDE5ZmM4ZWI3MjBjMGYwMDEwMmY5MDE5YTE0OGMyOTAwMDAwMDAwOTIwMzFhNDY2ZjcyNzQ2NTIwNjQ2ZjIwNTA2ZjZlNzQ2MTZjMjA2NDY1MjA0ZTYxN2E2MTcyYzNhOSIsInZvdGVzIjpudWxsLCJjb25maXJtZWQiOmZhbHNlLCJjcmVhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny4zODlaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuMzg5WiIsIm5hbWUiOiJGb3J0ZSBkbyBQb250YWwgZGUgTmF6YXLDqSIsImFkZHJlc3MiOiJSdWEgZG8gU29sLCBMb3RlYW1lbnRvIEFndWFzIENvbXByaWRhcywgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgNTQ1MDAtOTkyLCBCcmF6aWwiLCJjYXRlZ29yeSI6ImF0dHJhY3Rpb24ifSx7ImlkIjozNiwidHJpcF9pZCI6NSwiZXZlbnRfZGF0ZSI6bnVsbCwiZXZlbnRfdGltZSI6bnVsbCwiZXZlbnRfaWQiOiI1MTBkYWZlYWViMWY4NTQxYzA1OTMzMTUyMGRkYzM5MzIwYzBmMDAxMDJmOTAxYjkwODYwMjUwMDAwMDAwMDkyMDMxODUwNzI2MWMzYTc2MTIwNDQ3MjJlMjA0YTZmNzNjM2E5MjA0MjY1N2E2NTcyNzI2MSIsInZvdGVzIjpudWxsLCJjb25maXJtZWQiOmZhbHNlLCJjcmVhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny4zOTFaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuMzkxWiIsIm5hbWUiOiJQcmHDp2EgRHIuIEpvc8OpIEJlemVycmEiLCJhZGRyZXNzIjoiQ2VudHJvLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obywgUmVnacOjbyBNZXRyb3BvbGl0YW5hIGRvIFJlY2lmZSwgQnJhemlsIiwiY2F0ZWdvcnkiOiJhdHRyYWN0aW9uIn0seyJpZCI6MzcsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTE2ZTMwMmQzZWM2N2E0MWMwNTk3MWNiZTdhZmRjYmEyMGMwZjAwMTAyZjkwMTVmZDE4ZDI5MDAwMDAwMDA5MjAzMTg0NjZmNzI3NDY1MjA2NDZmMjA1MDZmNmU3NDYxNmMyMDY0NjUyMDUzNzU2MTcwNjUiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuMzkyWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjM5MloiLCJuYW1lIjoiRm9ydGUgZG8gUG9udGFsIGRlIFN1YXBlIiwiYWRkcmVzcyI6IlJ1YSBkYSBQcmFpYSwgU1VBUEUsIENhYm8gZGUgU2FudG8gQWdvc3RpbmhvIC0gUEUsIDU0NTAwLTk5MiwgQnJhemlsIiwiY2F0ZWdvcnkiOiJhdHRyYWN0aW9uIn0seyJpZCI6MzgsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTE4YmEyMmMyZDE0Nzk0MWMwNTkzNzYxYTUzODIwYjAyMGMwZjAwMTAyZjkwMTJiNjA5YjJkMDAwMDAwMDA5MjAzMDg1NDY5NzI2ZjZjNjU3MzYxIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjM5NloiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny4zOTZaIiwibmFtZSI6IlRpcm9sZXNhIiwiYWRkcmVzcyI6IkVzdHJhZGEgZGUgQ2FsaGV0YXMsIExvdGVhbWVudG8gQWd1YXMgQ29tcHJpZGFzLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUwMC05OTIsIEJyYXppbCIsImNhdGVnb3J5IjoiYXR0cmFjdGlvbiJ9LHsiaWQiOjM5LCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxOWE4NmUzMmU4NjgyNDFjMDU5NTQzMWJiM2Y5NGI4MjBjMGYwMDEwMmY5MDE0ZTk4ZDAyZjAwMDAwMDAwOTIwMzA1NTM1NTQxNTA0NSIsInZvdGVzIjpudWxsLCJjb25maXJtZWQiOmZhbHNlLCJjcmVhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny4zOThaIiwidXBkYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuMzk4WiIsIm5hbWUiOiJTVUFQRSIsImFkZHJlc3MiOiJSb2RvdmlhIFBFLTA2MCwgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgNTQ1MDAtMDAwLCBCcmF6aWwiLCJjYXRlZ29yeSI6ImF0dHJhY3Rpb24ifSx7ImlkIjo0MCwidHJpcF9pZCI6NSwiZXZlbnRfZGF0ZSI6bnVsbCwiZXZlbnRfdGltZSI6bnVsbCwiZXZlbnRfaWQiOiI1MWQ3YThhMGVjODQ4MjQxYzA1OThmNzBmN2U5NmRiODIwYzBmMDAxMDJmOTAxNGY5OGQwMmYwMDAwMDAwMDkyMDMwNTUzNTU0MTUwNDUiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuNDAxWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjQwMVoiLCJuYW1lIjoiU1VBUEUiLCJhZGRyZXNzIjoiUm9kb3ZpYSBQRS0wNjAsIENhYm8gZGUgU2FudG8gQWdvc3RpbmhvIC0gUEUsIDU0NTAwLTAwMCwgQnJhemlsIiwiY2F0ZWdvcnkiOiJhdHRyYWN0aW9uIn0seyJpZCI6NDEsInRyaXBfaWQiOjUsImV2ZW50X2RhdGUiOm51bGwsImV2ZW50X3RpbWUiOm51bGwsImV2ZW50X2lkIjoiNTExMjc3YWI5ZDE3Nzk0MWMwNTlhMTJmMmVmMzFkYjAyMGMwZjAwMTAzZjkwMTFhMzc3N2JkMDAwMDAwMDA5MjAzMDg1NDY5NzI2ZjZjNjU3MzYxIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjQwM1oiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny40MDNaIiwibmFtZSI6IlRpcm9sZXNhIiwiYWRkcmVzcyI6IkVzdHJhZGEgZGUgQ2FsaGV0YXMsIExvdGVhbWVudG8gQWd1YXMgQ29tcHJpZGFzLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUwMC05OTIsIEJyYXppbCIsImNhdGVnb3J5IjoiYXR0cmFjdGlvbiJ9LHsiaWQiOjQyLCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxYTNhMzY2NTk0MTgzNDFjMDU5Y2FkNDQ3YzI3NDkwMjBjMGYwMDEwM2Y5MDE3ZDZkMTAyOTAxMDAwMDAwOTIwMzA5NTY2OTZjNjEyMDUyNmY2MzYxIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjQwNloiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny40MDZaIiwibmFtZSI6IlZpbGEgUm9jYSIsImFkZHJlc3MiOiJSdWEgVmVyZWFkb3IgRnJhbmNpc2NvIFBlc3NvYSwgU2FudG8gSW5hY2lvLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUxNS0zMzAsIEJyYXppbCIsImNhdGVnb3J5IjoiYXR0cmFjdGlvbiJ9LHsiaWQiOjQzLCJ0cmlwX2lkIjo1LCJldmVudF9kYXRlIjpudWxsLCJldmVudF90aW1lIjpudWxsLCJldmVudF9pZCI6IjUxZjZjYzM3NDdjMjg0NDFjMDU5ZWUxYzE4MTEzMTkyMjBjMGYwMDEwM2Y5MDFkMzE0NDc2MTAxMDAwMDAwOTIwMzEyNDU3Mzc0YzNhMTc0NzU2MTIwNGY3MDY1NzJjM2ExNzI2OTZmIiwidm90ZXMiOm51bGwsImNvbmZpcm1lZCI6ZmFsc2UsImNyZWF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjQwOVoiLCJ1cGRhdGVkX2F0IjoiMjAyMy0wMy0wM1QwMjowNjo0Ny40MDlaIiwibmFtZSI6IkVzdMOhdHVhIE9wZXLDoXJpbyIsImFkZHJlc3MiOiJBdmVuaWRhIFByZXNpZGVudGUgR2V0dWxpbyBWYXJnYXMsIENlbnRybywgQ2FibyBkZSBTYW50byBBZ29zdGluaG8gLSBQRSwgNTQ1MTAtNDMwLCBCcmF6aWwiLCJjYXRlZ29yeSI6ImF0dHJhY3Rpb24ifSx7ImlkIjo0NCwidHJpcF9pZCI6NSwiZXZlbnRfZGF0ZSI6bnVsbCwiZXZlbnRfdGltZSI6bnVsbCwiZXZlbnRfaWQiOiI1MTkxMmM2MDAyYjc4NDQxYzA1OTAyZjU5M2E3YmQ5MjIwYzBmMDAxMDNmOTAxZDQxNDQ3NjEwMTAwMDAwMDkyMDMyMzRkNmY2ZTc1NmQ2NTZlNzQ2ZjIwNjQ2ZjIwNDE3Mjc0Njk3Mzc0NjEyMDY0NjUyMDUyNzU2MTIwNjQ2ZjIwNDM2MTYyNmYiLCJ2b3RlcyI6bnVsbCwiY29uZmlybWVkIjpmYWxzZSwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDI6MDY6NDcuNDExWiIsInVwZGF0ZWRfYXQiOiIyMDIzLTAzLTAzVDAyOjA2OjQ3LjQxMVoiLCJuYW1lIjoiTW9udW1lbnRvIGRvIEFydGlzdGEgZGUgUnVhIGRvIENhYm8iLCJhZGRyZXNzIjoiUnVhIERvdXRvciBTb3V6YSBMZcOjbywgQ2VudHJvLCBDYWJvIGRlIFNhbnRvIEFnb3N0aW5obyAtIFBFLCA1NDUwNS0zNzAsIEJyYXppbCIsImNhdGVnb3J5IjoiYXR0cmFjdGlvbiJ9XX0sInJlbGF0aW9uc2hpcHMiOnsiZXZlbnRzIjp7ImRhdGEiOlt7ImlkIjoiMjUiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMjYiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMjciLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMjgiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMjkiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzAiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzEiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzIiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzMiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzQiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzUiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzYiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzciLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzgiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiMzkiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiNDAiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiNDEiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiNDIiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiNDMiLCJ0eXBlIjoiZXZlbnQifSx7ImlkIjoiNDQiLCJ0eXBlIjoiZXZlbnQifV19fX1dfQ==
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=1
@@ -191,25 +192,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d3d73c135674a51d087803aa0e44ad26"
+      - W/"88ac7c0aba1f16efccc319c353e7b53f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c2314594-6308-4a93-a864-0549a3c24ac1
+      - e9474b0d-6f4e-47ad-b19e-75f51039b490
       X-Runtime:
-      - '0.007119'
+      - '0.012590'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.333Z","updated_at":"2023-03-02T20:31:11.333Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.335Z","updated_at":"2023-03-02T20:31:11.335Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.336Z","updated_at":"2023-03-02T20:31:11.336Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-02-28","end_date":"2023-03-09","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.337Z","updated_at":"2023-03-02T20:31:11.337Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}}]}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -235,15 +236,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 33dd007f-a0db-49c1-8524-accee380dc9d
+      - 9082c3ae-8765-4352-b25e-b96214fe9f81
       X-Runtime:
-      - '0.002100'
+      - '0.002156'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -269,15 +270,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eb61d40d-3623-494a-9361-1c6a16279f44
+      - 3e9e2266-3a6c-4f1f-8b96-f6072168702c
       X-Runtime:
-      - '0.001865'
+      - '0.002171'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -303,15 +304,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a9146f68-f2cc-4c4b-bb2c-874557fb3b6d
+      - 5168d576-1a08-46e7-97e7-4e2b8314617f
       X-Runtime:
-      - '0.004437'
+      - '0.002424'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/trips/1
@@ -333,28 +334,62 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cdf5297ff46bd562697d25e52dc6fe25"
+      - W/"68699912b204505e588a0a7d859b7b14"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8f0d67c5-82c4-4bd9-bacf-ccf8fe5711e6
+      - 414834a3-56e7-4345-9b08-fc9a041ed910
       X-Runtime:
-      - '0.004286'
+      - '0.005124'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.333Z","updated_at":"2023-03-02T20:31:11.333Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.335Z","updated_at":"2023-03-02T20:31:11.335Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.336Z","updated_at":"2023-03-02T20:31:11.336Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-02-28","end_date":"2023-03-09","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-02T20:31:11.337Z","updated_at":"2023-03-02T20:31:11.337Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}},"included":[{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
         Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"2","type":"event","attributes":{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"name":"Culver''s","address":"2993
         South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"3","type":"event","attributes":{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
         United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"4","type":"event","attributes":{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}]}'
-  recorded_at: Thu, 02 Mar 2023 20:43:41 GMT
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/1/users
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0fb46e2f59d0653a3075f55d34186f5e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0e7a3aee-a121-4814-afb8-1c533d7c5fc2
+      X-Runtime:
+      - '0.003036'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}]}'
+  recorded_at: Fri, 03 Mar 2023 02:06:52 GMT
 recorded_with: VCR 6.1.0

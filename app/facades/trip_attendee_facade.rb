@@ -6,4 +6,8 @@ class TripAttendeeFacade
   def self.delete_trip_attendee(user_id, trip_id)
     OnyvaService.delete_trip_attendee(user_id, trip_id)
   end
+
+  def self.create_trip_attendees(trip_id, user_emails)
+    OnyvaService.create_trip_attendees(trip_id, user_emails)
+  end
 end

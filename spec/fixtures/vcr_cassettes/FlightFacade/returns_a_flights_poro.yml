@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"aec50c72f212b657109d4571efdbcc1f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 98f38476-44cc-45e4-a4cc-f26bdfa2f9e7
+      - 31b8f030-7e5c-4f9f-a097-221f6d28cd00
       X-Runtime:
-      - '0.009045'
+      - '0.050405'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Thu, 02 Mar 2023 03:01:57 GMT
+      string: '{"data":[{"id":"1","type":"flight","attributes":{"airline_code":"sw","flight_number":"123","date":"2023-03-01T00:00:00.000Z"}}]}'
+  recorded_at: Fri, 03 Mar 2023 02:06:32 GMT
 recorded_with: VCR 6.1.0

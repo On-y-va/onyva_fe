@@ -32,4 +32,10 @@ RSpec.describe 'user show page', :vcr do
     expect(page).to have_content("You have successfully logged out.")
     expect(current_path).to eq('/')
   end
+
+  it 'has a button to accept a pending trip' do
+      expect(page).to have_button('Accept')
+      click_button('Accept')
+      expect(current_path).to eq(user_path(1))
+  end
 end

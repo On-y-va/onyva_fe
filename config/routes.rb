@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :new, :create]
   resources :trips do
+    get "/invite", to: "trip_attendees#new"
+    post "/invite", to: "trip_attendees#create"
     resources :flights, only: [:index, :new]
   end
   post '/trips/:trip_id/flights/new', to: 'flights#create'

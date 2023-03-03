@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: http://localhost:5000/api/v1/users/4
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/trips/1
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,11 +23,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 38a53be8-ed01-4b45-a2fb-83ad84bb4a5a
+      - 65521e8a-064e-444e-9c69-461be93e4b53
       X-Runtime:
-      - '0.172074'
+      - '0.024536'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 28 Feb 2023 23:18:50 GMT
+  recorded_at: Fri, 03 Mar 2023 02:59:46 GMT
 recorded_with: VCR 6.1.0

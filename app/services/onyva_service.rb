@@ -57,7 +57,7 @@ class OnyvaService
   end
   
   def self.create_flight(trip_id, flight)
-    response = conn.post("/api/v1/trips/#{trip_id}/flgihts", flight: flight)
+    response = conn.post("/api/v1/trips/#{trip_id}/flights", flight: flight)
     JSON.parse(response.body, symbolize_names: true)
   end
 
@@ -72,5 +72,13 @@ class OnyvaService
   def self.update_trip(trip_id, update_trip_params)
     response = conn.patch("/api/v1/trips/#{trip_id}", trip: update_trip_params)
     JSON.parse(response.body, symbolize_names: true)
+
+  def self.create_trip_attendees(trip_id, user_emails)
+    conn.post("/api/v1/trips/#{trip_id}/trip_attendees", user_emails: user_emails)
+  end
+
+  def self.trip_users(trip_id)
+    response = conn.get("/api/v1/trips/#{trip_id}/users")
+    JSON.parse(response.body, symbolize_names: true)[:data]
   end
 end
