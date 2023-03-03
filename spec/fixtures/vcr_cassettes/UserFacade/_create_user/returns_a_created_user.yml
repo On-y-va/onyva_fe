@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - a6caee8f-2e85-413f-b216-552fa65f45ab
+      - 7dcd1a34-0f44-44e1-9c72-94055c70e044
       X-Runtime:
-      - '0.009010'
+      - '0.087690'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"error":"Validation failed: First name can''t be blank, Last name
-        can''t be blank, Email can''t be blank, Google uid can''t be blank"}'
-  recorded_at: Wed, 01 Mar 2023 00:36:39 GMT
+      string: '{"error":[{"title":"Validation failed: First name can''t be blank,
+        Last name can''t be blank, Email can''t be blank, Google uid can''t be blank","status":"400"}]}'
+  recorded_at: Fri, 03 Mar 2023 02:06:38 GMT
 recorded_with: VCR 6.1.0

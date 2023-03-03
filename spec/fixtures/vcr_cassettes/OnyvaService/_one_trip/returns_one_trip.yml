@@ -21,17 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"528220b542e541ccf8fc052cbb24dfb1"
+      - W/"55c284d9692b7acd8506b2b6887121a5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f4fdf790-fc4b-4a97-b090-a6b4c7dc0821
+      - 90178dd1-6266-4d6e-b142-b9aca9f79a01
       X-Runtime:
-      - '0.020881'
+      - '0.004443'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"trip","attributes":{"name":"Trippin","city":"Rome","country":"Italy","postcode":"00123","place_id":null,"start_date":null,"end_date":null,"image_url":null},"relationships":{"events":{"data":[]}}},"included":[]}'
-  recorded_at: Tue, 28 Feb 2023 19:08:24 GMT
+      string: '{"data":{"id":"2","type":"trip","attributes":{"name":"Hen Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-04-01","end_date":"2023-04-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}},"included":[]}'
+  recorded_at: Fri, 03 Mar 2023 02:06:53 GMT
 recorded_with: VCR 6.1.0

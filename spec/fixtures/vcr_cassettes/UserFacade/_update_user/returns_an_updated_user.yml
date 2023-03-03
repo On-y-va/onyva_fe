@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"02bb9b3291b3f1a841e625a2227deddf"
+      - W/"71ab0f9750e6fb6c6c44b5760d502bb9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d0144d1b-5247-4ce1-b3ea-bc9d72e31b09
+      - 7d5794a7-33b8-4748-98f9-3dd41889611f
       X-Runtime:
-      - '0.006502'
+      - '0.019528'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"braxton","last_name":"eddings","phone_number":null,"email":"beddings81@gmail.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"109319244970235769326"}}}'
-  recorded_at: Tue, 28 Feb 2023 23:31:57 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Judy","last_name":"Doe","phone_number":null,"email":"judy.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456799"}}}'
+  recorded_at: Fri, 03 Mar 2023 02:06:38 GMT
 recorded_with: VCR 6.1.0

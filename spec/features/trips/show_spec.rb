@@ -102,4 +102,14 @@ RSpec.describe 'trip show page', :vcr do
       expect(page).to have_content('Todays Itinerary')
     end
   end
+
+  it 'has a button to invite friends' do
+    click_on "Trippin"
+    click_on "Invite Friends"
+    
+    fill_in(:user_emails, with: "judy.doe@example.com")
+    click_on "Invite"
+
+    expect(current_path).to eq(trip_path(1))
+  end
 end
