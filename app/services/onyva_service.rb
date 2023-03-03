@@ -57,7 +57,7 @@ class OnyvaService
   end
   
   def self.create_flight(trip_id, flight)
-    response = conn.post("/api/v1/trips/#{trip_id}/flgihts", flight: flight)
+    response = conn.post("/api/v1/trips/#{trip_id}/flights", flight: flight)
     JSON.parse(response.body, symbolize_names: true)
   end
 
