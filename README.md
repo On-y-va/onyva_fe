@@ -53,7 +53,14 @@ To invite a friend to your trip, click the "Invite friends" button on the trip p
 ## Screenshots
 
 
+![Screen Shot 2023-03-03 at 1 33 52 PM](https://user-images.githubusercontent.com/111713452/222833644-2e914bdc-b952-4842-bd78-dcd843887ffe.png)
 
+![Screen Shot 2023-03-03 at 1 33 58 PM](https://user-images.githubusercontent.com/111713452/222833818-5fce5064-ca1f-4a6c-9b8a-c91f907684f5.png)
+
+
+![Screen Shot 2023-03-03 at 1 34 39 PM](https://user-images.githubusercontent.com/111713452/222833858-3d1aa39f-8496-4695-b1e9-b706bcc5ef87.png)
+
+![Screen Shot 2023-03-03 at 1 34 52 PM](https://user-images.githubusercontent.com/111713452/222833887-1c4c0ca2-c295-49c9-8a1b-0d02af28d1cb.png)
 
 
 ## Contributors
