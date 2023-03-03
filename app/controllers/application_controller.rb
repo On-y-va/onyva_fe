@@ -12,9 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-    if !user_signed_in?
-      flash[:alert] = "Authentication failed"
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 end

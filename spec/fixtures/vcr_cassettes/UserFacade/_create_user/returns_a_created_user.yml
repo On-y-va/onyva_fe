@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: user%5Battributes%5D%5Bemail%5D=john%40gmail.com&user%5Battributes%5D%5Bfirst_name%5D=John&user%5Battributes%5D%5Bgoogle_uid%5D=sdfefefe&user%5Battributes%5D%5Blast_name%5D=Jones&user%5Bid%5D=1
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7695567c-35ae-411d-8f8f-342f0f515b0a
+      X-Runtime:
+      - '0.025872'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":[{"title":"Validation failed: First name can''t be blank,
+        Last name can''t be blank, Email can''t be blank, Google uid can''t be blank","status":"400"}]}'
+  recorded_at: Thu, 02 Mar 2023 23:36:24 GMT
+recorded_with: VCR 6.1.0

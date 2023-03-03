@@ -1,0 +1,281 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/find?google_uid=1235456789
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '09a79dd4-6683-4536-9f83-9ef98febbc48'
+      X-Runtime:
+      - '0.002258'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c181999-78a8-4b6b-adf9-ebce0fe95aa8
+      X-Runtime:
+      - '0.002074'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6ea5a16f-3396-4340-8b24-c4a2a5485271
+      X-Runtime:
+      - '0.003332'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b7377ff9-6701-40b2-9909-f18faffaabba
+      X-Runtime:
+      - '0.002017'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cb8a911fcb58e5f8afed75abb30a9643"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 93dc5108-85d0-4331-8673-ba27a7a19014
+      X-Runtime:
+      - '0.004864'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"trip","attributes":{"name":"Stag Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-05-01","end_date":"2023-05-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}}]}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"37e29cff8d77764148c00f4e24ba2d92"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8073dffd-b92d-43ba-9f5d-596d33deef74
+      X-Runtime:
+      - '0.004955'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-02-28","end_date":"2023-03-09","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-02T23:33:47.248Z","updated_at":"2023-03-02T23:33:47.248Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-02T23:33:47.254Z","updated_at":"2023-03-02T23:33:47.254Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-02T23:33:47.257Z","updated_at":"2023-03-02T23:33:47.257Z","name":"Hazen''s
+        Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-02T23:33:47.259Z","updated_at":"2023-03-02T23:33:47.259Z","name":"Rideout
+        Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}}]}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a4ba4d4-f9ac-44ba-a16d-049097bf066a
+      X-Runtime:
+      - '0.002018'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0c326dd-8009-4dcb-a2d2-c16f70818531
+      X-Runtime:
+      - '0.001971'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:27 GMT
+recorded_with: VCR 6.1.0

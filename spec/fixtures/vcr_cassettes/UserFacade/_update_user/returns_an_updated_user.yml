@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/2
+    body:
+      encoding: UTF-8
+      string: user%5Bname%5D=Ted
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"71ab0f9750e6fb6c6c44b5760d502bb9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef18d5dd-3a27-42ea-ac18-40d4cbb9b287
+      X-Runtime:
+      - '0.004791'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Judy","last_name":"Doe","phone_number":null,"email":"judy.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456799"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:36:24 GMT
+recorded_with: VCR 6.1.0
