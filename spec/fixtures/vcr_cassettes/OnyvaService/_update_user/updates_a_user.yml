@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
+    method: patch
     uri: http://localhost:5000/api/v1/users/2
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: user%5Bphone_number%5D=1234456778
     headers:
       User-Agent:
       - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"71ab0f9750e6fb6c6c44b5760d502bb9"
+      - W/"e610bec66463e358c66c80fac251db62"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 292778e1-d8ff-4ebe-9bc3-ec5f7564d247
+      - e535019f-1a02-444e-bf1e-b14e0fde7c83
       X-Runtime:
-      - '0.008998'
+      - '0.018447'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Judy","last_name":"Doe","phone_number":null,"email":"judy.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456799"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:38 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Judy","last_name":"Doe","phone_number":"1234456778","email":"judy.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456799"}}}'
+  recorded_at: Fri, 03 Mar 2023 02:55:20 GMT
 recorded_with: VCR 6.1.0
