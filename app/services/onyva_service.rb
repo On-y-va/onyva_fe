@@ -68,4 +68,9 @@ class OnyvaService
   def self.delete_trip_attendee(user_id, trip_id)
     conn.delete("/api/v1/users/#{user_id}/trips/#{trip_id}")
   end
+
+  def self.update_trip(trip_id, update_trip_params)
+    response = conn.patch("/api/v1/trips/#{trip_id}", trip: update_trip_params)
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
