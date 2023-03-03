@@ -18,16 +18,7 @@ class TripsController < ApplicationController
       flash[:notice] = "Vacation end date must be after the vacation start date"
       redirect_to new_trip_path
     else
-      # update_trip_params = ({
-      #   "name": params[:name],
-      #   "start_date": params[:start_date],
-      #   "end_date": params[:end_date]
-      #   })
       TripFacade.update_trip(params[:id], update_trip_params)
-      # conn = Faraday.new
-        # response = conn.post("https://onyva-be.herokuapp.com/api/v1/trips", trip: update_trip_params)
-      # response = conn.patch("http://localhost:5000/api/v1/trips/#{params[:id]}", trip: update_trip_params)
-      # trip = JSON.parse(response.body, symbolize_names: true)[:data]
       redirect_to trip_path(params[:id])
     end
   end
