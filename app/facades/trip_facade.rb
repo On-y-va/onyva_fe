@@ -12,4 +12,8 @@ class TripFacade
   def self.update_trip(trip_id, update_trip_params)
     result = OnyvaService.update_trip(trip_id, update_trip_params)
   end
+
+  def self.destroy_trip(trip_id)
+    OnyvaService.destroy_trip(trip_id)
+  end
 end

@@ -38,7 +38,7 @@ class TripsController < ApplicationController
   end
 
   def destroy
-    OnyvaService.destroy_trip(params[:id])
+    TripFacade.destroy_trip(params[:id])
     redirect_to user_path(session[:user_id])
     flash[:notice] = "Trip was successfully deleted."
   end
