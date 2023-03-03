@@ -24,10 +24,11 @@ Running this project requires Rails 5.2.8 and Ruby 2.7.4.
 4. `rails db:{drop,create,migrate,seed}`
 5. Set up your Google OAuth 2 credentials in config/initializers/omniauth.rb. You will need to create a project in the Google Cloud Console, enable the Google OAuth 2 API, and create a client ID and client secret.
 6. Run the test suite with `bundle exec rspec`
-7. Start the local server by running `rails s'
-8. Visit http://localhost:3000
+7. Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
+8. Start the local server by running `rails s'
 
-Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
+## Usage
+To use the application, go to http://localhost:3000 in your web browser. You should see the homepage, which displays a list of your trips if you are logged in, or a login/signup form if you are not.
 
 ## Learning Goals
 - API building and consumption
@@ -38,9 +39,10 @@ This application was designed according to the project specs [here](https://back
 
 ## Screenshots
 
-## OAuth
+## User Authentication
+This application uses Google OAuth 2 for user authentication. When you click the "Sign in with Google" button on the homepage, you will be prompted to log in to your Google account and authorize the application to access your basic profile information. Once you are authenticated, you will be redirected back to the application and logged in.
 
-This app uses the Google Sign-In API and OAuth 2.0 protocol to authenticate users and retrieve their basic profile information. This information is stored to allow users to sign in and create accounts using their Google credentials. 
+
 
 ## Contributors
 
