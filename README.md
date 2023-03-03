@@ -22,9 +22,10 @@ Running this project requires Rails 5.2.8 and Ruby 2.7.4.
 2. `cd` into the root directiory
 3. `bundle install`
 4. `rails db:{drop,create,migrate,seed}`
-5. Run the test suite with `bundle exec rspec`
-6. Start the local server by running `rails s'
-7. Visit http://localhost:3000
+5. Set up your Google OAuth 2 credentials in config/initializers/omniauth.rb. You will need to create a project in the Google Cloud Console, enable the Google OAuth 2 API, and create a client ID and client secret.
+6. Run the test suite with `bundle exec rspec`
+7. Start the local server by running `rails s'
+8. Visit http://localhost:3000
 
 Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
 
