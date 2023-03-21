@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'welcome page', :vcr do
+RSpec.describe 'welcome page' do
   before :each do
     visit root_path
   end

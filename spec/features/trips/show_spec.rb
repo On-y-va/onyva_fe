@@ -99,7 +99,7 @@ RSpec.describe 'trip show page', :vcr do
     click_on "Trippin"
     
     within("#schedule") do
-      expect(page).to have_content('Todays Itinerary')
+      expect(page).to have_content('Top Picks')
     end
   end
 

@@ -27,6 +27,11 @@ class OnyvaService
     result = JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
+  def self.one_flight(trip_id, flight_id)
+    response = conn.get("/api/v1/trips/#{trip_id}/flights/#{flight_id}")
+    result = JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
   def self.user_trips(id, status)
     response = conn.get("/api/v1/users/#{id}/trips/find_all?status=#{status}")
     result = JSON.parse(response.body, symbolize_names: true)[:data]
@@ -58,7 +63,16 @@ class OnyvaService
   
   def self.create_flight(trip_id, flight)
     response = conn.post("/api/v1/trips/#{trip_id}/flights", flight: flight)
-    JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.delete_flight(trip_id, flight_id)
+    conn.delete("/api/v1/trips/#{trip_id}/flights/#{flight_id}")
+  end
+
+  def self.update_flight(trip_id, flight_id, flight_params)
+    response = conn.patch("/api/v1/trips/#{trip_id}/flights/#{flight_id}", {flight: flight_params})
+    JSON.parse(response.body, symbolize_names: true)[:data]
   end
 
   def self.update_trip_attendee(user_id, trip_id)
@@ -74,7 +88,17 @@ class OnyvaService
   end
 
   def self.trip_users(trip_id)
-    response = conn.get("/api/v1/trips/#{trip_id}/users")
+    response = conn.get("/api/v1/trips/#{trip_id}/users/find_all?status=1")
     JSON.parse(response.body, symbolize_names: true)[:data]
+  end
+
+  def self.update_event(trip_id, event_id)
+    response = conn.patch("/api/v1/trips/#{trip_id}/events/#{event_id}")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.most_popular_event(trip_id)
+    response = conn.get("/api/v1/trips/#{trip_id}/event")
+    JSON.parse(response.body, symbolize_names: true)
   end
 end

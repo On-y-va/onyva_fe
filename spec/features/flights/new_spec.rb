@@ -20,9 +20,8 @@ RSpec.describe 'flight index page', :vcr do
     click_on "Trippin"
     click_button "Add Flight Information"
 
-    within("#email1") do
+    within("div#email") do
       expect(page).to have_field(:email)
-      expect(page).to have_content('Email')
     end
   end
 
@@ -30,17 +29,8 @@ RSpec.describe 'flight index page', :vcr do
     click_on "Trippin"
     click_button "Add Flight Information"
 
-    within("#date1") do
+    within("div#date") do
       expect(page).to have_field(:date)
-    end
-  end
-
-  it 'has a field to add airline_code' do
-    click_on "Trippin"
-    click_button "Add Flight Information"
-
-    within("#airline_code1") do
-      expect(page).to have_field(:airline_code)
     end
   end
 
@@ -48,7 +38,7 @@ RSpec.describe 'flight index page', :vcr do
     click_on "Trippin"
     click_button "Add Flight Information"
 
-    within("#flight_number1") do
+    within("div#flight_number") do
       expect(page).to have_field(:flight_number)
     end
   end
@@ -57,35 +47,62 @@ RSpec.describe 'flight index page', :vcr do
     click_on "Trippin"
     click_button "Add Flight Information"
 
-    expect(page).to have_button 'Add Flight'
+    expect(page).to have_button 'ONYVA!'
   end
 
-  xit 'can add the flight and details' do
+  it 'can add the flight and details' do
     click_on "Trippin"
     click_button "Add Flight Information"
 
-    fill_in :email, with: 'test@gmail.com'
+    fill_in :email, with: 'john.doe@example.com'
     fill_in :date, with: '03/01/2023'
-    fill_in :airline_code, with: 'SW'
-    fill_in :flight_number, with: '500'
+    fill_in :flight_number, with: 'N74GR'
+    click_on 'ONYVA!'
 
-    click_on 'Add Flight'
     expect(current_path).to eq trip_flights_path(1)
+    expect(page).to have_content("Flight successfully created")
 
-    expect(page).to have_content 'test@gmail.com'
-    expect(page).to have_content '03/01/2023'
-    expect(page).to have_content 'SW'
-    expect(page).to have_content '500'
+    expect(page).to have_content 'John'
+    expect(page).to have_content '2023-01-03'
+    expect(page).to have_content 'N74GR'
   end
 
-  xit 'must include a valid email to add flight' do
+  it 'must include a valid email to add flight' do
+    click_on "Trippin"
+    click_button "Add Flight Information"
+
     fill_in :email, with: ''
-    fill_in :date, with: date.today
-    fill_in :airline_code, with: 'SW'
+    fill_in :date, with: '03/01/2023'
     fill_in :flight_number, with: '123'
 
-    click_on 'Add Flight'
-    expect(current_path).to eq new_trip_flight
-    expect(page).to have_content #error message
+    click_on 'ONYVA!'
+    expect(current_path).to eq new_trip_flight_path(1)
+    expect(page).to have_content("Flight could not be created")
+  end
+
+  it 'must include a valid date to add flight' do
+    click_on "Trippin"
+    click_button "Add Flight Information"
+
+    fill_in :email, with: 'john.doe@example.com'
+    fill_in :date, with: ''
+    fill_in :flight_number, with: '123'
+
+    click_on 'ONYVA!'
+    expect(current_path).to eq new_trip_flight_path(1)
+    expect(page).to have_content("Flight could not be created")
+  end
+
+  it 'must include a valid flight number to add flight' do
+    click_on "Trippin"
+    click_button "Add Flight Information"
+
+    fill_in :email, with: 'john.doe@example.com'
+    fill_in :date, with: '03/01/2023'
+    fill_in :flight_number, with: '123'
+
+    click_on 'ONYVA!'
+    expect(current_path).to eq new_trip_flight_path(1)
+    expect(page).to have_content("Flight could not be created")
   end
 end

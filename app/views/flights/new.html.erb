@@ -5,33 +5,26 @@
 </center>
 
 <%= form_with method: :post, local: true do |f| %>
-<div class="row">
-    <div id="email1">
-        <div class="col">
-            <%= f.label :email %>
-            <p><%= f.email_field :email, class: "form-control", placeholder: "Email" %></p>
-        </div>
-    </div>
-    <div id="date1">
-        <div class="col">
-            <%= f.label :date %>
-            <p><%= f.date_field :date, class: "form-control" %></p>
-        </div>
-    </div>    
-</div>
-<div class="row">
-    <div id="airline_code1">
-        <div class="col">
-            <%= f.label :airline_code %>
-            <p><%= f.text_field :airline_code, class: "form-control", placeholder: "Airline Code('SW')" %></p>
-        </div>
-    </div>
-    <div id="flight_number1">
-        <div class="col">
-            <%= f.label :flight_number %>
-            <p><%= f.text_field :flight_number, class: "form-control", placeholder: "Flight Number" %></p>
-        </div>
+<div class="title_name" id="email">
+  <div class="row"> 
+    <div class="col">
+        <%= f.label :email %>
+        <p><%= f.text_field :email, class: "form-control", placeholder: "example@email.com" %></p>
     </div>
 </div>
-<%= f.submit "Add Flight", class:"btn btn-dark" %>
+<div class="title_name" id="flight_number">
+  <div class="row">
+    <div class="col">
+        <%= f.label :flight_number, "Flight number" %>
+        <p><%= f.text_field :flight_number, class: "form-control", placeholder: "EX: 'KL1234'" %></p>
+    </div>
+</div>
+<div class="title_name" id="date">
+  <div class="row">
+    <div class="col">
+        <%= f.label :date, "Date" %>
+        <p><%= f.date_field :date, class: "form-control" %></p>
+    </div>
+</div>
+<center><%= f.submit "ONYVA!", class: "button" %></center>
 <% end %>

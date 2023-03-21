@@ -34,8 +34,11 @@ RSpec.describe 'user show page', :vcr do
   end
 
   it 'has a button to accept a pending trip' do
+    within("div#pending_trips-3") do
       expect(page).to have_button('Accept')
+
       click_button('Accept')
       expect(current_path).to eq(user_path(1))
+    end
   end
 end

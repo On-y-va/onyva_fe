@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 90178dd1-6266-4d6e-b142-b9aca9f79a01
+      - 21fb3374-08a6-4800-bf98-0be92acf41e0
       X-Runtime:
-      - '0.004443'
+      - '0.007083'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"trip","attributes":{"name":"Hen Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-04-01","end_date":"2023-04-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}},"included":[]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:53 GMT
+  recorded_at: Tue, 21 Mar 2023 02:32:02 GMT
 recorded_with: VCR 6.1.0

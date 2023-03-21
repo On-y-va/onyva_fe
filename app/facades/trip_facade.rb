@@ -15,4 +15,8 @@ class TripFacade
       User.new(user)
     end
   end
+
+  def self.most_popular_event(trip_id)
+    result = OnyvaService.most_popular_event(trip_id)[:data]
+  end
 end

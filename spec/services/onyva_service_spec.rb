@@ -67,7 +67,6 @@ RSpec.describe OnyvaService, :vcr do
       expect(flights).to be_a(Array)
       expect(flights[0]).to have_key(:id)
       expect(flights[0]).to have_key(:attributes)
-      expect(flights[0][:attributes]).to have_key(:airline_code)
       expect(flights[0][:attributes]).to have_key(:flight_number)
       expect(flights[0][:attributes]).to have_key(:date)
     end
@@ -102,10 +101,10 @@ RSpec.describe OnyvaService, :vcr do
   describe '#update_user' do 
     it 'updates a user' do      
       user_params = { phone_number: "1234456778" }
-      user = OnyvaService.update_user(2, user_params)
+      user = OnyvaService.update_user(1, user_params)
+
       expect(user[:attributes]).to have_key(:phone_number)
       expect(user[:attributes][:phone_number]).to eq("1234456778")
-
     end
   end
 
