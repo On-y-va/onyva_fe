@@ -9,9 +9,15 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ## Project Overview
-Organize your upcoming travel plans with Onyva! This repo is a front-end application built on Rails. The back-end repo is available [here](https://github.com/On-y-va/onyva_be).
 
-[Production Link](https://onyva.herokuapp.com/)
+Onyva is an innovative travel application that aims to simplify the process of planning a trip and enhance the overall travel experience for users. With Onyva, users can easily create personalized itineraries for their trips, complete with local recommendations for restaurants and tourist attractions. Users can also invite their friends to join them on their trips and manage their trip details together.
+
+At its core, Onyva is committed to providing an exceptional travel experience for users, and we believe that our application can be a valuable tool for anyone looking to plan their next adventure.
+
+Organize your upcoming travel plans with Onyva! 
+
+This repo is a frontend application built on Rails which consumes our Onyva Backend API endpoints in order to display our data. <br>
+The backend repo is available [here](https://github.com/On-y-va/onyva_be).
 
 ## Learning Goals
 - API building and consumption
@@ -21,7 +27,16 @@ Organize your upcoming travel plans with Onyva! This repo is a front-end applica
 This application was designed according to the project specs [here](https://backend.turing.edu/module3/projects/consultancy/).
 
 ## Prerequisites
-Running this project requires Rails 5.2.8 and Ruby 2.7.4.
+Running this project requires:
+- Rails 5.2.8
+- Ruby 2.7.4
+- External APIs:
+  - This application required external API keys which are stored in a <i>.env</i> file at the top level of the program directory
+    - API keys can be requested but must be named as follows:
+      - :round_pushpin: GEOAPIFY_KEY - [Geoapify](https://myprojects.geoapify.com/projects)
+    - You will need to create a project in the Google Cloud Console, enable the Google OAuth 2 API, and create a client ID and client secret.
+      - :id: GOOGLE_CLIENT_ID - [Google Client ID](https://developers.google.com/identity/oauth2/web/guides/get-google-api-clientid)
+      - :no_mouth: GOOGLE_CLIENT_SECRET - [Google Client Secret](https://developers.google.com/identity/oauth2/web/guides/get-google-api-clientid)
 
 ## Installation
 
@@ -29,10 +44,10 @@ Running this project requires Rails 5.2.8 and Ruby 2.7.4.
 2. `cd` into the root directiory
 3. `bundle install`
 4. `rails db:{drop,create,migrate,seed}`
-5. Set up your Google OAuth 2 credentials in config/initializers/omniauth.rb. You will need to create a project in the Google Cloud Console, enable the Google OAuth 2 API, and create a client ID and client secret.
-6. Run the test suite with `bundle exec rspec`
-7. Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
-8. Start the local server by running `rails s'
+5. Run the test suite with `bundle exec rspec`
+6. Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
+7. Start the local server by running `rails s'
+8. Visit the app on `localhost:3000` in your web browser.
 
 ## Usage
 To use the application, go to http://localhost:3000 in your web browser. You should see the homepage, which displays a list of your trips if you are logged in, or a login/signup form if you are not.
