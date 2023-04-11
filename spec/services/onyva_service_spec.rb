@@ -174,7 +174,7 @@ RSpec.describe OnyvaService, :vcr do
         
         trip_attendee = OnyvaService.update_trip_attendee(1, 1)
 
-        expect(trip_attendee.status).to eq("accep")
+        expect(trip_attendee.status).to eq("accept")
       end
     end
 
