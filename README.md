@@ -46,7 +46,7 @@ Running this project requires:
 4. `rails db:{drop,create,migrate,seed}`
 5. Run the test suite with `bundle exec rspec`
 6. Pull down the [Back-End repo](https://github.com/On-y-va/onyva_be). Set up instructions are in that repository's README. Do not nest this inside your front-end repository.
-7. Start the local server by running `rails s'
+7. Start the local server by running `rails s`
 8. Visit the app on `localhost:3000` in your web browser.
 
 ## Usage
