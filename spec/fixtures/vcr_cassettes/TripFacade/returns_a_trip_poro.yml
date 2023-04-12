@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 78a6851d-8136-4c08-9e06-5317d9ac6033
+      - 4515f43e-dbe6-4ed5-9364-5aae21d1cffa
       X-Runtime:
-      - '0.004679'
+      - '0.033622'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":[{"title":"Couldn''t find Trip with ''id''=17","status":"404"}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:32 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:40 GMT
 recorded_with: VCR 6.1.0

@@ -25,15 +25,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9a729f86-b604-4b26-ae2c-e198249e55e4
+      - 71f4737c-e21a-4ebb-87c6-0e677ba4bc9b
       X-Runtime:
-      - '0.009985'
+      - '0.003107'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:41 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -59,15 +59,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 95982e99-fd6a-4497-8041-0831458fd6e3
+      - e0bdcca9-9fb6-4004-98e3-f7b5f9e2a780
       X-Runtime:
-      - '0.004415'
+      - '0.002608'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:41 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -93,15 +93,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c0c00df7-df75-4bb0-afd4-bd11ec7ef3f0
+      - '082233e5-2b2d-4ff0-9e8c-fd8aea381665'
       X-Runtime:
-      - '0.002406'
+      - '0.002469'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:41 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -127,15 +127,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 806d90bc-0c57-40a1-a595-d0b86cd5f92b
+      - 810e9d84-be45-4b41-ac64-9993504c74c2
       X-Runtime:
-      - '0.002362'
+      - '0.002438'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=0
@@ -161,15 +161,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37044902-5f2a-4824-816e-0c31d55be4ca
+      - d7115920-3e72-4859-a76d-e34f4ac6d090
       X-Runtime:
-      - '0.011255'
+      - '0.006270'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"3","type":"trip","attributes":{"name":"Stag Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-05-01","end_date":"2023-05-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=1
@@ -191,25 +191,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5ad1aa0c587152bbf31e2ae266afb583"
+      - W/"5cf2ea5120f5fd01dce62c73aa7901de"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6b50f42b-7d83-48ca-958e-c5d0efb331de
+      - d0431cb3-8757-4a49-beb3-ff0e8c50d232
       X-Runtime:
-      - '0.005548'
+      - '0.006209'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.099Z","updated_at":"2023-03-21T02:29:17.099Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.101Z","updated_at":"2023-03-21T02:29:17.101Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.103Z","updated_at":"2023-03-21T02:29:17.103Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.105Z","updated_at":"2023-03-21T02:29:17.105Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -235,15 +235,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a124c0fe-d021-42a4-9a50-569cca15c5c9
+      - 2c524aa7-20e7-4d5c-a18a-7b7d21dfb061
       X-Runtime:
-      - '0.002177'
+      - '0.002751'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -269,15 +269,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3e758731-f2c0-4725-abe9-46268a2e7348
+      - 5caf5f57-3ae7-4300-9277-200c813817e0
       X-Runtime:
-      - '0.002127'
+      - '0.002320'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -303,15 +303,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2c74d69c-4c88-4c83-8420-78602bf2a332
+      - aa73858e-3d3f-4581-912a-4388295e3d16
       X-Runtime:
-      - '0.002014'
+      - '0.005368'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/trips/1
@@ -333,33 +333,33 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2f8d76582d7b2f7cdefff56788546e2e"
+      - W/"f26be99ba283bcd315a4354856c87e8e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 22cd8ce2-5183-4388-b300-e58df9b1a9ff
+      - ed3b7bc1-34cf-4d0c-b864-5538cc0c9b53
       X-Runtime:
-      - '0.004329'
+      - '0.013731'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.099Z","updated_at":"2023-03-21T02:29:17.099Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.101Z","updated_at":"2023-03-21T02:29:17.101Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.103Z","updated_at":"2023-03-21T02:29:17.103Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.105Z","updated_at":"2023-03-21T02:29:17.105Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}},"included":[{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
         Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"2","type":"event","attributes":{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"name":"Culver''s","address":"2993
         South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"3","type":"event","attributes":{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
         United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"4","type":"event","attributes":{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/trips/1/users
+    uri: http://localhost:5000/api/v1/trips/1/users/find_all?status=1
     body:
       encoding: US-ASCII
       string: ''
@@ -382,15 +382,50 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 487d2fac-9657-4174-b623-f17e6835ac92
+      - 6345b846-3577-4f39-8aba-074b4387e833
       X-Runtime:
-      - '0.003001'
+      - '0.004395'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/1/event
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a59306b3034ecda74ea45d65de07cdd5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4aec4ac8-ec61-46e8-b103-acc97a45680d
+      X-Runtime:
+      - '0.007268'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -416,15 +451,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f1fafab9-5092-4955-a132-805356d9a1ac
+      - 37f3da4e-0b21-4403-8df9-9e4796558727
       X-Runtime:
-      - '0.002537'
+      - '0.002905'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -450,13 +485,185 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e3aab85a-7016-4e1b-886c-990510e0dbb1
+      - 0bb8649b-27eb-4cd2-8969-5f70b7d7112e
       X-Runtime:
-      - '0.002052'
+      - '0.002383'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:42 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b2d474d2-4c1a-40e0-a3ed-8ead2bd03f8d
+      X-Runtime:
+      - '0.002489'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ff42151e-e388-4b13-9f9c-0533a24f8a96
+      X-Runtime:
+      - '0.002532'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/trips/1/flights
+    body:
+      encoding: UTF-8
+      string: flight%5Bdate%5D=03%2F01%2F2023&flight%5Bemail%5D=&flight%5Bflight_number%5D=123
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a25c20c488dfcd60dc4e1c9a99271f2c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 853db675-c246-4a03-bc04-9d21ba51b75b
+      X-Runtime:
+      - '0.002562'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":[{"title":"Invalid Email given","status":"404"}]}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f6304e6e-11a3-405a-90df-7ac8df1d351a
+      X-Runtime:
+      - '0.004265'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc8b0509bf63094121a131e74fce0359"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a09d832-a69c-4b23-b5a7-9495be704317
+      X-Runtime:
+      - '0.002553'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:50 GMT
 recorded_with: VCR 6.1.0

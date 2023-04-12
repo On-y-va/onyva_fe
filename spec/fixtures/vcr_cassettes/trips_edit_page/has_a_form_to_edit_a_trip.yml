@@ -25,15 +25,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 638170af-4da9-4897-a13a-fd7f4b41e575
+      - f4da72c6-5ccf-4b0c-b9fb-245c67985a99
       X-Runtime:
-      - '0.002866'
+      - '0.003199'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -59,15 +59,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b411c4cf-056d-4ff9-8014-e4bceafb3ae0
+      - 2d0035c6-df44-42ce-a55a-47cabe1ebb5a
       X-Runtime:
-      - '0.006386'
+      - '0.003276'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -93,15 +93,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cce14815-1894-4cce-be4b-cd6891e4bd1a
+      - 077d69d9-9a4e-49a6-b6fd-72d7ac4e7aaa
       X-Runtime:
-      - '0.002489'
+      - '0.006187'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -127,15 +127,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fe2baa19-8de1-4fcc-8af2-b645fe255dca
+      - 4d326241-38b1-4a59-adde-f5fd7fae97ae
       X-Runtime:
-      - '0.002281'
+      - '0.004946'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=0
@@ -161,15 +161,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3e045bed-c7e1-41b4-b935-24d7a62d3d5c
+      - 4f3934fe-f98f-4b7e-bffe-7793da6d56ae
       X-Runtime:
-      - '0.009767'
+      - '0.007677'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"3","type":"trip","attributes":{"name":"Stag Do","city":"Cabo","country":"Mexico","postcode":"00123","place_id":"518120e5cc1b8441c0594f07b29e5a9120c0f00101f90188a2040000000000c00208","start_date":"2023-05-01","end_date":"2023-05-10","image_url":"https://live.staticflickr.com/65535/5716766064_64559491a3_w.jpg","events":[]},"relationships":{"events":{"data":[]}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/trips/find_all?status=1
@@ -191,25 +191,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5ad1aa0c587152bbf31e2ae266afb583"
+      - W/"5cf2ea5120f5fd01dce62c73aa7901de"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2884c06e-6c46-4029-9177-525cf60846c6
+      - dfb0e953-5ae8-4073-b07d-3093d7640c63
       X-Runtime:
-      - '0.005153'
+      - '0.009092'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.099Z","updated_at":"2023-03-21T02:29:17.099Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.101Z","updated_at":"2023-03-21T02:29:17.101Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.103Z","updated_at":"2023-03-21T02:29:17.103Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.105Z","updated_at":"2023-03-21T02:29:17.105Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -235,15 +235,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1575d34b-9df6-495f-a2c1-abf5f4ca44c8
+      - 0526cf80-7599-4ba3-b5ac-fb0d6eb05026
       X-Runtime:
-      - '0.002074'
+      - '0.002658'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -269,15 +269,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1d96b1e1-c2b0-4bd0-954c-0b77a35e5ee5
+      - '0596f4e2-f88d-4bcf-9bbd-a126fa05a82f'
       X-Runtime:
-      - '0.002330'
+      - '0.003366'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -303,15 +303,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b56c4bc1-8385-43a7-acd7-58912d50caf3
+      - dd1d9940-9c2b-4570-bc09-67b4cb4f6090
       X-Runtime:
-      - '0.004396'
+      - '0.007901'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/trips/1
@@ -333,33 +333,33 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2f8d76582d7b2f7cdefff56788546e2e"
+      - W/"f26be99ba283bcd315a4354856c87e8e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6b31b777-4971-4d83-9034-34d4903cd7a8
+      - 869da953-f279-455e-bc61-d79ec9e15505
       X-Runtime:
-      - '0.004748'
+      - '0.010395'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.099Z","updated_at":"2023-03-21T02:29:17.099Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.101Z","updated_at":"2023-03-21T02:29:17.101Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.103Z","updated_at":"2023-03-21T02:29:17.103Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.105Z","updated_at":"2023-03-21T02:29:17.105Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}},"included":[{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
         Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"2","type":"event","attributes":{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"name":"Culver''s","address":"2993
         South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"3","type":"event","attributes":{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
         United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"4","type":"event","attributes":{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/trips/1/users
+    uri: http://localhost:5000/api/v1/trips/1/users/find_all?status=1
     body:
       encoding: US-ASCII
       string: ''
@@ -382,15 +382,50 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5416a057-7112-47f4-82fa-f8b55a08e530
+      - 184c6259-1039-43c3-ae88-ba8be9b2dea5
       X-Runtime:
-      - '0.005139'
+      - '0.016687'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trips/1/event
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a59306b3034ecda74ea45d65de07cdd5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2a0e91b1-d2dc-485e-b824-ee5891151b65
+      X-Runtime:
+      - '0.007611'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}}'
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -416,15 +451,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - acd8c901-1c06-45f7-8e42-e0ad45949898
+      - 4f3b7059-23b6-4d6f-81fd-5120f0662d4d
       X-Runtime:
-      - '0.002467'
+      - '0.004581'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -450,15 +485,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fd928375-afdd-4add-a956-0af326b3bcb0
+      - 5f065326-a7ba-4152-84a6-c22232d4a1f9
       X-Runtime:
-      - '0.003381'
+      - '0.005515'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"first_name":"John","last_name":"Doe","phone_number":null,"email":"john.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456789"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/trips/1
@@ -480,28 +515,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2f8d76582d7b2f7cdefff56788546e2e"
+      - W/"f26be99ba283bcd315a4354856c87e8e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '087fa424-0af1-460f-a0ff-f0a2d27711a9'
+      - 511dfa60-8908-47ab-a471-0d627d923b1e
       X-Runtime:
-      - '0.011951'
+      - '0.008660'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"trip","attributes":{"name":"Trippin","city":"Murfreesboro","country":"United
-        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.912Z","updated_at":"2023-03-03T01:56:37.912Z","name":"Demos''","address":"1115
-        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.914Z","updated_at":"2023-03-03T01:56:37.914Z","name":"Culver''s","address":"2993
-        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.915Z","updated_at":"2023-03-03T01:56:37.915Z","name":"Hazen''s
+        States","postcode":"37128","place_id":"51a61cdd52189955c0597a8f8e064bec4140f00101f9011102030000000000c00208","start_date":"2023-03-01","end_date":"2023-03-08","image_url":"https://live.staticflickr.com/65535/51328655264_19b4724735_w.jpg","events":[{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.099Z","updated_at":"2023-03-21T02:29:17.099Z","name":"Demos''","address":"1115
+        Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.101Z","updated_at":"2023-03-21T02:29:17.101Z","name":"Culver''s","address":"2993
+        South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.103Z","updated_at":"2023-03-21T02:29:17.103Z","name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
-        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-03T01:56:37.916Z","updated_at":"2023-03-03T01:56:37.916Z","name":"Rideout
+        United States of America","category":"attraction"},{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"created_at":"2023-03-21T02:29:17.105Z","updated_at":"2023-03-21T02:29:17.105Z","name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"}]},"relationships":{"events":{"data":[{"id":"1","type":"event"},{"id":"2","type":"event"},{"id":"3","type":"event"},{"id":"4","type":"event"}]}}},"included":[{"id":"1","type":"event","attributes":{"id":1,"trip_id":1,"event_date":null,"event_time":null,"event_id":"516f5dbe70fc9955c0597a484b8be1ed4140f00102f90148bbc1110000000092030644656d6f7327","votes":null,"confirmed":false,"name":"Demos''","address":"1115
         Northwest Broad Street, Murfreesboro, TN 37129, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"2","type":"event","attributes":{"id":2,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51521580e9839655c0594eccdf61cbea4140f00102f901590b86250000000092030843756c7665722773","votes":null,"confirmed":false,"name":"Culver''s","address":"2993
         South Rutherford Boulevard, Murfreesboro, TN 37130, United States of America","category":"restaurant"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"3","type":"event","attributes":{"id":3,"trip_id":1,"event_date":null,"event_time":null,"event_id":"515a2ed10f599b55c0594006245d33f04140f00103f901ea8da7dd0000000092031848617a656e27732042726967616465204d6f6e756d656e74","votes":null,"confirmed":false,"name":"Hazen''s
         Brigade Monument","address":"Old Nashville Highway, Murfreesboro, TN 37167,
         United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}},{"id":"4","type":"event","attributes":{"id":4,"trip_id":1,"event_date":null,"event_time":null,"event_id":"51fb255d85509c55c059cb278093d8eb4140f00102f901e4c69f2000000000920310526964656f75742043656d6574657279","votes":null,"confirmed":false,"name":"Rideout
         Cemetery","address":"Murfreesboro, TN, United States of America","category":"attraction"},"relationships":{"trip":{"data":{"id":"1","type":"trip"}}}}]}'
-  recorded_at: Fri, 03 Mar 2023 02:06:43 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:52 GMT
 recorded_with: VCR 6.1.0

@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d5794a7-33b8-4748-98f9-3dd41889611f
+      - 23c55e55-055b-4625-85fe-ad3902602858
       X-Runtime:
-      - '0.019528'
+      - '0.008355'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"first_name":"Judy","last_name":"Doe","phone_number":null,"email":"judy.doe@example.com","emergency_contact_name":null,"emergency_contact_phone_number":null,"google_uid":"1235456799"}}}'
-  recorded_at: Fri, 03 Mar 2023 02:06:38 GMT
+  recorded_at: Tue, 21 Mar 2023 02:31:45 GMT
 recorded_with: VCR 6.1.0

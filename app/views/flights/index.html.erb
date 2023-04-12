@@ -9,28 +9,41 @@
 </div>
 </center>
 <center>
+<div class="title_name" id="flight_header">
   <h3> Group Flight Information </h3>
 </center>
 <div id="table" >
+<div class="font-class">
   <table class="table">
     <thead class="table-secondary">
       <tr>
-        <th scope="col">User Email</th>
-        <th scope="col">Airline Code</th>
+        <th scope="col">Name</th>
         <th scope="col">Flight Number</th>
         <th scope="col">Date</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody class="table-group-divider">
     <tbody>
     <% @flights.each do |flight| %>
       <tr>
-        <td>User Email</td>
-        <td><%= flight.airline_code %></td>
-        <td><%= flight.flight_number %></td>
-        <td><%= flight.date %></td>
+        <div id="flight_<%= flight.flight_id %>">
+          <td><%= flight.user_name %></td>
+          <td><%= flight.flight_number %></td>
+          <td><%= flight.date.slice!(0..9) %></td>
+          <td><%= flight.status %></td>
+          <td>
+        </div>
+          <div id="button">
+            <div class='btn-group'>
+              <%= button_to "Update", edit_trip_flight_path(@trip_id, flight.flight_id), method: :get, local: true, class:"button btn-outline-info btn-sm" %>&nbsp;&nbsp;&nbsp;&nbsp;<%= button_to "Delete", trip_flight_path(@trip_id, flight.flight_id), method: :delete, local: true, class:"button btn-outline-info btn-sm" %>
+            </div>
+          </div>
+        </td>
       </tr>
       <% end %>
     </tbody>
   </table>
+  </div>
 </div>

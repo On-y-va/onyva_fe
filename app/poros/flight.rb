@@ -1,10 +1,13 @@
 class Flight
-  attr_reader :flight_id, :airline_code, :flight_number, :date
+  attr_reader :flight_id, :flight_number, :date, :user_name, :status
 
   def initialize(data)
-    @flight_id = data[:id]
-    @airline_code = data[:attributes][:airline_code]
-    @flight_number = data[:attributes][:flight_number]
-    @date = data[:attributes][:date]
+    if data.present?
+      @flight_id = data[:id]
+      @flight_number = data[:attributes][:flight_number]
+      @date = data[:attributes][:date]
+      @status = data[:attributes][:status]
+      @user_name = data[:attributes][:flight_user_name]
+    end
   end
 end

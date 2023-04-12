@@ -24,9 +24,9 @@
         <div class="bg p-1 rounded-lg m-5">
           <div class="font-class">
         <h4>Attending</h4>
-        <% @users.each do |user| %>
-        <p><%= user.first_name %> <%= user.last_name %></p>
-        <% end %>
+          <% @users.each do |user| %>
+            <p><%= user.first_name %> <%= user.last_name %></p>
+          <% end %>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
                       <div id="collapse<%= event[:id] %>" class="accordion-collapse collapse" aria-labelledby="heading<%= event[:id] %>" data-bs-parent="#accordionExample">    
                         <div class="accordion-body">
                         <div class="btn_inner-color">
-                          <strong> <button class="button"> Vote </button> <%= event[:address] %></strong>
+                          <strong><%= button_to "Vote", trip_event_path(@trip.trip_id, event[:id]), method: :patch, local: true %> <%= event[:address] %></strong>
                         </div>
                         </div>
                       </div>
@@ -87,7 +87,7 @@
                       <div id="collapse<%= event[:id] %>" class="accordion-collapse collapse" aria-labelledby="heading<%= event[:id] %>" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                           <div class="btn_inner-color">
-                            <strong> <button class="button"> Vote </button> <%= event[:address] %></strong>
+                          <%= button_to "Vote", trip_event_path(@trip.trip_id, event[:id]), method: :patch, local: true %> <%= event[:address] %></strong>
                           </div>
                         </div>
                       </div>
@@ -98,8 +98,8 @@
             <% end %>
           </div>
         <div class="col", id="schedule">
-          <h4>Todays Itinerary:</h4>
-          COMING SOON!
+          <h4>Top Picks:</h4>
+          <p><%= @most_popular_event[:attributes][:name] %></p>
         </div>
       </div>
     </div>

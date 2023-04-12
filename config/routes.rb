@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :trips do
     get "/invite", to: "trip_attendees#new"
     post "/invite", to: "trip_attendees#create"
-    resources :flights, only: [:index, :new]
+    resources :flights
+    resources :events, only: [:show, :update]
   end
   post '/trips/:trip_id/flights/new', to: 'flights#create'
   get "/api/v1/users/:user_id/trips/:trip_id", to: 'trip_attendees#update'

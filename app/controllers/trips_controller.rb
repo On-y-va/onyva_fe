@@ -8,6 +8,7 @@ class TripsController < ApplicationController
     @trip = TripFacade.one_trip(params[:id])
     @events = @trip.events
     @users = TripFacade.trip_users(params[:id])
+    @most_popular_event = TripFacade.most_popular_event(params[:id])
   end
   
   def edit

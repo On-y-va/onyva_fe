@@ -27,9 +27,7 @@ RSpec.describe 'flight index page', :vcr do
     click_on "Trippin"
     click_button "Flight Information"
 
-    within("#button") do
-      expect(page).to have_button 'Trip Details'
-    end
+    expect(page).to have_button 'Trip Details'
   end
 
   it 'has user email info' do
@@ -37,16 +35,7 @@ RSpec.describe 'flight index page', :vcr do
     click_button "Flight Information"
 
     within("#table") do
-      expect(page).to have_content('User Email')
-    end
-  end
-
-  it 'has flight Airline code info' do
-    click_on "Trippin"
-    click_button "Flight Information"
-
-    within("#table") do
-      expect(page).to have_content('Airline Code')
+      expect(page).to have_content('Name')
     end
   end
 
