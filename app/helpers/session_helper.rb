@@ -11,7 +11,7 @@ module SessionHelper
   private
 
   def find_or_create_from_auth_hash(auth_hash)
-    user = UserFacade.find_by_google_uid(auth_hash[:uid])
+    user ||= UserFacade.find_by_google_uid(auth_hash[:uid])
     if user
       session[:user_id] = user.id
     else

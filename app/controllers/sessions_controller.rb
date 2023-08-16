@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 include SessionHelper
 
   def create
-    session[:user_id] = find_or_create_from_auth_hash(request.env["omniauth.auth"])
+    session[:user_id] ||= find_or_create_from_auth_hash(request.env["omniauth.auth"])
     redirect_to user_path(session[:user_id])
   end
 
