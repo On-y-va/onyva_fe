@@ -5,9 +5,6 @@
 # Onyva
 <img width="670" alt="Screen Shot 2023-02-22 at 8 24 13 PM" src="https://user-images.githubusercontent.com/111713452/220821040-f3bcdb59-f940-4916-8e06-45b74dfbb9ee.png">
 
-[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-
 ## Project Overview
 
 Onyva is an innovative travel application that aims to simplify the process of planning a trip and enhance the overall travel experience for users. With Onyva, users can easily create personalized itineraries for their trips, complete with local recommendations for restaurants and tourist attractions. Users can also invite their friends to join them on their trips and manage their trip details together.
